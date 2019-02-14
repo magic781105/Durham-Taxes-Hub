@@ -10,3 +10,7 @@ License URI: LICENSE
 Text Domain: yaju-chang
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
+
+body {
+    background: red;
+}
