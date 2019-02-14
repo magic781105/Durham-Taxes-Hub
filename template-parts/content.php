@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Ya-Ju_Chang
+ * @package Durham Tax Hub
  */
 
 ?>
@@ -22,21 +22,21 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				yaju_chang_posted_on();
-				yaju_chang_posted_by();
+				durhamtaxhub_posted_on();
+				durhamtaxhub_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php yaju_chang_post_thumbnail(); ?>
+	<?php durhamtaxhub_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'yaju-chang' ),
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'durhamtaxhub' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -47,13 +47,13 @@
 		) );
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'yaju-chang' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'durhamtaxhub' ),
 			'after'  => '</div>',
 		) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php yaju_chang_entry_footer(); ?>
+		<?php durhamtaxhub_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

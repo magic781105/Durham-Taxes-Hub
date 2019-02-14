@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Ya-Ju_Chang
+ * @package Durham Tax Hub
  */
 
 /*
@@ -28,18 +28,18 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$yaju_chang_comment_count = get_comments_number();
-			if ( '1' === $yaju_chang_comment_count ) {
+			$durhamtaxhub_comment_count = get_comments_number();
+			if ( '1' === $durhamtaxhub_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'yaju-chang' ),
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'durhamtaxhub' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $yaju_chang_comment_count, 'comments title', 'yaju-chang' ) ),
-					number_format_i18n( $yaju_chang_comment_count ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $durhamtaxhub_comment_count, 'comments title', 'durhamtaxhub' ) ),
+					number_format_i18n( $durhamtaxhub_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			}
@@ -63,7 +63,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'yaju-chang' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'durhamtaxhub' ); ?></p>
 			<?php
 		endif;
 

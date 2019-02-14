@@ -1,5 +1,18 @@
 <?php
-if ( ! function_exists( 'yaju_chang_setup' ) ) :
+/**
+ * Durham Tax Hub functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package Durham Tax Hub
+ */
+
+/**
+ * Theme Setup
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+if ( ! function_exists( 'durhamtaxhub_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -7,14 +20,14 @@ if ( ! function_exists( 'yaju_chang_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function yaju_chang_setup() {
+	function durhamtaxhub_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Ya-Ju Chang, use a find and replace
-		 * to change 'yaju-chang' to the name of your theme in all the template files.
+		 * If you're building a theme based on Durham Tax Hub, use a find and replace
+		 * to change 'durhamtaxhub' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'yaju-chang', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'durhamtaxhub', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -36,7 +49,7 @@ if ( ! function_exists( 'yaju_chang_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'yaju-chang' ),
+			'menu-1' => esc_html__( 'Primary', 'durhamtaxhub' ),
 		) );
 
 		/*
@@ -52,7 +65,7 @@ if ( ! function_exists( 'yaju_chang_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'yaju_chang_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'durhamtaxhub_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -73,7 +86,7 @@ if ( ! function_exists( 'yaju_chang_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'yaju_chang_setup' );
+add_action( 'after_setup_theme', 'durhamtaxhub_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -82,28 +95,28 @@ add_action( 'after_setup_theme', 'yaju_chang_setup' );
  *
  * @global int $content_width
  */
-function yaju_chang_content_width() {
+function durhamtaxhub_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'yaju_chang_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'durhamtaxhub_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'yaju_chang_content_width', 0 );
+add_action( 'after_setup_theme', 'durhamtaxhub_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function yaju_chang_widgets_init() {
+function durhamtaxhub_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'yaju-chang' ),
+		'name'          => esc_html__( 'Sidebar', 'durhamtaxhub' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'yaju-chang' ),
+		'description'   => esc_html__( 'Add widgets here.', 'durhamtaxhub' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'yaju_chang_widgets_init' );
+add_action( 'widgets_init', 'durhamtaxhub_widgets_init' );

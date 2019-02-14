@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Ya-Ju_Chang
+ * @package Durham Tax Hub
  */
 
 /**
@@ -11,7 +11,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function yaju_chang_body_classes( $classes ) {
+function durhamtaxhub_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -24,14 +24,14 @@ function yaju_chang_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'yaju_chang_body_classes' );
+add_filter( 'body_class', 'durhamtaxhub_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function yaju_chang_pingback_header() {
+function durhamtaxhub_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
-add_action( 'wp_head', 'yaju_chang_pingback_header' );
+add_action( 'wp_head', 'durhamtaxhub_pingback_header' );

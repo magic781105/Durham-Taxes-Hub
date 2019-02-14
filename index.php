@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Ya-Ju_Chang
+ * @package Durham Tax Hub
  */
 
 get_header();

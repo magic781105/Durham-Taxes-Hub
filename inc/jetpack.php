@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Ya-Ju_Chang
+ * @package Durham Tax Hub
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function yaju_chang_jetpack_setup() {
+function durhamtaxhub_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'yaju_chang_infinite_scroll_render',
+		'render'    => 'durhamtaxhub_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -28,7 +28,7 @@ function yaju_chang_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details'    => array(
-			'stylesheet' => 'yaju-chang-style',
+			'stylesheet' => 'durhamtaxhub-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -42,12 +42,12 @@ function yaju_chang_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'yaju_chang_jetpack_setup' );
+add_action( 'after_setup_theme', 'durhamtaxhub_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function yaju_chang_infinite_scroll_render() {
+function durhamtaxhub_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

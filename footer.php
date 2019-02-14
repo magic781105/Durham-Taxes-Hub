@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Ya-Ju_Chang
+ * @package Durham Tax Hub
  */
 
 ?>
@@ -15,16 +15,16 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'yaju-chang' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'durhamtaxhub' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'yaju-chang' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'durhamtaxhub' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'yaju-chang' ), 'yaju-chang', '<a href="http://yajuchang.com">Ya-Ju Chang</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'durhamtaxhub' ), 'durhamtaxhub', '<a href="http://durhamtaxhub.com">Durham Tax Hub</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
