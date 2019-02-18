@@ -27,6 +27,11 @@ How Can I Qualify Section
 
 .qualification {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.qualification h1 {
+    flex: 1 100vw;
 }
 
 .qualification-buttons {

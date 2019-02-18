@@ -51,29 +51,36 @@ get_header();
 				$how_to_qualify = get_field('how_to_qualify');
 				?>
 				
-				<div class="qualify">
-					<?php
-					// var_dump($featured_slider);
-					foreach($how_to_qualify as $section) {
-						$button = $section['button'];
-						$content = $section['content'];
-						?>
-
-						<section class="qualification">
-							<div class="qualification-buttons">
-								<ul>
-									<li><?php echo $button?></li>
-								</ul>
-							</div>
-							<div class="qualification-contents">
-								<div><?php echo $content?><div>
-							</div>
-						</section>
-
+				<section  class="qualification">
+					<h1>How to Qualify</h1>
+					<div class="qualification-buttons">
+						<ul>
 						<?php
-					}
-					?>
-				</div>
+						// var_dump($featured_slider);
+						foreach($how_to_qualify as $section) {
+							$button = $section['button'];
+							?>
+
+							<li><?php echo $button?></li>
+
+							<?php
+						}
+						?>
+						</ul>
+					</div>
+					<div class="qualification-contents">
+						<?php
+						foreach($how_to_qualify as $content) {
+							$content = $content['content'];
+							?>
+
+							<div><?php echo $content?></div>
+
+							<?php
+						}
+						?>
+					</div>
+				</section>
 				<?php
 			}
 		?>
