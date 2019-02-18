@@ -13,3 +13,37 @@
 .slider .slide * {
     color: rosybrown;
 }
+
+/* #021d49
+#0a4679
+#4dadce
+#99cadc
+#d6e7ee */
+
+
+/*
+How Can I Qualify Section
+*/
+
+.qualification {
+    display: flex;
+}
+
+.qualification-buttons {
+    flex: 1 30vw;
+}
+
+.qualification-buttons ul {
+    list-style-type: none;
+}
+
+.qualification-buttons li {
+    background: #0a4679;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.qualification-contents {
+    flex: 1 70vw;
+}

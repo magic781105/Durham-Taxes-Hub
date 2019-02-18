@@ -20,6 +20,7 @@ get_header();
 
 		<?php
 			// does get field exist
+			/*
 			if (function_exists('get_field')){
 				$featured_slider = get_field('featured_slider');
 				?>
@@ -38,6 +39,37 @@ get_header();
 							<h1><?php echo $header ?></h1>
 							<p><?php echo $content ?></p>
 						</div>
+						<?php
+					}
+					?>
+				</div>
+				<?php
+			}
+			*/
+
+			if (function_exists('get_field')){
+				$how_to_qualify = get_field('how_to_qualify');
+				?>
+				
+				<div class="qualify">
+					<?php
+					// var_dump($featured_slider);
+					foreach($how_to_qualify as $section) {
+						$button = $section['button'];
+						$content = $section['content'];
+						?>
+
+						<section class="qualification">
+							<div class="qualification-buttons">
+								<ul>
+									<li><?php echo $button?></li>
+								</ul>
+							</div>
+							<div class="qualification-contents">
+								<div><?php echo $content?><div>
+							</div>
+						</section>
+
 						<?php
 					}
 					?>
