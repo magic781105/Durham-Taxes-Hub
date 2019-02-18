@@ -8,8 +8,66 @@
     background-position: center;
     background-position: center;
     background-repeat: no-repeat;
+   
 }
-
+.slider, .slick-initialized, .slick-slider, .slick-dotted {
+    height: auto !important;
+}
 .slider .slide * {
     color: rosybrown;
+}
+
+
+
+/* === testmonial section === */
+.sectionHeader {
+    height: 150px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+.testmonial{
+    display: block;
+    height: 100vh;
+    background-color: rgb(83, 182, 240);
+
+}
+#allTestmonial{
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+
+}
+.testmonialGroup {    
+    margin-top: 140px;   
+    border: 2px solid black;
+    display: inline-block;
+    position: relative;
+}
+
+.testmonialImage{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+}
+.testmonialContent {
+    /* margin-top: 30px; */
+    padding: 20px;
+    padding-bottom: 0;
+    width: 350px;
+}
+.testmonialName:before{
+    content: "- ";
+}
+.testmonialName {
+    float: right;
+    padding:20px;
 }
