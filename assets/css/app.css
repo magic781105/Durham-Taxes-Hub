@@ -32,6 +32,7 @@ How Can I Qualify Section
 
 .qualification h1 {
     flex: 1 100vw;
+    text-align: center;
 }
 
 .qualification-buttons {
@@ -40,6 +41,8 @@ How Can I Qualify Section
 
 .qualification-buttons ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .qualification-buttons li {
@@ -47,8 +50,18 @@ How Can I Qualify Section
     color: #fff;
     font-weight: bold;
     font-size: 1.8em;
+    margin-bottom: .5em;
+    display: inline-block;
+    align-self: flex-start;
+    padding: .3em;
+    border-radius: 20px;
 }
 
 .qualification-contents {
     flex: 1 70vw;
+    border: 2px solid teal;
+}
+
+#qualification-2, #qualification-3 {
+    display: none;
 }

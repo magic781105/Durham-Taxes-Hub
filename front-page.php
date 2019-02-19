@@ -54,14 +54,14 @@ get_header();
 				<section  class="qualification">
 					<h1>How to Qualify</h1>
 					<div class="qualification-buttons">
-						<ul>
+						<ul id="qualificationBubble">
 						<?php
 						// var_dump($featured_slider);
 						foreach($how_to_qualify as $section) {
 							$button = $section['button'];
 							?>
 
-							<li><?php echo $button?></li>
+							<li class="qualification-btn"><?php echo $button?></li>
 
 							<?php
 						}
@@ -70,13 +70,16 @@ get_header();
 					</div>
 					<div class="qualification-contents">
 						<?php
+						$idCounter = 1;
 						foreach($how_to_qualify as $content) {
 							$content = $content['content'];
+							$id = "qualification-" . $idCounter;
 							?>
 
-							<div><?php echo $content?></div>
+							<div id="<?php echo $id?>" class="qualification-div"><?php echo $content?></div>
 
 							<?php
+							$idCounter++;
 						}
 						?>
 					</div>
