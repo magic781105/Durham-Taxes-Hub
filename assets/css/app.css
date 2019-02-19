@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .slider .slide {
     min-height: 600px;
     display: flex !important;
@@ -26,8 +30,14 @@ How Can I Qualify Section
 */
 
 .qualification {
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    background-image: url('./../img/qualifybg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3em;
 }
 
 .qualification h1 {
@@ -36,13 +46,15 @@ How Can I Qualify Section
 }
 
 .qualification-buttons {
-    flex: 1 30vw;
+    flex: 0 25vw;
+    margin-left: 5em;
 }
 
 .qualification-buttons ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    flex-wrap: warp;
 }
 
 .qualification-buttons li {
@@ -50,7 +62,7 @@ How Can I Qualify Section
     color: #fff;
     font-weight: bold;
     font-size: 1.8em;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
     display: inline-block;
     align-self: flex-start;
     padding: .3em;
@@ -58,8 +70,13 @@ How Can I Qualify Section
 }
 
 .qualification-contents {
-    flex: 1 70vw;
-    border: 2px solid teal;
+    flex: 0 646px;
+    background: #fff;
+    background-image: url('./../img/border.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding: 2em;
 }
 
 #qualification-2, #qualification-3 {

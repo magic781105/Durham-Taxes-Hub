@@ -20,6 +20,6 @@
         let id = `#qualification-${index[0]}`;
 
         $('.qualification-div').css({'display': 'none'});
-        $(id).css({'display': 'block'});
+        $(id).fadeIn('slow');
     });
 })(jQuery);
