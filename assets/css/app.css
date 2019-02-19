@@ -29,8 +29,9 @@
 .testmonial{
     display: block;
     height: 100vh;
-    background-color: rgb(83, 182, 240);
-
+    /* background-color: rgb(83, 182, 240); */
+    background-image: url("../img/testimonialbg.png");
+    background-repeat: no-repeat;
 }
 #allTestmonial{
 
@@ -45,6 +46,7 @@
     border: 2px solid black;
     display: inline-block;
     position: relative;
+    background-color: white;
 }
 
 .testmonialImage{
