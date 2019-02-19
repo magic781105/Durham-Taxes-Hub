@@ -28,10 +28,14 @@
 }
 .testmonial{
     display: block;
-    height: 100vh;
+    /* height: 100vh; */
+    height: auto;
+    overflow: auto;
+
     /* background-color: rgb(83, 182, 240); */
-    background-image: url("../img/testimonialbg.png");
+    background-image: url("../img/testimonialbg.svg");
     background-repeat: no-repeat;
+    
 }
 #allTestmonial{
 
@@ -43,10 +47,14 @@
 }
 .testmonialGroup {    
     margin-top: 140px;   
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: inline-block;
     position: relative;
     background-color: white;
+    background-image: url("../img/border.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .testmonialImage{
@@ -65,6 +73,7 @@
     padding: 20px;
     padding-bottom: 0;
     width: 350px;
+    height: 152.5px;
 }
 .testmonialName:before{
     content: "- ";
@@ -73,3 +82,11 @@
     float: right;
     padding:20px;
 }
+@media only screen and (max-width: 800px) {
+    .testmonial{
+        background-size: cover;
+    }
+    
+}
+
+
