@@ -13,3 +13,13 @@
 .slider .slide * {
     color: rosybrown;
 }
+footer_content {
+  display:block;
+  position: absolute; 
+  bottom:0;
+}
+
+.partnerLogos {
+  display:flex;
+  flex-direction:row;
+}

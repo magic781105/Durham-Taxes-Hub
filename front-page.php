@@ -47,7 +47,7 @@ get_header();
 			}
 		?>
 		<footer>
-			<div class="footerContent" style="display:block; position:fixed; bottom:0;">
+			<div class="footerContent">
 				<?php
 					$footer_header = $footer['heading'];
 					$footer_paragraph = $footer['paragraph'];
@@ -66,7 +66,7 @@ get_header();
 						<?php echo $footer_paragraph; ?>
 					</p>
 					<a <?php echo $footer_link; ?> </a>
-					<div class="partnerLogos" style="display:flex; flex-direction:row;">
+					<div class="partnerLogos">
 						<img src='<?php echo $footer_partner_one ?>' />
 						<img src='<?php echo $footer_partner_two ?>' />
 						<img src='<?php echo $footer_partner_three ?>' />
