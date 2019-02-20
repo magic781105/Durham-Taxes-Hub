@@ -20,6 +20,7 @@ get_header();
 
 		<?php
 			// does get field exist
+			/*
 			if (function_exists('get_field')){
 				$featured_slider = get_field('featured_slider');
 				$testmonials = get_field('testmonials');
@@ -75,6 +76,47 @@ get_header();
 						</div>
 					
 				</div>
+				<?php
+			}
+			*/
+
+			if (function_exists('get_field')){
+				$how_to_qualify = get_field('how_to_qualify');
+				?>
+				
+				<section  class="qualification">
+					<h1>How to Qualify</h1>
+					<div class="qualification-buttons">
+						<ul id="qualificationBubble">
+						<?php
+						// var_dump($featured_slider);
+						foreach($how_to_qualify as $section) {
+							$button = $section['button'];
+							?>
+
+							<li class="qualification-btn"><?php echo $button?></li>
+
+							<?php
+						}
+						?>
+						</ul>
+					</div>
+					<div class="qualification-contents">
+						<?php
+						$idCounter = 1;
+						foreach($how_to_qualify as $content) {
+							$content = $content['content'];
+							$id = "qualification-" . $idCounter;
+							?>
+
+							<div id="<?php echo $id?>" class="qualification-div"><?php echo $content?></div>
+
+							<?php
+							$idCounter++;
+						}
+						?>
+					</div>
+				</section>
 				<?php
 			}
 		?>

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .slider .slide {
     min-height: 600px;
     display: flex !important;
@@ -16,6 +20,64 @@
 .slider .slide * {
     color: rosybrown;
 }
+
+
+/* === How Can I Qualify Section === */
+.qualification {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('./../img/qualifybg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3em;
+}
+
+.qualification h1 {
+    flex: 1 100vw;
+    text-align: center;
+}
+
+.qualification-buttons {
+    flex: 0 25vw;
+    margin-left: 5em;
+}
+
+.qualification-buttons ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: warp;
+}
+
+.qualification-buttons li {
+    background: #0a4679;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    display: inline-block;
+    align-self: flex-start;
+    padding: .3em;
+    border-radius: 20px;
+}
+
+.qualification-contents {
+    flex: 0 646px;
+    background: #fff;
+    background-image: url('./../img/border.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding: 2em;
+}
+
+#qualification-2, #qualification-3 {
+    display: none;
+}
+
+
 
 
 
@@ -88,5 +150,6 @@
     }
     
 }
+
 
 
