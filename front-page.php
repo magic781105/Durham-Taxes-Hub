@@ -22,8 +22,9 @@ get_header();
 			// does get field exist
 			if (function_exists('get_field')){
 				$featured_slider = get_field('featured_slider');
+				$footer = get_field('footer');
 				?>
-				
+
 				<div class="slider">
 					<?php
 					// var_dump($featured_slider);
@@ -45,7 +46,34 @@ get_header();
 				<?php
 			}
 		?>
-
+		<footer>
+			<div class="footerContent" style="display:block; position:fixed; bottom:0;">
+				<?php
+					$footer_header = $footer['heading'];
+					$footer_paragraph = $footer['paragraph'];
+					$footer_link = $footer['link'];
+					$footer_partner_one = $footer['partner_logo_one'];
+					$footer_partner_two = $footer['partner_logo_two'];
+					$footer_partner_three = $footer['partner_logo_three'];
+					$footer_partner_four = $footer['partner_logo_four'];
+					// var_dump($footer_header);
+					// var_dump($footer_content);
+					?>
+					<p class="footerHeader">
+						<?php echo $footer_header; ?>
+					</p>
+					<p class="footerParagraph">
+						<?php echo $footer_paragraph; ?>
+					</p>
+					<a <?php echo $footer_link; ?> </a>
+					<div class="partnerLogos" style="display:flex; flex-direction:row;">
+						<img src='<?php echo $footer_partner_one ?>' />
+						<img src='<?php echo $footer_partner_two ?>' />
+						<img src='<?php echo $footer_partner_three ?>' />
+						<img src='<?php echo $footer_partner_four ?>' />
+					</div>
+			</div>
+		</footer>
 		<?php
 		while ( have_posts() ) :
 			the_post();
