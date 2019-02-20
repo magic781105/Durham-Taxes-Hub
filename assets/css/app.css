@@ -12,11 +12,16 @@
     background-position: center;
     background-position: center;
     background-repeat: no-repeat;
-   
+
 }
-.slider, .slick-initialized, .slick-slider, .slick-dotted {
+
+.slider,
+.slick-initialized,
+.slick-slider,
+.slick-dotted {
     height: auto !important;
 }
+
 .slider .slide * {
     color: rosybrown;
 }
@@ -74,7 +79,8 @@
     padding: 2em;
 }
 
-#qualification-2, #qualification-3 {
+#qualification-2,
+#qualification-3 {
     display: none;
 }
 
@@ -89,7 +95,8 @@
     text-align: center;
     font-size: 50px;
 }
-.testmonial{
+
+.testmonial {
     display: block;
     /* height: 100vh; */
     height: auto;
@@ -98,9 +105,10 @@
     /* background-color: rgb(83, 182, 240); */
     background-image: url("../img/testimonialbg.svg");
     background-repeat: no-repeat;
-    
+
 }
-#allTestmonial{
+
+#allTestmonial {
 
     display: flex;
     flex-flow: row wrap;
@@ -108,8 +116,9 @@
     align-content: center;
 
 }
-.testmonialGroup {    
-    margin-top: 140px;   
+
+.testmonialGroup {
+    margin-top: 140px;
     /* border: 2px solid black; */
     display: inline-block;
     position: relative;
@@ -120,7 +129,7 @@
 
 }
 
-.testmonialImage{
+.testmonialImage {
     width: 100px;
     height: 100px;
     background-size: cover;
@@ -131,6 +140,7 @@
     transform: translate(-50%, -50%);
     border: 2px solid black;
 }
+
 .testmonialContent {
     /* margin-top: 30px; */
     padding: 20px;
@@ -138,29 +148,47 @@
     width: 350px;
     height: 152.5px;
 }
-.testmonialName:before{
+
+.testmonialName:before {
     content: "- ";
 }
+
 .testmonialName {
     float: right;
-    padding:20px;
+    padding: 20px;
 }
+
 @media only screen and (max-width: 800px) {
-    .testmonial{
+    .testmonial {
         background-size: cover;
     }
-    
+
 }
 
 
 /* === footer section === */
+footer {
+    /* height: 100vh; */
+}
 .footer_content {
-  display:block;
-  position: absolute; 
-  bottom:0;
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+
+.footerHeader {
+    height: 150px;
+    padding-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.footerParagraph {
+    padding: 0 200px;
+    text-align: center;
 }
 
 .partnerLogos {
-  display:flex;
-  flex-direction:row;
+    display: flex;
+    flex-direction: row;
 }

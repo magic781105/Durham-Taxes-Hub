@@ -33,8 +33,9 @@ get_header();
       
         
 				
-				<div class="slider">
+				<!-- <div class="slider"> -->
 					<?php
+					/*
 					// var_dump($featured_slider);
 					foreach($featured_slider as $featured_slide) {
 						$header = $featured_slide['heading'];
@@ -49,8 +50,10 @@ get_header();
 						</div>
 						<?php
 					}
+					*/
 					?>
-				</div>
+				<!-- </div> -->
+				
 
 				<section  class="qualification">
 					<h1>How to Qualify</h1>
@@ -156,6 +159,8 @@ get_header();
 
 		
 		<?php
+
+		/*
 		while ( have_posts() ) :
 			the_post();
 
@@ -167,6 +172,8 @@ get_header();
 			endif;
 
 		endwhile; // End of the loop.
+
+		*/
 		?>
 
 		</main><!-- #main -->
@@ -174,4 +181,4 @@ get_header();
 
 <?php
 // get_sidebar();
-get_footer();
+// get_footer();
