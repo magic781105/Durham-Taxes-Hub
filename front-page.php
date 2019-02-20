@@ -20,12 +20,22 @@ get_header();
 
 		<?php
 			// does get field exist
-			/*
+			
 			if (function_exists('get_field')){
-				$featured_slider = get_field('featured_slider');
-				$testmonials = get_field('testmonials');
-				?>
 				
+        $featured_slider = get_field('featured_slider');
+
+				
+
+				$testmonials = get_field('testmonials');
+        
+        $how_to_qualify = get_field('how_to_qualify');
+        
+        $footer = get_field('footer');
+
+				?>
+      
+        /*
 				<div class="slider">
 					<?php
 					// var_dump($featured_slider);
@@ -43,7 +53,9 @@ get_header();
 						<?php
 					}
 					?>
-				</div>
+				</div>      
+        */
+      
 				<div class="testmonial">
 					<?php 
 						$testmonial_header = $testmonials["header"];						
@@ -53,9 +65,9 @@ get_header();
 						<div id="allTestmonial">
 						<?php 
 
-						$i = 0;
+						$testimonialSubEle = 0;
 						foreach($testmonials as $testmonial){
-							if($i > 0){
+							if($testimonialSubEle > 0){
 							$testmonial_img = $testmonial['image'];
 							$testmonial_content = $testmonial['content'];
 							$testmonial_name = $testmonial['name'];
@@ -70,21 +82,13 @@ get_header();
 							
 							<?php	
 							}
-							$i++;						
+							$testimonialSubEle++;						
 						}
 						?>
 						</div>
 					
 				</div>
-				<?php
-			}
-			*/
-
-			if (function_exists('get_field')){
-				$how_to_qualify = get_field('how_to_qualify');
-				?>
-				
-				<section  class="qualification">
+        <section  class="qualification">
 					<h1>How to Qualify</h1>
 					<div class="qualification-buttons">
 						<ul id="qualificationBubble">
@@ -117,10 +121,42 @@ get_header();
 						?>
 					</div>
 				</section>
+      
+        
+        <footer>
+          <div class="footerContent">
+            <?php
+              $footer_header = $footer['heading'];
+              $footer_paragraph = $footer['paragraph'];
+              $footer_link = $footer['link'];
+              $footer_partner_one = $footer['partner_logo_one'];
+              $footer_partner_two = $footer['partner_logo_two'];
+              $footer_partner_three = $footer['partner_logo_three'];
+              $footer_partner_four = $footer['partner_logo_four'];
+              // var_dump($footer_header);
+              // var_dump($footer_content);
+              ?>
+              <p class="footerHeader">
+                <?php echo $footer_header; ?>
+              </p>
+              <p class="footerParagraph">
+                <?php echo $footer_paragraph; ?>
+              </p>
+              <a <?php echo $footer_link; ?> </a>
+              <div class="partnerLogos">
+                <img src='<?php echo $footer_partner_one ?>' />
+                <img src='<?php echo $footer_partner_two ?>' />
+                <img src='<?php echo $footer_partner_three ?>' />
+                <img src='<?php echo $footer_partner_four ?>' />
+              </div>
+          </div>
+        </footer>
+      
 				<?php
 			}
+			
 		?>
-
+		
 		<?php
 		while ( have_posts() ) :
 			the_post();
