@@ -86,22 +86,23 @@
 
 /* Volunteers section */
 
-#primary #volunteersMain {
+
+
+
+
+main .volunteers {
     background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/volunteerbg.png');
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-#volunteersMain {
-    padding: 20px;
-}
-
-main .volunteers {
     text-align: center;
+
+
+}
+
+.volunteers .grid-container {
     width: 100%;
     max-width: 78rem;
-    margin: 10px auto;
-
+    margin: 15px auto;
 }
 
 .volunteers .volunteerContainer .volunteerTextSection {
@@ -148,23 +149,25 @@ main .volunteers {
 
 /*Empowerment page*/
 
-#empowermentMain {
+
+
+main .empowerment {
     background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/empowermentbg.png');
     background-repeat: no-repeat;
-    padding: 20px;
+
     background-position: right;
     background-size: contain;
 
 
+
 }
 
-main .empowerment {
-    margin: 10px auto;
+.empowerment .grid-container {
+    margin: 15px auto;
     text-align: center;
     max-width: 78rem;
     width: 100%;
     padding: 20px;
-
 }
 
 main .empowerment h1 {
@@ -224,7 +227,7 @@ main .empowerment h1 {
     font-size: 20px;
 }
 
-#empowermentMain .empowerment .empowermentContainer .listContainBg {
+.empowerment .empowermentContainer .listContainBg {
     margin-left: 3rem;
     background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/boxout.svg');
     background-repeat: no-repeat;

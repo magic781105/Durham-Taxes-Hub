@@ -19,17 +19,18 @@ get_header();
 
 
     <!--    volunteers main-->
-    <main id="volunteersMain" class="site-main">
+    <main id="main" class="site-main">
 
         <?php
 			// does get field exist
 			if (function_exists('get_field')){
 				
 				$volunteers = get_field('volunteers');
+                $empowerment = get_field('financialempowerment');
 		?>
 
         <!--volunteers section-->
-        <section class="volunteers grid-container">
+        <section class="volunteers ">
             <?php 
 						$volunteer_header = $volunteers["header"];
 						$volunteer_volunteertext1 = $volunteers["volunteertext1"];
@@ -37,59 +38,48 @@ get_header();
 						$volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];		
 						$volunteer_volunteertext2 = $volunteers["volunteertext2"];						
 						?>
+            <div class="grid-container">
+                <h1 class="volunteerHeader">
+                    <?php echo $volunteer_header; ?>
+                </h1>
+                <div class="volunteerContainer grid-x grid-margin-x">
 
-            <h1 class="volunteerHeader">
-                <?php echo $volunteer_header; ?>
-            </h1>
-            <div class="volunteerContainer grid-x grid-margin-x">
+                    <div class="volunteerTextSection cell large-4">
+                        <h1>How to become a volunteer </h1>
+                        <p class="volunteerText1">
+                            <?php echo $volunteer_volunteertext1; ?>
+                        </p>
+                        <a>Click here >></a>
+                    </div>
 
-                <div class="volunteerTextSection cell large-4">
-                    <h1>How to become a volunteer </h1>
-                    <p class="volunteerText1">
-                        <?php echo $volunteer_volunteertext1; ?>
-                    </p>
-                    <a>Click here >></a>
+                    <div class="volunteerVideo cell small-8 medium-6 large-4">
+
+                        <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
+
+                        <p class="volunteerVideoDesc">
+                            <?php echo $volunteer_volunteerVideoDesc;?>
+                        </p>
+                    </div>
+
+                    <div class="volunteerTextSection cell large-4">
+                        <h1>How to become a volunteer </h1>
+                        <p class="volunteerText1">
+                            <?php echo $volunteer_volunteertext1; ?>
+                        </p>
+                        <a>Click here >></a>
+                    </div>
                 </div>
 
-                <div class="volunteerVideo cell small-8 medium-6 large-4">
-
-                    <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
-
-                    <p class="volunteerVideoDesc">
-                        <?php echo $volunteer_volunteerVideoDesc;?>
-                    </p>
-                </div>
-
-                <div class="volunteerTextSection cell large-4">
-                    <h1>How to become a volunteer </h1>
-                    <p class="volunteerText1">
-                        <?php echo $volunteer_volunteertext1; ?>
-                    </p>
-                    <a>Click here >></a>
-                </div>
             </div>
 
 
-            <?php
-			}
-		?>
-
 
         </section><!-- #primary -->
-    </main><!-- #main volunteer end-->
 
-    <!--    main for empowerment-->
-    <main id="empowermentMain" class="site-main">
 
-        <?php
-			// does get field exist
-			if (function_exists('get_field')){
-				
-				$empowerment = get_field('financialempowerment');
-		?>
 
         <!--section for empowerment-->
-        <section class="empowerment grid-container">
+        <section class="empowerment">
             <?php 
 						$empowerment_header = $empowerment["header"];
 						$empowerment_listItems = $empowerment["empowermentlist"];
@@ -102,70 +92,72 @@ get_header();
 						$empowerment_listitem5 = $empowerment_listItems["listitem5"];
 										
 						?>
+            <div class="grid-container">
+                <h1 class="empowermentHeader">
+                    <?php echo $empowerment_header; ?>
+                </h1>
+                <div class="empowermentContainer grid-x grid-margin-x">
 
-            <h1 class="empowermentHeader">
-                <?php echo $empowerment_header; ?>
-            </h1>
-            <div class="empowermentContainer grid-x grid-margin-x">
 
+                    <div class="listContain cell small-12 medium-8 large-3">
+                        <div class="orderedList">
+                            <div class="listItem">
+                                <p>
+                                    <?php echo $empowerment_listitem1; ?>
+                                </p>
+                            </div>
 
-                <div class="listContain cell small-12 medium-8 large-3">
-                    <div class="orderedList">
-                        <div class="listItem">
-                            <p>
-                                <?php echo $empowerment_listitem1; ?>
-                            </p>
+                            <div class="listItem">
+                                <p>
+                                    <?php echo $empowerment_listitem2; ?>
+                                </p>
+                            </div>
+
+                            <div class="listItem">
+                                <p>
+                                    <?php echo $empowerment_listitem3; ?>
+                                </p>
+                            </div>
+
+                            <div class="listItem">
+                                <p>
+                                    <?php echo $empowerment_listitem4; ?>
+                                </p>
+                            </div>
+
+                            <div class="listItem">
+                                <p>
+                                    <?php echo $empowerment_listitem5; ?>
+                                </p>
+                            </div>
                         </div>
-
-                        <div class="listItem">
+                    </div>
+                    <div class="listContainBg cell small-12 medium-8 large-8">
+                        <div class="listResult ">
+                            <h2>Overview</h2>
                             <p>
-                                <?php echo $empowerment_listitem2; ?>
+                                <?php echo $empowerment_text1; ?>
                             </p>
-                        </div>
-
-                        <div class="listItem">
                             <p>
-                                <?php echo $empowerment_listitem3; ?>
-                            </p>
-                        </div>
-
-                        <div class="listItem">
-                            <p>
-                                <?php echo $empowerment_listitem4; ?>
-                            </p>
-                        </div>
-
-                        <div class="listItem">
-                            <p>
-                                <?php echo $empowerment_listitem5; ?>
+                                <?php echo $empowerment_text2; ?>
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="listContainBg cell small-12 medium-8 large-8">
-                    <div class="listResult ">
-                        <h2>Overview</h2>
-                        <p>
-                            <?php echo $empowerment_text1; ?>
-                        </p>
-                        <p>
-                            <?php echo $empowerment_text2; ?>
-                        </p>
-                    </div>
-                </div>
 
+
+
+                </div>
 
 
             </div>
 
-
             <?php
-			}
-		?>
-
+            
+            }
+            ?>
 
         </section><!-- #primary -->
-    </main><!-- #main empowerment end -->
+    </main><!-- #main-->
 
 </div>
 
