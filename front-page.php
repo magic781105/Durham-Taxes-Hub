@@ -23,6 +23,7 @@ get_header();
 			/*
 			if (function_exists('get_field')){
 				$featured_slider = get_field('featured_slider');
+				$testmonials = get_field('testmonials');
 				?>
 				
 				<div class="slider">
@@ -36,12 +37,44 @@ get_header();
 						?>
 
 						<div class="slide" style="background-image:url(<?php echo $image['url'];?>);">
-							<h1><?php echo $header ?></h1>
-							<p><?php echo $content ?></p>
+							<h1><?php echo $header; ?></h1>
+							<p><?php echo $content; ?></p>
 						</div>
 						<?php
 					}
 					?>
+				</div>
+				<div class="testmonial">
+					<?php 
+						$testmonial_header = $testmonials["header"];						
+						?>
+						
+						<p class="sectionHeader"><?php echo $testmonial_header; ?></p>
+						<div id="allTestmonial">
+						<?php 
+
+						$i = 0;
+						foreach($testmonials as $testmonial){
+							if($i > 0){
+							$testmonial_img = $testmonial['image'];
+							$testmonial_content = $testmonial['content'];
+							$testmonial_name = $testmonial['name'];
+							// var_dump($testmonial_img);						
+							?>
+							
+							<div class="testmonialGroup">								
+								<div class="testmonialImage" style="background-image:url(<?php echo $testmonial_img['url'];?>);"></div>
+								<div class="testmonialContent"><?php echo $testmonial_content; ?></div>
+								<div class="testmonialName"><?php echo $testmonial_name; ?></div>
+							</div>
+							
+							<?php	
+							}
+							$i++;						
+						}
+						?>
+						</div>
+					
 				</div>
 				<?php
 			}
@@ -106,5 +139,5 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
