@@ -17,6 +17,8 @@ get_header();
 
 <div id="primary" class="content-area">
 
+
+    <!--    volunteers main-->
     <main id="volunteersMain" class="site-main">
 
         <?php
@@ -26,7 +28,7 @@ get_header();
 				$volunteers = get_field('volunteers');
 		?>
 
-
+        <!--volunteers section-->
         <section class="volunteers grid-container">
             <?php 
 						$volunteer_header = $volunteers["header"];
@@ -72,22 +74,23 @@ get_header();
 			}
 		?>
 
-          
+
         </section><!-- #primary -->
-    </main><!-- #main -->
+    </main><!-- #main volunteer end-->
 
-	<main id="empowermentMain" class="site-main">
+    <!--    main for empowerment-->
+    <main id="empowermentMain" class="site-main">
 
-		<?php
+        <?php
 			// does get field exist
 			if (function_exists('get_field')){
 				
 				$empowerment = get_field('financialempowerment');
 		?>
 
-
-		<section class="empowerment grid-container">
-			<?php 
+        <!--section for empowerment-->
+        <section class="empowerment grid-container">
+            <?php 
 						$empowerment_header = $empowerment["header"];
 						$empowerment_listItems = $empowerment["empowermentlist"];
 						$empowerment_text1 = $empowerment["empowermenttext1"];
@@ -100,55 +103,69 @@ get_header();
 										
 						?>
 
-			<h1 class="empowermentHeader">
-				<?php echo $empowerment_header; ?>
-			</h1>
-			<div class="empowermentContainer grid-x grid-margin-x">
-				
-				
-				<div class="listContain cell small-12 medium-8 large-3">
-					<ol>
-						<li class ="listItem">
-							<?php echo $empowerment_listitem1; ?>
-						</li>
-
-						<li class ="listItem">
-							<?php echo $empowerment_listitem2; ?>
-						</li>
-
-						<li class ="listItem">
-							<?php echo $empowerment_listitem3; ?>
-						</li>
-
-						<li class ="listItem">
-							<?php echo $empowerment_listitem4; ?>
-						</li>
-
-						<li class ="listItem">
-							<?php echo $empowerment_listitem5; ?>
-						</li>
-					</ul>
-				</div>
-				<div class="listContainBg cell small-12 medium-8 large-7">
-					<div class="listResult ">
-						<h2>Overview</h2>
-						<p><?php echo $empowerment_text1; ?></p>
-						<p><?php echo $empowerment_text2; ?></p>
-					</div>
-				</div>
-
-			
-				
-			</div>
+            <h1 class="empowermentHeader">
+                <?php echo $empowerment_header; ?>
+            </h1>
+            <div class="empowermentContainer grid-x grid-margin-x">
 
 
-			<?php
+                <div class="listContain cell small-12 medium-8 large-3">
+                    <div class="orderedList">
+                        <div class="listItem">
+                            <p>
+                                <?php echo $empowerment_listitem1; ?>
+                            </p>
+                        </div>
+
+                        <div class="listItem">
+                            <p>
+                                <?php echo $empowerment_listitem2; ?>
+                            </p>
+                        </div>
+
+                        <div class="listItem">
+                            <p>
+                                <?php echo $empowerment_listitem3; ?>
+                            </p>
+                        </div>
+
+                        <div class="listItem">
+                            <p>
+                                <?php echo $empowerment_listitem4; ?>
+                            </p>
+                        </div>
+
+                        <div class="listItem">
+                            <p>
+                                <?php echo $empowerment_listitem5; ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="listContainBg cell small-12 medium-8 large-8">
+                    <div class="listResult ">
+                        <h2>Overview</h2>
+                        <p>
+                            <?php echo $empowerment_text1; ?>
+                        </p>
+                        <p>
+                            <?php echo $empowerment_text2; ?>
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <?php
 			}
 		?>
 
-			
-	</section><!-- #primary -->
-</main><!-- #main -->
+
+        </section><!-- #primary -->
+    </main><!-- #main empowerment end -->
 
 </div>
 

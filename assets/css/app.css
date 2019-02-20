@@ -8,11 +8,16 @@
     background-position: center;
     background-position: center;
     background-repeat: no-repeat;
-   
+
 }
-.slider, .slick-initialized, .slick-slider, .slick-dotted {
+
+.slider,
+.slick-initialized,
+.slick-slider,
+.slick-dotted {
     height: auto !important;
 }
+
 .slider .slide * {
     color: rosybrown;
 }
@@ -26,13 +31,15 @@
     text-align: center;
     font-size: 50px;
 }
-.testmonial{
+
+.testmonial {
     display: block;
     height: 100vh;
     background-color: rgb(83, 182, 240);
 
 }
-#allTestmonial{
+
+#allTestmonial {
 
     display: flex;
     flex-flow: row wrap;
@@ -40,14 +47,15 @@
     align-content: center;
 
 }
-.testmonialGroup {    
-    margin-top: 140px;   
+
+.testmonialGroup {
+    margin-top: 140px;
     border: 2px solid black;
     display: inline-block;
     position: relative;
 }
 
-.testmonialImage{
+.testmonialImage {
     width: 100px;
     height: 100px;
     background-size: cover;
@@ -58,16 +66,168 @@
     transform: translate(-50%, -50%);
     border: 2px solid black;
 }
+
 .testmonialContent {
     /* margin-top: 30px; */
     padding: 20px;
     padding-bottom: 0;
     width: 350px;
 }
-.testmonialName:before{
+
+.testmonialName:before {
     content: "- ";
 }
+
 .testmonialName {
     float: right;
-    padding:20px;
+    padding: 20px;
+}
+
+
+/* Volunteers section */
+
+#primary #volunteersMain {
+    background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/volunteerbg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#volunteersMain {
+    padding: 20px;
+}
+
+main .volunteers {
+    text-align: center;
+    width: 100%;
+    max-width: 78rem;
+    margin: 10px auto;
+
+}
+
+.volunteers .volunteerContainer .volunteerTextSection {
+    background-color: #d6e7ee;
+    padding: 30px;
+    border-radius: 40px;
+    padding-bottom: 15px;
+}
+
+.volunteers .volunteerContainer .volunteerTextSection h1 {
+    font-size: 24px;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.volunteers .volunteerContainer .volunteerTextSection p {
+    font-size: 23px;
+    margin-bottom: 60px;
+
+}
+
+.volunteers .volunteerContainer .volunteerTextSection a {
+    margin-top: 10px;
+
+
+}
+
+.volunteers .volunteerContainer .volunteerVideo {
+    margin-top: 220px;
+
+}
+
+.volunteers .volunteerContainer .volunteerVideo p {
+    margin-top: 50px;
+    font-size: 19px;
+}
+
+.volunteerVideo .volunteerVideoDesc {
+    background-color: #021d49;
+    color: white;
+}
+
+
+/*Empowerment page*/
+
+#empowermentMain {
+    background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/empowermentbg.png');
+    background-repeat: no-repeat;
+    padding: 20px;
+    background-position: right;
+    background-size: contain;
+
+
+}
+
+main .empowerment {
+    margin: 10px auto;
+    text-align: center;
+    max-width: 78rem;
+    width: 100%;
+    padding: 20px;
+
+}
+
+main .empowerment h1 {
+    margin: 30px 10px;
+}
+
+.empowermentContainer {
+    margin-top: 70px;
+}
+
+.empowerment .listContain {
+    background-color: #99cadc;
+    border-radius: 26px;
+
+
+}
+
+
+.empowerment .listContain .listItem {
+
+    width: 335px;
+    padding-top: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.empowerment .listContain .listItem p {
+    font-size: 21px;
+    width: 255px;
+    padding: 10px 40px;
+    text-align: left;
+    margin: 5px;
+    margin-bottom: 0px;
+
+}
+
+.empowerment .listContain .listItem:last-child {
+    margin-bottom: 0px;
+}
+
+
+
+.empowerment .listResult {
+    background-color: #99cadc;
+    padding: 36px 20px;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 30px;
+    margin: 18px 13px;
+
+
+
+}
+
+.empowerment .listResult p {
+    font-size: 20px;
+}
+
+#empowermentMain .empowerment .empowermentContainer .listContainBg {
+    margin-left: 3rem;
+    background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/boxout.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
 }
