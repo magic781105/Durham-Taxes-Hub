@@ -19,13 +19,12 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php
-			// does get field exist
-			/*
-			if (function_exists('get_field')){
+			// does get field exist	
+			/*	
+			if(function_exists('get_field')){
 				$featured_slider = get_field('featured_slider');
-				$testmonials = get_field('testmonials');
+
 				?>
-				
 				<div class="slider">
 					<?php
 					// var_dump($featured_slider);
@@ -44,42 +43,13 @@ get_header();
 					}
 					?>
 				</div>
-				<div class="testmonial">
-					<?php 
-						$testmonial_header = $testmonials["header"];						
-						?>
-						
-						<p class="sectionHeader"><?php echo $testmonial_header; ?></p>
-						<div id="allTestmonial">
-						<?php 
-
-						$i = 0;
-						foreach($testmonials as $testmonial){
-							if($i > 0){
-							$testmonial_img = $testmonial['image'];
-							$testmonial_content = $testmonial['content'];
-							$testmonial_name = $testmonial['name'];
-							// var_dump($testmonial_img);						
-							?>
-							
-							<div class="testmonialGroup">								
-								<div class="testmonialImage" style="background-image:url(<?php echo $testmonial_img['url'];?>);"></div>
-								<div class="testmonialContent"><?php echo $testmonial_content; ?></div>
-								<div class="testmonialName"><?php echo $testmonial_name; ?></div>
-							</div>
-							
-							<?php	
-							}
-							$i++;						
-						}
-						?>
-						</div>
-					
-				</div>
 				<?php
 			}
+
 			*/
 
+
+			// how am I qualified section
 			if (function_exists('get_field')){
 				$how_to_qualify = get_field('how_to_qualify');
 				?>
@@ -119,6 +89,50 @@ get_header();
 				</section>
 				<?php
 			}
+
+			// testimonial section
+			if (function_exists('get_field')){
+				// $featured_slider = get_field('featured_slider');
+				$testmonials = get_field('testmonials');
+				?>
+				
+				
+				<div class="testmonial">
+					<?php 
+						$testmonial_header = $testmonials["header"];						
+						?>
+						
+						<p class="sectionHeader"><?php echo $testmonial_header; ?></p>
+						<div id="allTestmonial">
+						<?php 
+
+						$i = 0;
+						foreach($testmonials as $testmonial){
+							if($i > 0){
+							$testmonial_img = $testmonial['image'];
+							$testmonial_content = $testmonial['content'];
+							$testmonial_name = $testmonial['name'];
+							// var_dump($testmonial_img);						
+							?>
+							
+							<div class="testmonialGroup">								
+								<div class="testmonialImage" style="background-image:url(<?php echo $testmonial_img['url'];?>);"></div>
+								<div class="testmonialContent"><?php echo $testmonial_content; ?></div>
+								<div class="testmonialName"><?php echo $testmonial_name; ?></div>
+							</div>
+							
+							<?php	
+							}
+							$i++;						
+						}
+						?>
+						</div>
+					
+				</div>
+				<?php
+			}
+			
+	
 		?>
 
 		<?php
