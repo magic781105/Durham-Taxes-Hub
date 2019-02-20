@@ -8,8 +8,85 @@
     background-position: center;
     background-position: center;
     background-repeat: no-repeat;
+   
 }
-
+.slider, .slick-initialized, .slick-slider, .slick-dotted {
+    height: auto !important;
+}
 .slider .slide * {
     color: rosybrown;
 }
+
+
+
+/* === testmonial section === */
+.sectionHeader {
+    height: 150px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+.testmonial{
+    display: block;
+    /* height: 100vh; */
+    height: auto;
+    overflow: auto;
+
+    /* background-color: rgb(83, 182, 240); */
+    background-image: url("../img/testimonialbg.svg");
+    background-repeat: no-repeat;
+    
+}
+#allTestmonial{
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+
+}
+.testmonialGroup {    
+    margin-top: 140px;   
+    /* border: 2px solid black; */
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    background-image: url("../img/border.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.testmonialImage{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+}
+.testmonialContent {
+    /* margin-top: 30px; */
+    padding: 20px;
+    padding-bottom: 0;
+    width: 350px;
+    height: 152.5px;
+}
+.testmonialName:before{
+    content: "- ";
+}
+.testmonialName {
+    float: right;
+    padding:20px;
+}
+@media only screen and (max-width: 800px) {
+    .testmonial{
+        background-size: cover;
+    }
+    
+}
+
+
