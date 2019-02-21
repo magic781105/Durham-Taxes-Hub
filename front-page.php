@@ -33,13 +33,14 @@ get_header();
 						$image = $featured_slide['image'];
 						//var_dump($header);
 						?>
-
-						<div class="slide" style="background-image:url(<?php echo $image['url'];?>);">
-							<h1 class="header_title"><?php echo $header ?></h1>
-							<p class="header_desc"><?php echo $content ?></p>
-							<button class="header_button">Be a Volunteer!</button>
-							<p><?php echo $table ?></p>
-						</div>
+						<section id="header_page">
+							<div class="slide" style="background-image:url(<?php echo $image['url'];?>);">
+								<h1 class="header_title"><?php echo $header ?></h1>
+								<p class="header_desc"><?php echo $content ?></p>
+								<button class="header_button">Be a Volunteer!</button>
+								<p><?php echo $table ?></p>
+							</div>
+						</section>
 						<?php
 					}
 					?>
