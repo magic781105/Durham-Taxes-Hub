@@ -35,8 +35,10 @@ get_header();
 						?>
 
 						<div class="slide" style="background-image:url(<?php echo $image['url'];?>);">
-							<h1><?php echo $header ?></h1>
-							<p><?php echo $content ?></p>
+							<h1 class="header_title"><?php echo $header ?></h1>
+							<p class="header_desc"><?php echo $content ?></p>
+							<button class="header_button">Be a Volunteer!</button>
+							<p><?php echo $table ?></p>
 						</div>
 						<?php
 					}
