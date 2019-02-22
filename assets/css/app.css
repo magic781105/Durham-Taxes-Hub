@@ -158,12 +158,151 @@
     padding: 20px;
 }
 
+
 @media only screen and (max-width: 800px) {
     .testmonial {
         background-size: cover;
     }
 
+
 }
+
+
+
+/* Volunteers section */
+main .volunteers {
+    background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/volunteerbg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+}
+
+.volunteers .grid-container {
+    width: 100%;
+    max-width: 78rem;
+    margin: 15px auto;
+}
+
+.volunteers .volunteerContainer .volunteerTextSection {
+    background-color: #d6e7ee;
+    padding: 30px;
+    border-radius: 40px;
+    padding-bottom: 15px;
+}
+
+.volunteers .volunteerContainer .volunteerTextSection h1 {
+    font-size: 24px;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.volunteers .volunteerContainer .volunteerTextSection p {
+    font-size: 23px;
+    margin-bottom: 60px;
+
+}
+
+.volunteers .volunteerContainer .volunteerTextSection a {
+    margin-top: 10px;
+
+
+}
+
+.volunteers .volunteerContainer .volunteerVideo {
+    margin-top: 220px;
+
+}
+
+.volunteers .volunteerContainer .volunteerVideo p {
+    margin-top: 50px;
+    font-size: 19px;
+}
+
+.volunteerVideo .volunteerVideoDesc {
+    background-color: #021d49;
+    color: white;
+}
+
+
+/*Empowerment page*/
+main .empowerment {
+    background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/empowermentbg.png');
+    background-repeat: no-repeat;
+
+    background-position: right;
+    background-size: contain;
+}
+
+.empowerment .grid-container {
+    margin: 15px auto;
+    text-align: center;
+    max-width: 78rem;
+    width: 100%;
+    padding: 20px;
+}
+
+main .empowerment h1 {
+    margin: 30px 10px;
+}
+
+.empowermentContainer {
+    margin-top: 70px;
+}
+
+.empowerment .listContain {
+    background-color: #99cadc;
+    border-radius: 26px;
+
+
+}
+
+
+.empowerment .listContain .listItem {
+
+    width: 335px;
+    padding-top: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.empowerment .listContain .listItem p {
+    font-size: 21px;
+    width: 255px;
+    padding: 10px 40px;
+    text-align: left;
+    margin: 5px;
+    margin-bottom: 0px;
+
+}
+
+.empowerment .listContain .listItem:last-child {
+    margin-bottom: 0px;
+}
+
+
+
+.empowerment .listResult {
+    background-color: #99cadc;
+    padding: 36px 20px;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 30px;
+    margin: 18px 13px;
+}
+
+.empowerment .listResult p {
+    font-size: 20px;
+}
+
+.empowerment .empowermentContainer .listContainBg {
+    margin-left: 3rem;
+    background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/boxout.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+
 
 
 /* === footer section === */
