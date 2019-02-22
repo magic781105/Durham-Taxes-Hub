@@ -90,7 +90,7 @@ get_header();
 				</section>
 				
 
-				<div class="testmonial">
+				<section class="testmonial">
 					<?php 
 						$testmonial_header = $testmonials["header"];						
 						?>
@@ -99,9 +99,9 @@ get_header();
 						<div id="allTestmonial">
 						<?php 
 
-						$i = 0;
+						$testimonialItem = 0;
 						foreach($testmonials as $testmonial){
-							if($i > 0){
+							if($testimonialItem > 0){
 							$testmonial_img = $testmonial['image'];
 							$testmonial_content = $testmonial['content'];
 							$testmonial_name = $testmonial['name'];
@@ -116,12 +116,12 @@ get_header();
 							
 							<?php	
 							}
-							$i++;						
+							$testimonialItem++;						
 						}
 						?>
 						</div>
 					
-				</div>
+				</section>
 				<footer>
 					<div class="footerContent">
 						<?php
