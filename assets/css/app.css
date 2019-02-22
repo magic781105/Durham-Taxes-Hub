@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .slider .slide {
     min-height: 600px;
     display: flex !important;
@@ -24,6 +28,66 @@
 
 
 
+/* === How Can I Qualify Section === */
+.qualification {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('./../img/qualifybg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3em;
+}
+
+.qualification h1 {
+    flex: 1 100vw;
+    text-align: center;
+}
+
+.qualification-buttons {
+    flex: 0 25vw;
+    margin-left: 5em;
+}
+
+.qualification-buttons ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: warp;
+}
+
+.qualification-buttons li {
+    background: #0a4679;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    display: inline-block;
+    align-self: flex-start;
+    padding: .3em;
+    border-radius: 20px;
+}
+
+.qualification-contents {
+    flex: 0 646px;
+    background: #fff;
+    background-image: url('./../img/border.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding: 2em;
+}
+
+#qualification-2,
+#qualification-3 {
+    display: none;
+}
+
+
+
+
+
 /* === testmonial section === */
 .sectionHeader {
     height: 150px;
@@ -34,8 +98,13 @@
 
 .testmonial {
     display: block;
-    height: 100vh;
-    background-color: rgb(83, 182, 240);
+    /* height: 100vh; */
+    height: auto;
+    overflow: auto;
+
+    /* background-color: rgb(83, 182, 240); */
+    background-image: url("../img/testimonialbg.svg");
+    background-repeat: no-repeat;
 
 }
 
@@ -50,9 +119,14 @@
 
 .testmonialGroup {
     margin-top: 140px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: inline-block;
     position: relative;
+    background-color: white;
+    background-image: url("../img/border.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .testmonialImage {
@@ -72,6 +146,7 @@
     padding: 20px;
     padding-bottom: 0;
     width: 350px;
+    height: 152.5px;
 }
 
 .testmonialName:before {
@@ -84,19 +159,22 @@
 }
 
 
+@media only screen and (max-width: 800px) {
+    .testmonial {
+        background-size: cover;
+    }
+
+
+}
+
+
+
 /* Volunteers section */
-
-
-
-
-
 main .volunteers {
     background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/volunteerbg.png');
     background-repeat: no-repeat;
     background-size: contain;
     text-align: center;
-
-
 }
 
 .volunteers .grid-container {
@@ -148,18 +226,12 @@ main .volunteers {
 
 
 /*Empowerment page*/
-
-
-
 main .empowerment {
     background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/empowermentbg.png');
     background-repeat: no-repeat;
 
     background-position: right;
     background-size: contain;
-
-
-
 }
 
 .empowerment .grid-container {
@@ -218,9 +290,6 @@ main .empowerment h1 {
     text-align: left;
     border-radius: 30px;
     margin: 18px 13px;
-
-
-
 }
 
 .empowerment .listResult p {
@@ -233,4 +302,32 @@ main .empowerment h1 {
     background-repeat: no-repeat;
     background-size: contain;
 
+
+
+
+/* === footer section === */
+footer {
+    /* height: 100vh; */
+}
+.footer_content {
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+
+.footerHeader {
+    height: 150px;
+    padding-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.footerParagraph {
+    padding: 0 200px;
+    text-align: center;
+}
+
+.partnerLogos {
+    display: flex;
+    flex-direction: row;
 }
