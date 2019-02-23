@@ -91,7 +91,7 @@
 
 
 main .volunteers {
-    background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/volunteerbg.png');
+    background-image: url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/volunteerbg.png');
     background-repeat: no-repeat;
     background-size: contain;
     text-align: center;
@@ -152,7 +152,7 @@ main .volunteers {
 
 
 main .empowerment {
-    background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/empowermentbg.png');
+    background-image: url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/empowermentbg.png');
     background-repeat: no-repeat;
 
     background-position: right;
@@ -229,7 +229,7 @@ main .empowerment h1 {
 
 .empowerment .empowermentContainer .listContainBg {
     margin-left: 3rem;
-    background-image: url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/boxout.svg');
+    background-image: url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/boxout.svg');
     background-repeat: no-repeat;
     background-size: contain;
 
