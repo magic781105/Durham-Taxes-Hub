@@ -7,8 +7,9 @@
 
         debugger;
 
+        $(".empowerment .listItem:first-child").css("background-image", "url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/menuarrow.svg')");
 
-        $(".empowerment .listContain .listItem:first-child").css("background-image", "url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/menuarrow.svg')");
+        $(".empowerment .listContain .listItem:nth-child(1)").click(function () {
 
         $(".empowerment .listContain .listItem:nth-child(1)").click(function () {
 
@@ -54,10 +55,20 @@
 
 
         });
-
+      
         // Toggle contents in qualification section by clicking the buttons
+        $('#qualificationBubble').on('click', 'li', e => {
+            let index = $($(e.target).index('li'));
+            let id = `#qualification-${index[0]}`;
+
+            $('.qualification-div').css({'display': 'none'});
+            $(id).fadeIn('slow');
+        });
+
+
 
 
     });
-
+    
 })(jQuery);
+
