@@ -2,60 +2,67 @@
 
     $(document).foundation();
 
+
     $(document).ready(function () {
 
-        $('.slider').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            adaptiveHeight: true
-        });
 
-        $(".empowerment .listItem:first-child").css("background-image", "url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/menuarrow.svg')");
+        $(".empowerment .listItem:first-child").css("background-image", "url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/menuarrow.svg')");
+
+
+
+        $(".empowerment .listContain .listItem:nth-child(1)").click(function () {
+
+            $(".listContain .listItem").css("background-image", "none");
+            $(this).css("background-image", "url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/menuarrow.svg')");
+
+
+
+        });
 
         $(".empowerment .listContain .listItem:nth-child(2)").click(function () {
 
             $(".listContain .listItem").css("background-image", "none");
-            $(this).css("background-image", "url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/middlearrow.svg')");
+            $(this).css("background-image", "url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/middlearrow.svg')");
 
 
 
         });
 
-        $(".empowermentMain .listContain .listItem:nth-child(3)").click(function () {
+        $(".empowerment .listContain .listItem:nth-child(3)").click(function () {
 
             $(".listContain .listItem").css("background-image", "none");
-            $(this).css("background-image", "url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/middleArrow.svg')");
+            $(this).css("background-image", "url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/middlearrow.svg')");
 
 
 
         });
 
-        $(".empowermentMain .listContain .listItem:nth-child(4)").click(function () {
+        $(".empowerment .listContain .listItem:nth-child(4)").click(function () {
 
             $(".listContain .listItem").css("background-image", "none");
-            $(this).css("background-image", "url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/middleArrow.svg')");
+            $(this).css("background-image", "url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/middleArrow.svg')");
 
 
 
         });
 
-        $(".empowermentMain .listContain .listItem:last-child").click(function () {
+        $(".empowerment .listContain .listItem:last-child").click(function () {
 
             $(".listContain .listItem").css("background-image", "none");
-            $(this).css("background-image", "url('http://durhamtaxeshub.local/wp-content/uploads/2019/02/bottomArrow.svg')");
+            $(this).css("background-image", "url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/bottomArrow.svg')");
 
 
 
         });
-      
+
         // Toggle contents in qualification section by clicking the buttons
         $('#qualificationBubble').on('click', 'li', e => {
             let index = $($(e.target).index('li'));
             let id = `#qualification-${index[0]}`;
 
-            $('.qualification-div').css({'display': 'none'});
+            $('.qualification-div').css({
+                'display': 'none'
+            });
             $(id).fadeIn('slow');
         });
 
@@ -63,6 +70,5 @@
 
 
     });
-    
-})(jQuery);
 
+})(jQuery);
