@@ -171,7 +171,7 @@
 
 /* Volunteers section */
 main .volunteers {
-    background-image: url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/volunteerbg.png');
+    background-image: url('./../img/volunteerbg.png');
     background-repeat: no-repeat;
     background-size: contain;
     text-align: center;
@@ -227,7 +227,7 @@ main .volunteers {
 
 /*Empowerment page*/
 main .empowerment {
-    background-image: url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/empowermentbg.png');
+    background-image: url('./../img/empowermentbg.png');
     background-repeat: no-repeat;
 
     background-position: right;
@@ -265,6 +265,10 @@ main .empowerment h1 {
     margin-bottom: 10px;
 }
 
+.empowerment .listContain .listItem:hover {
+    cursor: pointer;
+}
+
 .empowerment .listContain .listItem p {
     font-size: 21px;
     width: 255px;
@@ -296,36 +300,37 @@ main .empowerment h1 {
 
 .empowerment .empowermentContainer .listContainBg {
     margin-left: 3rem;
-    background-image: url('http://durhamtaxeshub.local/wp-content/themes/durhamtaxeshub/assets/img/boxout.svg');
+    background-image: url('./../img/boxout.svg');
     background-repeat: no-repeat;
     background-size: contain;
 
 }
 
 
-/* === footer section === */
-footer {
-    /* height: 100vh; */
-}
-.footer_content {
-    display: block;
-    position: absolute;
-    bottom: 0;
-}
+    /* === footer section === */
+    footer {
+        /* height: 100vh; */
+    }
 
-.footerHeader {
-    height: 150px;
-    padding-top: 50px;
-    font-size: 50px;
-    text-align: center;
-}
+    .footer_content {
+        display: block;
+        position: absolute;
+        bottom: 0;
+    }
 
-.footerParagraph {
-    padding: 0 200px;
-    text-align: center;
-}
+    .footerHeader {
+        height: 150px;
+        padding-top: 50px;
+        font-size: 50px;
+        text-align: center;
+    }
 
-.partnerLogos {
-    display: flex;
-    flex-direction: row;
-}
+    .footerParagraph {
+        padding: 0 200px;
+        text-align: center;
+    }
+
+    .partnerLogos {
+        display: flex;
+        flex-direction: row;
+    }
