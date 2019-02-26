@@ -1,7 +1,16 @@
 (function($) {
 
     $(document).foundation();
+debugger;
+    $(".form #inputCheck").click(function(){
+        // debugger;
+        console.log("tes");
+       let eligibleVal=  $("#userInput").val();
 
+    });
+
+
+    /*
     $(document).ready(function(){
 
         $('.slider').slick({
@@ -12,6 +21,6 @@
             adaptiveHeight: true
         });
       
-    });
+    });*/
 
 })(jQuery);

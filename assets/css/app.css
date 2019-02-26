@@ -3,7 +3,7 @@
     src: url(../fonts/Abel-Regular.ttf);
 }
 
-.slider .slide {
+.yo .yo1 {
     min-height: 600px;
     width: auto;
     display: flex !important;
@@ -33,14 +33,65 @@
     font-weight:800;
     color: #021d49;
     text-align: left;
-    margin-left: 700px;
+    margin-left: 690px;
 }
 
 .header_button {
     background: #021d49;
     color: white;
-    font-size: 35px;
-    padding: 20px;
+    font-size: 30px;
+    padding: 15px;
     border-radius: 50px;
-    margin-left: 675px;
+    margin-left: 630px;
+    margin-top:10px;
+}
+
+.form {
+    margin-left: 700px;
+}
+.wsf-alert {
+    margin-left: 600px;
+}
+
+#wsf-1-field-7 {
+    color: #021d49;
+    background: #ffc436;
+    border:1px solid #021d49;
+    padding: 9px;
+}
+#wsf-1-field-5 {
+    border: 1px solid #021d49;
+}
+
+/*.testImage {
+    width: 100px;
+    height: 100px;
+}
+
+.tests {
+    color: #000;
+    z-index: 100;
+    font-size: 1.2em;
+}*/
+nav {
+    /* background: #021d49; */
+    display: flex;
+    flex-flow: row;
+}
+ul {
+    background: #021d49;
+}
+
+.menu_bar {
+    position: fixed;
+    top:0;
+    right: -175px;
+}
+.menu-list {
+    color: white;
+    list-style-type: none;
+}
+.menu-list img {
+    width: 50px;
+    height: auto;
 }
