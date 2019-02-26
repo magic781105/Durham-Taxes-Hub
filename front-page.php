@@ -37,7 +37,7 @@ get_header();
 			$featured_slider = get_field('featured_slider');
 			$volunteers = get_field('volunteers');
 			$empowerment = get_field('financialempowerment');
-			$testmonials = get_field('testmonials');
+			$testimonials = get_field('testimonials');
 			$how_to_qualify = get_field('how_to_qualify');
 			$footer = get_field('footer');
 
@@ -223,33 +223,33 @@ get_header();
         </section>
 
 
-        <section class="testmonial">
+        <section class="testimonial">
             <?php 
-					$testmonial_header = $testmonials["header"];						
+					$testimonial_header = $testimonials["header"];						
 					?>
 
             <p class="sectionHeader">
-                <?php echo $testmonial_header; ?>
+                <?php echo $testimonial_header; ?>
             </p>
-            <div id="allTestmonial">
+            <div id="alltestimonial">
                 <?php 
 
 					$testimonialItem = 0;
-					foreach($testmonials as $testmonial){
+					foreach($testimonials as $testimonial){
 						if($testimonialItem > 0){
-						$testmonial_img = $testmonial['image'];
-						$testmonial_content = $testmonial['content'];
-						$testmonial_name = $testmonial['name'];
-						// var_dump($testmonial_img);						
+						$testimonial_img = $testimonial['image'];
+						$testimonial_content = $testimonial['content'];
+						$testimonial_name = $testimonial['name'];
+						// var_dump($testimonial_img);						
 						?>
 
-                <div class="testmonialGroup">
-                    <div class="testmonialImage" style="background-image:url(<?php echo $testmonial_img['url'];?>);"></div>
-                    <div class="testmonialContent">
-                        <?php echo $testmonial_content; ?>
+                <div class="testimonialGroup">
+                    <div class="testimonialImage" style="background-image:url(<?php echo $testimonial_img['url'];?>);"></div>
+                    <div class="testimonialContent">
+                        <?php echo $testimonial_content; ?>
                     </div>
-                    <div class="testmonialName">
-                        <?php echo $testmonial_name; ?>
+                    <div class="testimonialName">
+                        <?php echo $testimonial_name; ?>
                     </div>
                 </div>
 

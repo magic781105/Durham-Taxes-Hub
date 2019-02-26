@@ -88,7 +88,7 @@
 
 
 
-/* === testmonial section === */
+/* === testimonial section === */
 .sectionHeader {
     height: 150px;
     padding-top: 50px;
@@ -96,7 +96,7 @@
     font-size: 50px;
 }
 
-.testmonial {
+.testimonial {
     display: block;
     /* height: 100vh; */
     height: auto;
@@ -108,7 +108,7 @@
 
 }
 
-#allTestmonial {
+#alltestimonial {
 
     display: flex;
     flex-flow: row wrap;
@@ -117,7 +117,7 @@
 
 }
 
-.testmonialGroup {
+.testimonialGroup {
     margin-top: 140px;
     /* border: 2px solid black; */
     display: inline-block;
@@ -129,7 +129,7 @@
 
 }
 
-.testmonialImage {
+.testimonialImage {
     width: 100px;
     height: 100px;
     background-size: cover;
@@ -141,7 +141,7 @@
     border: 2px solid black;
 }
 
-.testmonialContent {
+.testimonialContent {
     /* margin-top: 30px; */
     padding: 20px;
     padding-bottom: 0;
@@ -149,18 +149,18 @@
     height: 152.5px;
 }
 
-.testmonialName:before {
+.testimonialName:before {
     content: "- ";
 }
 
-.testmonialName {
+.testimonialName {
     float: right;
     padding: 20px;
 }
 
 
 @media only screen and (max-width: 800px) {
-    .testmonial {
+    .testimonial {
         background-size: cover;
     }
 

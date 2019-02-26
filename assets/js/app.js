@@ -77,12 +77,12 @@
         //end of animated scrolling
 
         // Toggle contents in qualification section by clicking the buttons
-        $('#qualificationBubble').on('click', 'li', e => {
-            let index = $($(e.target).index('li'));
+        $('#qualificationBubble').on('click', '.qualification-btn', e => {
+            let index = $($(e.target).index('.qualification-btn'));
             let id = `#qualification-${index[0]}`;
-
+            console.log("id" + id);
             $('.qualification-div').css({
-                'display': 'none'
+                display: 'none'
             });
             $(id).fadeIn('slow');
         });
