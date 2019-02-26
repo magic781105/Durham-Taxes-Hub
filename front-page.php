@@ -205,7 +205,7 @@ get_header();
             </div>
             <div class="qualification-contents">
                 <?php
-					$idCounter = 1;
+					$idCounter = 0;
 					foreach($how_to_qualify as $content) {
 						$content = $content['content'];
 						$id = "qualification-" . $idCounter;
