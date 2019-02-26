@@ -305,12 +305,10 @@ main .empowerment h1 {
     background-size: contain;
 }
 
-
 /* === footer section === */
 footer {
     /* height: 100vh; */
 }
-
 .footer_content {
     display: block;
     position: absolute;
