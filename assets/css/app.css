@@ -170,51 +170,51 @@
 
 
 /* Volunteers section */
-main .volunteers {
+main .volunteer {
     background-image: url('./../img/volunteerbg.png');
     background-repeat: no-repeat;
     background-size: contain;
     text-align: center;
 }
 
-.volunteers .grid-container {
+.volunteer .grid-container {
     width: 100%;
     max-width: 78rem;
     margin: 15px auto;
 }
 
-.volunteers .volunteerContainer .volunteerTextSection {
+.volunteer .volunteerContainer .volunteerTextSection {
     background-color: #d6e7ee;
     padding: 30px;
     border-radius: 40px;
     padding-bottom: 15px;
 }
 
-.volunteers .volunteerContainer .volunteerTextSection h1 {
+.volunteer .volunteerContainer .volunteerTextSection h1 {
     font-size: 24px;
     text-decoration: underline;
     font-weight: bold;
     font-style: italic;
 }
 
-.volunteers .volunteerContainer .volunteerTextSection p {
+.volunteer .volunteerContainer .volunteerTextSection p {
     font-size: 23px;
     margin-bottom: 60px;
 
 }
 
-.volunteers .volunteerContainer .volunteerTextSection a {
+.volunteer .volunteerContainer .volunteerTextSection a {
     margin-top: 10px;
 
 
 }
 
-.volunteers .volunteerContainer .volunteerVideo {
+.volunteer .volunteerContainer .volunteerVideo {
     margin-top: 220px;
 
 }
 
-.volunteers .volunteerContainer .volunteerVideo p {
+.volunteer .volunteerContainer .volunteerVideo p {
     margin-top: 50px;
     font-size: 19px;
 }
@@ -305,31 +305,29 @@ main .empowerment h1 {
     background-size: contain;
 }
 
+/* === footer section === */
+footer {
+    /* height: 100vh; */
+}
+.footer_content {
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
 
-    /* === footer section === */
-    footer {
-        /* height: 100vh; */
-    }
+.footerHeader {
+    height: 150px;
+    padding-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}
 
-    .footer_content {
-        display: block;
-        position: absolute;
-        bottom: 0;
-    }
+.footerParagraph {
+    padding: 0 200px;
+    text-align: center;
+}
 
-    .footerHeader {
-        height: 150px;
-        padding-top: 50px;
-        font-size: 50px;
-        text-align: center;
-    }
-
-    .footerParagraph {
-        padding: 0 200px;
-        text-align: center;
-    }
-
-    .partnerLogos {
-        display: flex;
-        flex-direction: row;
-    }
+.partnerLogos {
+    display: flex;
+    flex-direction: row;
+}
