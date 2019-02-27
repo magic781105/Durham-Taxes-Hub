@@ -12,17 +12,15 @@
     background-position: center;
     background-position: center;
     background-repeat: no-repeat;
+   
 }
-
+.slider, .slick-initialized, .slick-slider, .slick-dotted {
+    height: auto !important;
+}
 .slider .slide * {
     color: rosybrown;
 }
 
-/* #021d49
-#0a4679
-#4dadce
-#99cadc
-#d6e7ee */
 
 
 /*
