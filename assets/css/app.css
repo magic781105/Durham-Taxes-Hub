@@ -1,10 +1,16 @@
+
 @font-face {
     font-family: Abel;
     src: url(../fonts/Abel-Regular.ttf);
 }
 
 /* ** header page ** */
-.header-page .header {
+
+* {
+    box-sizing: border-box;
+}
+
+ .header-page .header {   
     min-height: 600px;
     width: auto;
     display: flex !important;
@@ -15,7 +21,11 @@
     background-position: center;
     background-position: center;
     background-repeat: no-repeat;
+
 }
+
+
+
 /* ** header description ** */
 .header_desc {
     font-family: Abel;
@@ -46,6 +56,7 @@
     margin-left: 630px;
     margin-top:20px;
 }
+
 
 /* ** header form ** */
 .form {
@@ -102,3 +113,311 @@ ul {
     width: 50px;
     height: auto;
 }
+
+
+
+
+/* === How Can I Qualify Section === */
+.qualification {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('./../img/qualifybg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3em;
+}
+
+.qualification h1 {
+    flex: 1 100vw;
+    text-align: center;
+}
+
+.qualification-buttons {
+    flex: 0 25vw;
+    margin-left: 5em;
+}
+
+.qualification-buttons ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: warp;
+}
+
+.qualification-buttons li {
+    background: #0a4679;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    display: inline-block;
+    align-self: flex-start;
+    padding: .3em;
+    border-radius: 20px;
+}
+
+.qualification-contents {
+    flex: 0 646px;
+    background: #fff;
+    background-image: url('./../img/border.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding: 2em;
+}
+
+#qualification-2,
+#qualification-3 {
+    display: none;
+}
+
+
+
+
+
+/* === testimonial section === */
+.sectionHeader {
+    height: 150px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.testimonial {
+    display: block;
+    /* height: 100vh; */
+    height: auto;
+    overflow: auto;
+
+    /* background-color: rgb(83, 182, 240); */
+    background-image: url("../img/testimonialbg.svg");
+    background-repeat: no-repeat;
+
+}
+
+#alltestimonial {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+
+}
+
+.testimonialGroup {
+    margin-top: 140px;
+    /* border: 2px solid black; */
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    background-image: url("../img/border.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.testimonialImage {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+}
+
+.testimonialContent {
+    /* margin-top: 30px; */
+    padding: 20px;
+    padding-bottom: 0;
+    width: 350px;
+    height: 152.5px;
+}
+
+.testimonialName:before {
+    content: "- ";
+}
+
+.testimonialName {
+    float: right;
+    padding: 20px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .testimonial {
+        background-size: cover;
+    }
+
+
+}
+
+
+
+/* Volunteers section */
+main .volunteer {
+    background-image: url('./../img/volunteerbg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+}
+
+.volunteer .grid-container {
+    width: 100%;
+    max-width: 78rem;
+    margin: 15px auto;
+}
+
+.volunteer .volunteerContainer .volunteerTextSection {
+    background-color: #d6e7ee;
+    padding: 30px;
+    border-radius: 40px;
+    padding-bottom: 15px;
+}
+
+.volunteer .volunteerContainer .volunteerTextSection h1 {
+    font-size: 24px;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.volunteer .volunteerContainer .volunteerTextSection p {
+    font-size: 23px;
+    margin-bottom: 60px;
+
+}
+
+.volunteer .volunteerContainer .volunteerTextSection a {
+    margin-top: 10px;
+
+
+}
+
+.volunteer .volunteerContainer .volunteerVideo {
+    margin-top: 220px;
+
+}
+
+.volunteer .volunteerContainer .volunteerVideo p {
+    margin-top: 50px;
+    font-size: 19px;
+}
+
+.volunteerVideo .volunteerVideoDesc {
+    background-color: #021d49;
+    color: white;
+}
+
+
+/*Empowerment page*/
+main .empowerment {
+    background-image: url('./../img/empowermentbg.png');
+    background-repeat: no-repeat;
+
+    background-position: right;
+    background-size: contain;
+}
+
+.empowerment .grid-container {
+    margin: 15px auto;
+    text-align: center;
+    max-width: 78rem;
+    width: 100%;
+    padding: 20px;
+}
+
+main .empowerment h1 {
+    margin: 30px 10px;
+}
+
+.empowermentContainer {
+    margin-top: 70px;
+}
+
+.empowerment .listContain {
+    background-color: #99cadc;
+    border-radius: 26px;
+}
+
+
+.empowerment .listContain .listItem {
+
+    width: 335px;
+    padding-top: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.empowerment .listContain .listItem:hover {
+    cursor: pointer;
+}
+
+.empowerment .listContain .listItem p {
+    font-size: 21px;
+    width: 255px;
+    padding: 10px 40px;
+    text-align: left;
+    margin: 5px;
+    margin-bottom: 0px;
+
+}
+
+.empowerment .listContain .listItem:last-child {
+    margin-bottom: 0px;
+}
+
+
+
+.empowerment .listResult {
+    background-color: #99cadc;
+    padding: 36px 20px;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 30px;
+    margin: 18px 13px;
+}
+
+.empowerment .listResult p {
+    font-size: 20px;
+}
+
+.empowerment .empowermentContainer .listContainBg {
+    margin-left: 3rem;
+    background-image: url('./../img/boxout.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* === footer section === */
+footer {
+    /* height: 100vh; */
+}
+.footer_content {
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+
+.footerHeader {
+    height: 150px;
+    padding-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.footerParagraph {
+    padding: 0 200px;
+    text-align: center;
+}
+
+.partnerLogos {
+    display: flex;
+    flex-direction: row;
+}
+
