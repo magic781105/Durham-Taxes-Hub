@@ -19,15 +19,15 @@ get_header();
     <main id="main" class="site-main">
 
         <!--        temporary nav-->
-        <nav>
-            <ul class="nav-bar">
-                <li id="testimonial">Testimonials</li>
+        <!-- <nav>
+            <ul class="nav-bar"> -->
+                <!-- <li id="testimonial">Testimonials</li>
                 <li id="volunteer">volunteers</li>
                 <li id="empowerment">empowerment</li>
-                <li id="qualification">qualification</li>
+                <li id="qualification">qualification</li> -->
 
-            </ul>
-        </nav>
+            <!-- </ul>
+        </nav> -->
         <?php
 
 			// does get field exist
@@ -35,8 +35,9 @@ get_header();
 			if (function_exists('get_field')){
 
 			$eligible = get_field('header');
-      $navigation_menu = get_field('menu_bar');
+      		$navigation_menu = get_field('menu_bar');
 			$featured_slider = get_field('featured_slider');
+			$location = get_field('location');
 			$volunteers = get_field('volunteers');
 			$empowerment = get_field('financialempowerment');
 			$testimonials = get_field('testimonials');
@@ -84,58 +85,148 @@ get_header();
           //var_dump($header);
           ?>
           <section id="header">
-							<div class="header" style="background-image:url(<?php echo $image['url'];?>);">
-								<h1 class="header_title"><?php echo $header ?></h1>
-								<p class="header_desc"><?php echo $content ?></p>
-								<div class="form">
-									<input id="userInput" placeholder="Example: $30,000"/>
-									<input id="threshold" value = "<?php echo $threshold ?>" />
-									<button id="inputCheck">Am I Eligible?</button>
-								</div>
-								<button class="header_button">Be a Volunteer!</button>
-							</div>
-						</section>
+			  	<div id="logo"></div>
+				<div class="header" style="background-image:url(<?php echo $image['url'];?>);">
+					<h1 class="header_title"><?php echo $header ?></h1>
+					<p class="header_desc"><?php echo $content ?></p>
+					<div class="form">
+						<input id="userInput" placeholder="Example: $30,000"/>
+						<input id="threshold" value = "<?php echo $threshold ?>" />
+						<button id="inputCheck">Am I Eligible?</button>
+					</div>
+					<button class="header_button">Be a Volunteer!</button>
+				</div>
+			</section>
           <?php 
-            }
-        
+            }        
         ?>
         </div>
         <!--  menu setcion  -->
         <div class="menu-bar">
-				<nav>
-					<div id="navigation" data-click-state = "0"></div>
-					<ul>
-						<?php
-						// var_dump($nav_menu);
-						foreach($navigation_menu as $nav_menu) {
-							$icon = $nav_menu['nav_div1'];
-							$text = $nav_menu['nav_div2'];
-						?>
-						<div class="nav-menu">
-							<div class="nav-border">
-								<li class="menu-list">
-									<img src="<?php echo $icon['url']; ?>"/>
-									<p><?php echo $text?></p>
-								</li>
-							</div>
+			<nav>
+				<div id="navigation" data-click-state = "0"></div>
+				<ul>
+					<?php
+					// var_dump($nav_menu);
+					foreach($navigation_menu as $nav_menu) {
+						$icon = $nav_menu['nav_div1'];
+						$text = $nav_menu['nav_div2'];
+						$idName = $nav_menu['id_name'];
+						// var_dump($idName);
+					?>
+					<div class="nav-menu">
+						<div class="nav-border">
+							<li class="menu-list" id="<?php echo $idName ?>">
+								<img src="<?php echo $icon['url']; ?>"/>
+								<p><?php echo $text?></p>
+							</li>
 						</div>
-						
-						<?php	
+					</div>
+					
+					<?php	
+					}
+					?>		
+				</ul>
+			</nav>
+		</div>
+		
+		<!-- how to qualified -->
+		<section class="qualification">
+            <h1>How to Qualify</h1>
+            <div class="qualification-buttons">
+                <ul id="qualificationBubble">
+                    <?php
+					// var_dump($featured_slider);
+					foreach($how_to_qualify as $section) {
+						$button = $section['button'];
+						?>
+
+                    <li class="qualification-btn">
+                        <?php echo $button ?>
+                    </li>
+
+                    <?php
+					}
+					?>
+                </ul>
+            </div>
+            <div class="qualification-contents">
+                <?php
+					$idCounter = 0;
+					foreach($how_to_qualify as $content) {
+						$content = $content['content'];
+						$id = "qualification-" . $idCounter;
+						?>
+
+                <div id="<?php echo $id?>" class="qualification-div">
+                    <?php echo $content?>
+                </div>
+
+                <?php
+						$idCounter++;
+					}
+					?>
+            </div>
+        </section>
+
+		<section  class="location">
+			<h1><?php echo $location['header']?></h1>
+			<div class="location-wrapper">
+				<div class="location-lists">
+					<h2><?php echo $location['header']?></h2>
+					<?php
+					// var_dump($location);
+					$locationCount = 0;
+					foreach($location as $section) {
+						if($locationCount > 0){
+						$name = $section['name'];
+						$address = $section['address'];
+						$id = "location-" . $locationCount;
+						?>
+							<div class="location-list">
+								<h3 data-id="<?php echo $id?>"><?php echo $name ?></h3>
+								<p><?php echo $address ?><p>
+							</div>
+						<?php
 						}
-						?>		
-					</ul>
-					</nav>
+						$locationCount++;
+					}
+					?>
 				</div>
+				<div class="location-detail">
+					<?php
+					$locationCount = 0;
+					foreach($location as $section) {
+						if($locationCount > 0){
+						$locationDetail = $section['content'];
+						$name = $section['name'];
+						$address = $section['address'];
+						$id = "location-" . $locationCount;
+						?>
+							<div id="<?php echo $id?>" class="tim">
+								<h5><?php echo $name?></h5>
+								<p><?php echo $address?></p>
+								<p><?php echo $locationDetail?></p>
+							</div>
+						<?php
+						}
+						$locationCount++;
+					}
+					?>
+				</div>
+				<div class="location-map"></div>
+			</div>
+		</section>
 
         <!--volunteers section-->
         <section class="volunteer">
             <?php 
-					$volunteer_header = $volunteers["header"];
-					$volunteer_volunteertext1 = $volunteers["volunteertext1"];
-					$volunteer_volunteerVideo = $volunteers["volunteerVideo"];	
-					$volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];		
-					$volunteer_volunteertext2 = $volunteers["volunteertext2"];						
-				?>
+				$volunteer_header = $volunteers["header"];
+				$volunteer_volunteertext1 = $volunteers["volunteertext1"];
+				$volunteer_volunteerVideo = $volunteers["volunteerVideo"];	
+				$volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];		
+				$volunteer_volunteertext2 = $volunteers["volunteertext2"];						
+			?>
             <div class="grid-container">
                 <h1 class="volunteerHeader">
                     <?php echo $volunteer_header; ?>
@@ -241,53 +332,16 @@ get_header();
             </div>
         </section>
 
-        <section class="qualification">
-            <h1>How to Qualify</h1>
-            <div class="qualification-buttons">
-                <ul id="qualificationBubble">
-                    <?php
-					// var_dump($featured_slider);
-					foreach($how_to_qualify as $section) {
-						$button = $section['button'];
-						?>
-
-                    <li class="qualification-btn">
-                        <?php echo $button ?>
-                    </li>
-
-                    <?php
-					}
-					?>
-                </ul>
-            </div>
-            <div class="qualification-contents">
-                <?php
-					$idCounter = 0;
-					foreach($how_to_qualify as $content) {
-						$content = $content['content'];
-						$id = "qualification-" . $idCounter;
-						?>
-
-                <div id="<?php echo $id?>" class="qualification-div">
-                    <?php echo $content?>
-                </div>
-
-                <?php
-						$idCounter++;
-					}
-					?>
-            </div>
-        </section>
+        
 
 
         <section class="testimonial">
-            <?php 
-					$testimonial_header = $testimonials["header"];						
-					?>
+           <?php 
+					$testimonial_header = $testimonials["header"];	?>
 
-            <p class="sectionHeader">
-                <?php echo $testimonial_header; ?>
-            </p>
+            
+			<h1 class="sectionHeader"><?php echo $testimonial_header; ?></h1>
+            
             <div id="alltestimonial">
                 <?php 
 

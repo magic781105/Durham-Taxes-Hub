@@ -23,10 +23,22 @@
     background-repeat: no-repeat;
 
 }
-
+h1 {
+    font-family: Abel;
+}
 
 
 /* ** header description ** */
+#logo {
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -10px;
+}
 .header_desc {
     font-family: Abel;
     color: #021d49;
@@ -79,6 +91,9 @@
     padding: 10px;
     background: #ffc436;
 }
+#inputCheck:hover {
+    cursor: pointer;
+}
 
 
 /* ** navigation menu ** */
@@ -87,15 +102,18 @@
     top:0;
     right: -200px;
 }
-nav {
+.menu-bar nav {
     display: flex;
     flex-flow: row;
 }
-ul {
+.menu-bar ul {
     background: #021d49;
     padding: 10px;
     margin-left: 0;
     margin:0;
+}
+.menu-bar li {
+    cursor: pointer;
 }
 #navigation {
     cursor: pointer;
@@ -115,6 +133,72 @@ ul {
 }
 
 
+/*  locations */
+.location {
+    background-image: url("../img/locationsbg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.location h1 {
+    text-align: center;
+}
+.location h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.location p {
+    margin: 0;
+}
+
+.location-wrapper {
+    display: grid;
+    grid-template-columns: 15vw 45vw 25vw;
+    grid-gap: 1em;
+    padding: 2em;
+}
+
+.location-lists {
+    padding: 1em;
+    background-color: #d6e7ee;
+    border-radius: 10px;
+}
+
+.location-list {
+    font-size: 1em;
+    margin-bottom: .5em;
+}
+.location-list h3, .location-lists h2 {
+    font-family: Abel;
+}
+.location-list:hover {
+    cursor: pointer;
+}
+
+.location-detail {
+    position: relative;
+    /* background-color: #d6e7ee; */
+}
+
+.location-detail > div {
+    position: absolute;
+    top: 0;
+}
+
+.location-map {
+    /* border: 1px solid; */
+    background-image: url("../img/locations.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#location-2,
+#location-3,
+#location-4,
+#location-5,
+#location-6 {
+    display: none;
+}
 
 
 /* === How Can I Qualify Section === */
@@ -147,6 +231,7 @@ ul {
 }
 
 .qualification-buttons li {
+    font-family: Abel;
     background: #0a4679;
     color: #fff;
     font-weight: bold;
@@ -386,7 +471,9 @@ main .empowerment h1 {
 .empowerment .listResult p {
     font-size: 20px;
 }
-
+.listResult h2 {
+    font-family: Abel;
+}
 .empowerment .empowermentContainer .listContainBg {
     margin-left: 3rem;
     background-image: url('./../img/boxout.svg');
@@ -405,6 +492,7 @@ footer {
 }
 
 .footerHeader {
+    font-family: Abel;
     height: 150px;
     padding-top: 50px;
     font-size: 50px;
@@ -419,5 +507,12 @@ footer {
 .partnerLogos {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-content: center;
 }
+.partnerLogos img {
+    height: 100px;
+    /* height: auto; */
+}
+
 

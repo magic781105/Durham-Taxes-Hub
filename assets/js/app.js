@@ -94,7 +94,7 @@
 
         }
 
-        $(".nav-bar li").click(function () {
+        $(".menu-bar li").click(function () {
 
             let clickedSection = $(this).attr("id");
 
@@ -112,6 +112,14 @@
             $('.qualification-div').css({
                 display: 'none'
             });
+            $(id).fadeIn('slow');
+        });
+
+        $('.location-list').on('click', 'h3', (e) => {
+            let index = $(e.target).attr('data-id');
+            let id = `#${index}`;
+            console.log(index);
+            $('.tim').css({display: 'none'});
             $(id).fadeIn('slow');
         });
 
