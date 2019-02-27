@@ -3,7 +3,8 @@
     src: url(../fonts/Abel-Regular.ttf);
 }
 
-.yo .yo1 {
+/* ** header page ** */
+.header-page .header {
     min-height: 600px;
     width: auto;
     display: flex !important;
@@ -15,7 +16,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
+/* ** header description ** */
 .header_desc {
     font-family: Abel;
     color: #021d49;
@@ -26,7 +27,7 @@
     width: 500px;
     margin-left: 900px;
 }
-
+/* ** header title ** */
 .header_title {
     font-family: Abel;
     font-size: 45px;
@@ -35,7 +36,7 @@
     text-align: left;
     margin-left: 690px;
 }
-
+/* ** header button - Be a Volunteer ** */
 .header_button {
     background: #021d49;
     color: white;
@@ -43,49 +44,44 @@
     padding: 15px;
     border-radius: 50px;
     margin-left: 630px;
-    margin-top:10px;
+    margin-top:20px;
 }
 
+/* ** header form ** */
 .form {
-    margin-left: 700px;
-}
-.wsf-alert {
-    margin-left: 600px;
-}
-
-#wsf-1-field-7 {
-    color: #021d49;
-    background: #ffc436;
-    border:1px solid #021d49;
-    padding: 9px;
-}
-#wsf-1-field-5 {
+    display: flex;
+    flex-flow: row;
     border: 1px solid #021d49;
+    margin-left: 720px;
+    padding:0;
+}
+.form #threshold{
+    display: none;
+}
+#userInput {
+    border:1px solid #021d49;
+    padding:10px;
+    color: rgb(50, 50, 50);
+}
+#inputCheck {
+    border:1px solid #021d49;
+    padding: 10px;
+    background: #ffc436;
 }
 
-/*.testImage {
-    width: 100px;
-    height: 100px;
-}
 
-.tests {
-    color: #000;
-    z-index: 100;
-    font-size: 1.2em;
-}*/
+/* ** navigation menu ** */
+.menu-bar {
+    position: fixed;
+    top:0;
+    right: -175px;
+}
 nav {
-    /* background: #021d49; */
     display: flex;
     flex-flow: row;
 }
 ul {
     background: #021d49;
-}
-
-.menu_bar {
-    position: fixed;
-    top:0;
-    right: -175px;
 }
 .menu-list {
     color: white;

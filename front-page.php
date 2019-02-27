@@ -24,7 +24,7 @@ get_header();
 				$eligible = get_field('header');
 				?>
 				
-				<div class="yo">
+				<div class="header-page">
 					<?php
 					// var_dump($header);
 					foreach($eligible as $eligible_header) {
@@ -36,11 +36,12 @@ get_header();
 						//var_dump($header);
 						?>
 						<section id="header">
-							<div class="yo1" style="background-image:url(<?php echo $image['url'];?>);">
+							<div class="header" style="background-image:url(<?php echo $image['url'];?>);">
 								<h1 class="header_title"><?php echo $header ?></h1>
 								<p class="header_desc"><?php echo $content ?></p>
 								<div class="form">
-									<input id="userInput" placeholder="$30000" value="30000"/>
+									<input id="userInput" placeholder="Example: $30,000"/>
+									<input id="threshold" value = "<?php echo $threshold ?>" />
 									<button id="inputCheck">Am I Eligible?</button>
 								</div>
 								<button class="header_button">Be a Volunteer!</button>
@@ -59,9 +60,9 @@ get_header();
 				$navigation_menu = get_field('menu_bar');
 				?>
 				
-				<div class="menu_bar">
+				<div class="menu-bar">
 				<nav>
-					<img src ="assets/img/nav.png" alt="nav"/>
+					<img src ="../assets/img/nav.png" alt="nav"/>
 					<ul>
 						<?php
 						// var_dump($nav_menu);
