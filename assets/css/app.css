@@ -74,7 +74,7 @@
 .menu-bar {
     position: fixed;
     top:0;
-    right: -175px;
+    right: -200px;
 }
 nav {
     display: flex;
@@ -82,6 +82,17 @@ nav {
 }
 ul {
     background: #021d49;
+    padding: 10px;
+    margin-left: 0;
+    margin:0;
+}
+#navigation {
+    cursor: pointer;
+    background-image:url(../img/nav.png);
+    background-size: contain;
+    width:30px;
+    height:auto;
+    background-repeat: no-repeat;
 }
 .menu-list {
     color: white;

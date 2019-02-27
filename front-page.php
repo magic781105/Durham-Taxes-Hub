@@ -62,7 +62,7 @@ get_header();
 				
 				<div class="menu-bar">
 				<nav>
-					<img src ="../assets/img/nav.png" alt="nav"/>
+					<div id="navigation" data-click-state = "0"></div>
 					<ul>
 						<?php
 						// var_dump($nav_menu);
