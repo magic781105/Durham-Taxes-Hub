@@ -34,6 +34,8 @@ get_header();
 			
 			if (function_exists('get_field')){
 
+			$eligible = get_field('header');
+      $navigation_menu = get_field('menu_bar');
 			$featured_slider = get_field('featured_slider');
 			$volunteers = get_field('volunteers');
 			$empowerment = get_field('financialempowerment');
@@ -67,8 +69,63 @@ get_header();
 				*/
 				?>
         <!-- </div> -->
-
-
+        
+      
+        <!-- header section -->
+        <div class="header-page">
+        <?php
+        // var_dump($header);
+        foreach($eligible as $eligible_header) {
+          $header = $eligible_header['heading'];
+          $content = $eligible_header['content'];
+          $image = $eligible_header['image'];
+          $button = $eligible_header['button'];
+          $threshold = $eligible_header['threshold'];
+          //var_dump($header);
+          ?>
+          <section id="header">
+							<div class="header" style="background-image:url(<?php echo $image['url'];?>);">
+								<h1 class="header_title"><?php echo $header ?></h1>
+								<p class="header_desc"><?php echo $content ?></p>
+								<div class="form">
+									<input id="userInput" placeholder="Example: $30,000"/>
+									<input id="threshold" value = "<?php echo $threshold ?>" />
+									<button id="inputCheck">Am I Eligible?</button>
+								</div>
+								<button class="header_button">Be a Volunteer!</button>
+							</div>
+						</section>
+          <?php 
+            }
+        
+        ?>
+        </div>
+        <!--  menu setcion  -->
+        <div class="menu-bar">
+				<nav>
+					<div id="navigation" data-click-state = "0"></div>
+					<ul>
+						<?php
+						// var_dump($nav_menu);
+						foreach($navigation_menu as $nav_menu) {
+							$icon = $nav_menu['nav_div1'];
+							$text = $nav_menu['nav_div2'];
+						?>
+						<div class="nav-menu">
+							<div class="nav-border">
+								<li class="menu-list">
+									<img src="<?php echo $icon['url']; ?>"/>
+									<p><?php echo $text?></p>
+								</li>
+							</div>
+						</div>
+						
+						<?php	
+						}
+						?>		
+					</ul>
+					</nav>
+				</div>
 
         <!--volunteers section-->
         <section class="volunteer">
@@ -241,8 +298,9 @@ get_header();
 						$testimonial_content = $testimonial['content'];
 						$testimonial_name = $testimonial['name'];
 						// var_dump($testimonial_img);						
-						?>
 
+						?>
+						
                 <div class="testimonialGroup">
                     <div class="testimonialImage" style="background-image:url(<?php echo $testimonial_img['url'];?>);"></div>
                     <div class="testimonialContent">
@@ -256,6 +314,7 @@ get_header();
                 <?php	
 						}
 						$testimonialItem++;						
+
 					}
 					?>
             </div>
@@ -294,27 +353,22 @@ get_header();
 
         <?php
 			}
-
 		?>
 
+		<?php
+		// while ( have_posts() ) :
+		// 	the_post();
+
+		// 	get_template_part( 'template-parts/content', 'page' );
+
+		// 	// If comments are open or we have at least one comment, load up the comment template.
+		// 	if ( comments_open() || get_comments_number() ) :
+		// 		comments_template();
+		// 	endif;
 
 
-        <?php
+		// endwhile; // End of the loop.
 
-	
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-
-		
 		?>
 
     </main><!-- #main-->
