@@ -16,10 +16,19 @@
 
     // Toggle contents in qualification section by clicking the buttons
     $('#qualificationBubble').on('click', 'li', e => {
-        let index = $($(e.target).index('li'));
-        let id = `#qualification-${index[0]}`;
+        let index = $(e.target).index();
+        let id = `#qualification-${index}`;
+        $('.qualification-div').css({
+            display: 'none'
+        });
+        $(id).fadeIn('slow');
+    });
 
-        $('.qualification-div').css({'display': 'none'});
+    $('.location-list').on('click', 'h3', (e) => {
+        let index = $(e.target).attr('data-id');
+        let id = `#${index}`;
+        console.log(index);
+        $('.tim').css({display: 'none'});
         $(id).fadeIn('slow');
     });
 })(jQuery);

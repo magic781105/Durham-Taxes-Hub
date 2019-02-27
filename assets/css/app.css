@@ -29,7 +29,7 @@
 How Can I Qualify Section
 */
 
-.qualification {
+.qualification, .location {
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +40,7 @@ How Can I Qualify Section
     padding: 3em;
 }
 
-.qualification h1 {
+.qualification h1, .location h1 {
     flex: 1 100vw;
     text-align: center;
 }
@@ -79,6 +79,56 @@ How Can I Qualify Section
     padding: 2em;
 }
 
-#qualification-2, #qualification-3 {
+#qualification-2,
+#qualification-3 {
+    display: none;
+}
+
+.location h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.location p {
+    margin: 0;
+}
+
+.location-wrapper {
+    display: grid;
+    grid-template-columns: 15vw 45vw 25vw;
+    grid-gap: 1em;
+    padding: 2em;
+}
+
+.location-lists {
+    padding: 1em;
+    background-color: #d6e7ee;
+    border-radius: 10px;
+}
+
+.location-list {
+    font-size: 1em;
+    margin-bottom: .5em;
+}
+
+.location-detail {
+    position: relative;
+    /* background-color: #d6e7ee; */
+}
+
+.location-detail > div {
+    position: absolute;
+    top: 0;
+}
+
+.location-map {
+    border: 1px solid;
+}
+
+#location-2,
+#location-3,
+#location-4,
+#location-5,
+#location-6 {
     display: none;
 }
