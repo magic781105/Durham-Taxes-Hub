@@ -297,9 +297,11 @@ h1 {
     display: inline-block;
     position: relative;
     background-color: white;
-    background-image: url("../img/border.svg");
+    background-image: url("../img/testimonialsbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    height: 240px;
 
 }
 
@@ -348,9 +350,12 @@ main .volunteer {
     background-image: url('./../img/volunteerbg.png');
     background-repeat: no-repeat;
     background-size: contain;
+    /* text-align: center; */
+    text-align: left;
+}
+.volunteer h1 {
     text-align: center;
 }
-
 .volunteer .grid-container {
     width: 100%;
     max-width: 78rem;
@@ -372,7 +377,7 @@ main .volunteer {
 }
 
 .volunteer .volunteerContainer .volunteerTextSection p {
-    font-size: 23px;
+    font-size: 20px;
     margin-bottom: 60px;
 
 }
@@ -384,7 +389,8 @@ main .volunteer {
 }
 
 .volunteer .volunteerContainer .volunteerVideo {
-    margin-top: 220px;
+    margin-top: 45px;
+    text-align: center;
 
 }
 
@@ -460,7 +466,7 @@ main .empowerment h1 {
 
 
 .empowerment .listResult {
-    background-color: #99cadc;
+    background-color: #d6e7ee;
     padding: 36px 20px;
     cursor: pointer;
     text-align: left;
@@ -509,10 +515,19 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-content: center;
+    margin-top: 100px;
 }
 .partnerLogos img {
     height: 100px;
     /* height: auto; */
+}
+
+.footerLink {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration-line: underline;
 }
 
 

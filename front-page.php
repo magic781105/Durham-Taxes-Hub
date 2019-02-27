@@ -380,13 +380,14 @@ get_header();
                 <?php
 					$footer_header = $footer['heading'];
 					$footer_paragraph = $footer['paragraph'];
-					$footer_link = $footer['link'];
+					$footer_link = $footer['link']["title"];
 					$footer_partner_one = $footer['partner_logo_one'];
 					$footer_partner_two = $footer['partner_logo_two'];
 					$footer_partner_three = $footer['partner_logo_three'];
 					$footer_partner_four = $footer['partner_logo_four'];
 					// var_dump($footer_header);
-					// var_dump($footer_content);
+                    // var_dump($footer_content);
+                    // var_dump($footer_link);
 					?>
                 <p class="footerHeader">
                     <?php echo $footer_header; ?>
@@ -394,7 +395,7 @@ get_header();
                 <p class="footerParagraph">
                     <?php echo $footer_paragraph; ?>
                 </p>
-                <a>
+                <a class="footerLink">
                     <?php echo $footer_link; ?> </a>
                 <div class="partnerLogos">
                     <img src='<?php echo $footer_partner_one ?>' />
