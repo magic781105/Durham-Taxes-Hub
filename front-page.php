@@ -162,7 +162,7 @@ get_header();
 								$address = $section['address'];
 								$id = "location-" . $locationCount;
 								?>
-									<div id="<?php echo $id?>" class="tim">
+									<div id="<?php echo $id?>" class="location-wrapper">
 										<h5><?php echo $name?></h5>
 										<p><?php echo $address?></p>
 										<p><?php echo $locationDetail?></p>
