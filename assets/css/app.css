@@ -109,6 +109,15 @@ How Can I Qualify Section
     margin-bottom: .5em;
 }
 
+.tim {
+    background: #fff;
+    background-image: url('./../img/border.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1em;
+    height: 400px;
+}
+
 .location-detail {
     position: relative;
     /* background-color: #d6e7ee; */
