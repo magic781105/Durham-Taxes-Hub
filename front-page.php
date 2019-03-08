@@ -375,6 +375,29 @@ get_header();
 
         </section>
 
+        <!--<section class="form">-->
+        <?php
+			if(function_exists('get_field')) {
+				$form_shortcode = get_field('form_shortcode');
+				if($form_shortcode) {
+					?>
+						<section class="contact-form">
+							<div class="grid-container">
+								<div class="grid-x grid-margin-x">
+									<div class="cell small-12 medium-12 large-12">
+										<h2>Form Shortcode</h2>
+										<?php echo $form_shortcode?>
+									</div>
+								</div>
+							</div>
+						</section>
+					<?php
+				}
+			}
+		?>
+        <!--</section>-->
+        
+
         <footer>
             <div class="footerContent">
                 <?php
@@ -425,6 +448,8 @@ get_header();
 		// endwhile; // End of the loop.
 
 		?>
+
+
 
     </main><!-- #main-->
 </div>
