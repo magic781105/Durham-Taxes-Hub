@@ -1,4 +1,4 @@
-/* test */
+
 @font-face {
     font-family: Abel;
     src: url(../fonts/Abel-Regular.ttf);
@@ -213,7 +213,7 @@ h1 {
     padding: 3em;
 }
 
-.qualification h1, .location h1 {
+.qualification h1 {
     flex: 1 100vw;
     text-align: center;
 }
@@ -258,27 +258,9 @@ h1 {
     display: none;
 }
 
-.location h3 {
-    font-size: 1.5em;
-    margin: 0;
-}
 
-.location p {
-    margin: 0;
-}
 
-.location-wrapper {
-    display: grid;
-    grid-template-columns: 15vw 45vw 25vw;
-    grid-gap: 1em;
-    padding: 2em;
-}
 
-.location-lists {
-    padding: 1em;
-    background-color: #d6e7ee;
-    border-radius: 10px;
-}
 
 /* === testimonial section === */
 .sectionHeader {
@@ -294,9 +276,8 @@ h1 {
     height: auto;
     overflow: auto;
 
-.location-wrapper {
-    background: #fff;
-    background-image: url('./../img/border.svg');
+    /* background-color: rgb(83, 182, 240); */
+    background-image: url("../img/testimonialbg.svg");
     background-repeat: no-repeat;
 
 }
@@ -330,7 +311,10 @@ h1 {
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-    top: 0;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
 }
 
 .testimonialContent {

@@ -408,65 +408,6 @@ get_header();
 
         <?php
 			}
-
-			/**
-			 * Location
-			 */
-
-			if (function_exists('get_field')){
-				$location = get_field('location');
-				?>
-				
-				<section  class="location">
-					<h1><?php echo $location['header']?></h1>
-					<div class="location-wrapper">
-						<div class="location-lists">
-							<h2><?php echo $location['header']?></h2>
-							<?php
-							// var_dump($location);
-							$locationCount = 0;
-							foreach($location as $section) {
-								if($locationCount > 0){
-								$name = $section['name'];
-								$address = $section['address'];
-								$id = "location-" . $locationCount;
-								?>
-									<div class="location-list">
-										<h3 data-id="<?php echo $id?>"><?php echo $name ?></h3>
-										<p><?php echo $address ?><p>
-									</div>
-								<?php
-								}
-								$locationCount++;
-							}
-							?>
-						</div>
-						<div class="location-detail">
-							<?php
-							$locationCount = 0;
-							foreach($location as $section) {
-								if($locationCount > 0){
-								$locationDetail = $section['content'];
-								$name = $section['name'];
-								$address = $section['address'];
-								$id = "location-" . $locationCount;
-								?>
-									<div id="<?php echo $id?>" class="location-wrapper">
-										<h5><?php echo $name?></h5>
-										<p><?php echo $address?></p>
-										<p><?php echo $locationDetail?></p>
-									</div>
-								<?php
-								}
-								$locationCount++;
-							}
-							?>
-						</div>
-						<div class="location-map"></div>
-					</div>
-				</section>
-				<?php
-			}
 		?>
 
 		<?php
