@@ -214,7 +214,7 @@ h1 {
 }
 
 .qualification h1 {
-    flex: 1 100vw;
+    flex: 0 100vw;
     text-align: center;
 }
 
@@ -227,7 +227,6 @@ h1 {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    flex-wrap: warp;
 }
 
 .qualification-buttons li {
@@ -237,7 +236,6 @@ h1 {
     font-weight: bold;
     font-size: 1.8em;
     margin-bottom: 1em;
-    display: inline-block;
     align-self: flex-start;
     padding: .3em;
     border-radius: 20px;
@@ -258,7 +256,54 @@ h1 {
     display: none;
 }
 
+@media(max-width: 1100px) {
 
+    .qualification {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .qualification h1 {
+        flex: 0;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .qualification-buttons {
+        flex: 0;
+        margin-left: 0;
+    }
+
+    .qualification-buttons ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .qualification-buttons li:nth-child(2) {
+        margin: 0 1em;
+    }
+}
+
+@media(max-width: 638px) {
+   .qualification h1 {
+       margin-bottom: 1em;
+       font-size: 2.8em;
+   }
+
+   .qualification-buttons {
+       font-size: 1em;
+   }
+
+   .qualification-buttons li {
+       font-size: 1.4em;
+   }
+}
+
+@media(max-width: 500px) {
+    .qualification-buttons {
+        display: none;
+    }
+}
 
 
 
