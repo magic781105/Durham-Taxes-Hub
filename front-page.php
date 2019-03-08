@@ -42,7 +42,8 @@ get_header();
 			$empowerment = get_field('financialempowerment');
 			$testimonials = get_field('testimonials');
 			$how_to_qualify = get_field('how_to_qualify');
-			$footer = get_field('footer');
+            $footer = get_field('footer');
+            $form = get_field('form');
 
 		?>
 
@@ -446,11 +447,7 @@ get_header();
 
 
 		// endwhile; // End of the loop.
-
-		?>
-
-
-
+        ?>
     </main><!-- #main-->
 </div>
 
