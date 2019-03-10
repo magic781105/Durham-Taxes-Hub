@@ -48,9 +48,7 @@
             <div id="menu-bar">
                 <nav id="site-navigation" class="main-navigation">
                     <div id="navigation" data-click-state="0"></div>
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                        <?php esc_html_e( 'Primary Menu', 'durhamtaxhub' ); ?>
-                    </button>
+
                     <div class="nav-menu">
                         <div class="nav-border">
                             <?php

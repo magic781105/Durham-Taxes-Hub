@@ -577,4 +577,15 @@ screen and (max-width: 600px) {
     .volunteerContainer .volunteerTextSection {
         margin: 20px auto;
     }
+
+    #primary-menu li .sub-menu {
+        display: flex;
+    }
+
+    .main-navigation ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }

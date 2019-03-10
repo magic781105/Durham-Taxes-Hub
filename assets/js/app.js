@@ -23,7 +23,7 @@
 
         //form
         $("#inputCheck").click(function () {
-            // debugger;
+
             if ($("#userInput").val() <= $("#threshold").val()) {
                 alert("you are eligible");
 
@@ -98,9 +98,13 @@
 
         $("#menu-bar li a").each(function (index, item) {
 
-            let idForA = item.innerText;
-            $(item).attr('id', `${idForA}`);
-            debugger;
+            let arrayOfId = ['qualification', '', '', '', 'location', 'volunteer', 'empowerment', '', '', '', '', '', 'testimonial'];
+
+            let selectedId = arrayOfId[index];
+
+
+            $(item).attr('id', `${selectedId}`);
+
 
         });
 
@@ -136,7 +140,7 @@
             });
             $(id).fadeIn('slow');
         });
-        debugger;
+
     });
 
 
