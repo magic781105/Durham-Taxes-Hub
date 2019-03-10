@@ -5,34 +5,34 @@
     $(document).ready(function () {
 
         //nav
-        $("#navigation").click(function() {
-            if($(this).attr("data-click-state")==="0"){
-                
-              $(this).attr("data-click-state",1);
-              $(".menu-bar").animate({
-                  right: 0+"px",
-              });
-              } else {
-                  $(this).attr("data-click-state",0);
-                  $(".menu-bar").animate({
-                      right: -200+"px",
-                  });
+        $("#navigation").click(function () {
+            if ($(this).attr("data-click-state") === "0") {
+
+                $(this).attr("data-click-state", 1);
+                $("#menu-bar").animate({
+                    right: 0 + "px",
+                });
+            } else {
+                $(this).attr("data-click-state", 0);
+                $("#menu-bar").animate({
+                    right: -200 + "px",
+                });
             }
         });
 
 
         //form
         $("#inputCheck").click(function () {
-           // debugger;
-           if($("#userInput").val()<= $("#threshold").val()) {
-            alert("you are eligible");
+            // debugger;
+            if ($("#userInput").val() <= $("#threshold").val()) {
+                alert("you are eligible");
 
-           } else{
-               alert("you are not eligible");
-           }
+            } else {
+                alert("you are not eligible");
+            }
         });
-  
-  
+
+
         $(".empowerment .listItem:first-child").css("background-image", "url('/wp-content/themes/durhamtaxhub/assets/img/menuarrow.svg')");
 
 
@@ -94,7 +94,19 @@
 
         }
 
-        $(".menu-bar li").click(function () {
+        $("#menu-bar li a").attr('href', '#');
+
+        $("#menu-bar li a").each(function (index, item) {
+
+            let idForA = item.innerText;
+            $(item).attr('id', `${idForA}`);
+            debugger;
+
+        });
+
+
+
+        $("#menu-bar li a").click(function () {
 
             let clickedSection = $(this).attr("id");
 
@@ -107,7 +119,7 @@
         $('#qualificationBubble').on('click', 'li', e => {
 
             let index = $(e.target).index();
-            let id = `#qualification-${index}`; 
+            let id = `#qualification-${index}`;
             console.log("id" + id);
             $('.qualification-div').css({
                 display: 'none'
@@ -119,14 +131,15 @@
             let index = $(e.target).attr('data-id');
             let id = `#${index}`;
             console.log(index);
-            $('.tim').css({display: 'none'});
+            $('.tim').css({
+                display: 'none'
+            });
             $(id).fadeIn('slow');
         });
-
+        debugger;
     });
 
 
 
 
 })(jQuery);
-

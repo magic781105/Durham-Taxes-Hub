@@ -45,17 +45,24 @@
                 <!-- <p class="site-description"><?php //echo $durhamtaxhub_description; /* WPCS: xss ok. */ ?></p> -->
                 <?php endif; ?>
             </div><!-- .site-branding -->
-
-            <nav id="site-navigation" class="main-navigation">
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                    <?php esc_html_e( 'Primary Menu', 'durhamtaxhub' ); ?></button>
-                <?php
+            <div id="menu-bar">
+                <nav id="site-navigation" class="main-navigation">
+                    <div id="navigation" data-click-state="0"></div>
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                        <?php esc_html_e( 'Primary Menu', 'durhamtaxhub' ); ?>
+                    </button>
+                    <div class="nav-menu">
+                        <div class="nav-border">
+                            <?php
             wp_nav_menu( array(
 			'theme_location' => 'primary-menu',
  	          'menu_id'        => 'primary-menu',
 			 ) );
 			?>
-            </nav><!-- #site-navigation -->
+                        </div>
+                    </div>
+                </nav>
+            </div><!-- #site-navigation -->
         </header><!-- #masthead -->
 
         <div id="content" class="site-content">
