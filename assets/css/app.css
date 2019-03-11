@@ -537,7 +537,7 @@ main .empowerment h1 {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.form {
+.contact {
     margin: 0 auto;
     width: 50%;
     display:flex;
@@ -550,11 +550,11 @@ main .empowerment h1 {
     text-align: center;
     font-size:50px;
 }
-#wsf-1-field-wrapper-7{
+.contact-form #wsf-1-field-wrapper-7{
     display:flex;
     justify-content: center;
 }
-#wsf-1-field-7 {
+.contact-form #wsf-1-field-7 {
     width:50%;
     background-color:#021d49;
     font-size: 20px;
@@ -562,7 +562,7 @@ main .empowerment h1 {
     border-radius: 50px;
     margin: 0 auto;
 }
-.wsf-label {
+.contact-form .wsf-label {
     color: #021d49;
     font-family: Abel;
     font-size: 20px;
