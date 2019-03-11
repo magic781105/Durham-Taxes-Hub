@@ -17,6 +17,16 @@ get_header();
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
+        <?php
+		if(get_theme_mod('durhamtaxhub_facebook_url')) {?>
+			<a href="<?php echo get_theme_mod('durhamtaxhub_facebook_url')?>" class="icon facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
+		<?php
+        }
+        if(get_theme_mod('durhamtaxhub_twitter_url')) {?>
+			<a href="<?php echo get_theme_mod('durhamtaxhub_twitter_url')?>" class="icon twitter" target="_blank"><i class="fab fa-twitter-square"></i></a>
+		<?php
+		}
+		?>
 
         <!--        temporary nav-->
         <!-- <nav>

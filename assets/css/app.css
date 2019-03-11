@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+/* font awesome */
+.fab {
+    font-size: 3em;
+}
+
  .header-page .header {   
     min-height: 600px;
     width: auto;
@@ -244,7 +249,7 @@ h1 {
 .qualification-contents {
     flex: 0 646px;
     background: #fff;
-    background-image: url('./../img/border.svg');
+    /* background-image: url('./../img/border.svg'); */
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
