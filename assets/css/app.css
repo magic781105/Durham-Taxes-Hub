@@ -39,11 +39,7 @@ h1 {
     margin-left: 20px;
     margin-top: -10px;
 }
-/*.image {
-    background-image: url("../img/homebg.svg");
-    background-repeat:no-repeat;
-    background-size: contain;
-}*/
+
 #image {
     width:1280px;
     height:auto;
@@ -95,7 +91,7 @@ h1 {
     display: flex;
     flex-flow: row;
     border: 1px solid #021d49;
-    margin-left: 720px;
+   /* margin-left: 720px;*/
     padding:0;
 }
 .form #threshold{
@@ -592,19 +588,19 @@ main .empowerment h1 {
 
 /*responsive*/
 @media screen and (min-width:326px) 
-and (max-width:669px){
+and (max-width:600px){
     .height{
         height:auto;
     }
     .header-info {
-        padding-top:20px;
+        padding-top:0;
     }
     #image {
-        width: 600px;
-        height:auto;
-    }
-    #image img {
-        width: 600px;
-        height:auto;
+        background-image: url(../img/mobile-header-bg.svg);
+        background-repeat:no-repeat;
+        background-size: cover;
+        width:auto;
+        height:625px;
+    
     }
 }

@@ -68,15 +68,15 @@ get_header();
                 </section>-->
 
                 <section id="header">
+                    <div id="logo"></div>
                     <div class="grid-x height">
-                        <div class="cell small-12 medium-6 large-8"> 
-                            <div id="logo"></div>
+                        <div class="cell hide-for-small-only small-12 medium-6 large-8"> 
 						    <div id="image">
                                 <img src="<?php echo $image['url']; ?>"/>
                             </div>
                         </div>
 
-                        <div class="cell small-12 medium-6 large-4">
+                        <div class="cell hide-for-small-only medium-6 large-4 display-image">
                             <div id="header-info">
                                 <h1 class="header_title"><?php echo $header; ?></h1>
                                 <p class="header_desc"><?php echo $content; ?></p>
@@ -88,6 +88,28 @@ get_header();
                                 <button class="header_button">Be a Volunteer!</button>
                                 </div>
                             </div>
+                    </div>
+
+                    <!--mobile-->
+                    <div class="grid-x">
+                    <div class="cell show-for-small-only display-image">
+                            <div id="header-info">
+                                <h1 class="header_title"><?php echo $header; ?></h1>
+                                <p class="header_desc"><?php echo $content; ?></p>
+                                <div class="form">
+                                    <input id="userInput" placeholder="Example: $30,000"/>
+                                    <input id="threshold" value = "<?php echo $threshold; ?>" />
+                                    <button id="inputCheck">Am I Eligible?</button>
+                                </div>
+                                <button class="header_button">Be a Volunteer!</button>
+                                </div>
+                        </div>
+
+                        <div class="cell show-for-small-only"> 
+						    <div id="image">
+                                
+                            </div>
+                        </div>
                     </div>
                 </section>
                 
