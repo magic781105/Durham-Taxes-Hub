@@ -18,87 +18,55 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-        <!--        temporary nav-->
-        <!-- <nav>
-            <ul class="nav-bar"> -->
-                <!-- <li id="testimonial">Testimonials</li>
-                <li id="volunteer">volunteers</li>
-                <li id="empowerment">empowerment</li>
-                <li id="qualification">qualification</li> -->
-
-            <!-- </ul>
-        </nav> -->
         <?php
 
 			// does get field exist
 			
-			if (function_exists('get_field')){
+            if (function_exists('get_field')){
 
-			$eligible = get_field('header');
-      		$navigation_menu = get_field('menu_bar');
-			$featured_slider = get_field('featured_slider');
-			$location = get_field('location');
-			$volunteers = get_field('volunteers');
-			$empowerment = get_field('financialempowerment');
-			$testimonials = get_field('testimonials');
-			$how_to_qualify = get_field('how_to_qualify');
-            $footer = get_field('footer');
-            $form = get_field('form');
+                $eligible = get_field('header');
+                $navigation_menu = get_field('menu_bar');
+                $featured_slider = get_field('featured_slider');
+                $location = get_field('location');
+                $volunteers = get_field('volunteers');
+                $empowerment = get_field('financialempowerment');
+                $testimonials = get_field('testimonials');
+                $how_to_qualify = get_field('how_to_qualify');
+                $footer = get_field('footer');
 
+
+                $form_id 		= get_field('form_id');
+                // $form_shortcode = get_field('form_shortcode');
 		?>
 
-        <!-- <div class="slider"> -->
-        <?php
-				/*
-				// var_dump($featured_slider);
-				foreach($featured_slider as $featured_slide) {
-					$header = $featured_slide['heading'];
-					$content = $featured_slide['content'];
-					$image = $featured_slide['image'];
-					//var_dump($header);
-					?>
 
-        <div class="slide" style="background-image:url(<?php echo $image['url'];?>);">
-            <h1>
-                <?php echo $header; ?>
-            </h1>
-            <p>
-                <?php echo $content; ?>
-            </p>
-        </div>
-        <?php
-				}
-				*/
-				?>
-        <!-- </div> -->
-        
       
         <!-- header section -->
         <div class="header-page">
         <?php
-        // var_dump($header);
-        foreach($eligible as $eligible_header) {
-          $header = $eligible_header['heading'];
-          $content = $eligible_header['content'];
-          $image = $eligible_header['image'];
-          $button = $eligible_header['button'];
-          $threshold = $eligible_header['threshold'];
-          //var_dump($header);
-          ?>
-          <section id="header">
-			  	<div id="logo"></div>
-				<div class="header" style="background-image:url(<?php echo $image['url'];?>);">
-					<h1 class="header_title"><?php echo $header ?></h1>
-					<p class="header_desc"><?php echo $content ?></p>
-					<div class="form">
-						<input id="userInput" placeholder="Example: $30,000"/>
-						<input id="threshold" value = "<?php echo $threshold ?>" />
-						<button id="inputCheck">Am I Eligible?</button>
-					</div>
-					<button class="header_button">Be a Volunteer!</button>
-				</div>
-			</section>
-          <?php 
+            // var_dump($header);
+            foreach($eligible as $eligible_header) {
+                $header = $eligible_header['heading'];
+                $content = $eligible_header['content'];
+                $image = $eligible_header['image'];
+                $button = $eligible_header['button'];
+                $threshold = $eligible_header['threshold'];
+                //var_dump($header);
+                ?>
+                <section id="header">
+                    <div id="logo"></div>
+                    <div class="header" style="background-image:url(<?php echo $image['url'];?>);">
+                        <h1 class="header_title"><?php echo $header; ?></h1>
+                        <p class="header_desc"><?php echo $content; ?></p>
+                        <div class="form">
+                            <input id="userInput" placeholder="Example: $30,000"/>
+                            <input id="threshold" value = "<?php echo $threshold; ?>" />
+                            <button id="inputCheck">Am I Eligible?</button>
+                        </div>
+                        <button class="header_button">Be a Volunteer!</button>
+                    </div>
+                </section>
+                <?php 
             }        
         ?>
         </div>
@@ -108,18 +76,18 @@ get_header();
 				<div id="navigation" data-click-state = "0"></div>
 				<ul>
 					<?php
-					// var_dump($nav_menu);
-					foreach($navigation_menu as $nav_menu) {
-						$icon = $nav_menu['nav_div1'];
-						$text = $nav_menu['nav_div2'];
-						$idName = $nav_menu['id_name'];
-						// var_dump($idName);
+                        // var_dump($nav_menu);
+                        foreach($navigation_menu as $nav_menu) {
+                            $icon = $nav_menu['nav_div1'];
+                            $text = $nav_menu['nav_div2'];
+                            $idName = $nav_menu['id_name'];
+                            // var_dump($idName);
 					?>
 					<div class="nav-menu">
 						<div class="nav-border">
-							<li class="menu-list" id="<?php echo $idName ?>">
+							<li class="menu-list" id="<?php echo $idName; ?>">
 								<img src="<?php echo $icon['url']; ?>"/>
-								<p><?php echo $text?></p>
+								<p><?php echo $text; ?></p>
 							</li>
 						</div>
 					</div>
@@ -138,12 +106,12 @@ get_header();
                 <ul id="qualificationBubble">
                     <?php
 					// var_dump($featured_slider);
-					foreach($how_to_qualify as $section) {
-						$button = $section['button'];
-						?>
+                        foreach($how_to_qualify as $section) {
+                            $button = $section['button'];
+                    ?>
 
                     <li class="qualification-btn">
-                        <?php echo $button ?>
+                        <?php echo $button; ?>
                     </li>
 
                     <?php
@@ -157,62 +125,62 @@ get_header();
 					foreach($how_to_qualify as $content) {
 						$content = $content['content'];
 						$id = "qualification-" . $idCounter;
-						?>
+				?>
 
-                <div id="<?php echo $id?>" class="qualification-div">
-                    <?php echo $content?>
+                <div id="<?php echo $id; ?>" class="qualification-div">
+                    <?php echo $content; ?>
                 </div>
 
                 <?php
 						$idCounter++;
 					}
-					?>
+				?>
             </div>
         </section>
 
 		<section  class="location">
-			<h1><?php echo $location['header']?></h1>
+			<h1><?php echo $location['header']; ?></h1>
 			<div class="location-wrapper">
 				<div class="location-lists">
-					<h2><?php echo $location['header']?></h2>
+					<h2><?php echo $location['header']; ?></h2>
 					<?php
-					// var_dump($location);
-					$locationCount = 0;
-					foreach($location as $section) {
-						if($locationCount > 0){
-						$name = $section['name'];
-						$address = $section['address'];
-						$id = "location-" . $locationCount;
-						?>
-							<div class="location-list">
-								<h3 data-id="<?php echo $id?>"><?php echo $name ?></h3>
-								<p><?php echo $address ?><p>
-							</div>
-						<?php
-						}
-						$locationCount++;
+                        // var_dump($location);
+                        $locationCount = 0;
+                        foreach($location as $section) {
+                            if($locationCount > 0){
+                            $name = $section['name'];
+                            $address = $section['address'];
+                            $id = "location-" . $locationCount;
+                        ?>
+                        <div class="location-list">
+                            <h3 data-id="<?php echo $id; ?>"><?php echo $name; ?></h3>
+                            <p><?php echo $address; ?><p>
+                        </div>
+                        <?php
+                        }
+                        $locationCount++;
 					}
 					?>
 				</div>
 				<div class="location-detail">
 					<?php
-					$locationCount = 0;
-					foreach($location as $section) {
-						if($locationCount > 0){
-						$locationDetail = $section['content'];
-						$name = $section['name'];
-						$address = $section['address'];
-						$id = "location-" . $locationCount;
-						?>
-							<div id="<?php echo $id?>" class="tim">
-								<h5><?php echo $name?></h5>
-								<p><?php echo $address?></p>
-								<p><?php echo $locationDetail?></p>
-							</div>
-						<?php
-						}
-						$locationCount++;
-					}
+                        $locationCount = 0;
+                        foreach($location as $section) {
+                            if($locationCount > 0){
+                            $locationDetail = $section['content'];
+                            $name = $section['name'];
+                            $address = $section['address'];
+                            $id = "location-" . $locationCount;
+                            ?>
+                                <div id="<?php echo $id; ?>" class="tim">
+                                    <h5><?php echo $name; ?></h5>
+                                    <p><?php echo $address; ?></p>
+                                    <p><?php echo $locationDetail; ?></p>
+                                </div>
+                            <?php
+                            }
+                            $locationCount++;
+                        }
 					?>
 				</div>
 				<div class="location-map"></div>
@@ -244,10 +212,10 @@ get_header();
 
                     <div class="volunteerVideo cell small-8 medium-6 large-4">
 
-                        <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
+                        <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo; ?>" alt="video"></div>
 
                         <p class="volunteerVideoDesc">
-                            <?php echo $volunteer_volunteerVideoDesc;?>
+                            <?php echo $volunteer_volunteerVideoDesc; ?>
                         </p>
                     </div>
 
@@ -268,17 +236,17 @@ get_header();
         <!--section for empowerment-->
         <section class="empowerment">
             <?php 
-					$empowerment_header = $empowerment["header"];
-					$empowerment_listItems = $empowerment["empowermentlist"];
-					$empowerment_text1 = $empowerment["empowermenttext1"];
-					$empowerment_text2 = $empowerment["empowermenttext2"];
-					$empowerment_listitem1 = $empowerment_listItems["listitem1"];
-					$empowerment_listitem2 = $empowerment_listItems["listitem2"];
-					$empowerment_listitem3 = $empowerment_listItems["listitem3"];
-					$empowerment_listitem4 = $empowerment_listItems["listitem4"];
-					$empowerment_listitem5 = $empowerment_listItems["listitem5"];
-									
-				?>
+                $empowerment_header = $empowerment["header"];
+                $empowerment_listItems = $empowerment["empowermentlist"];
+                $empowerment_text1 = $empowerment["empowermenttext1"];
+                $empowerment_text2 = $empowerment["empowermenttext2"];
+                $empowerment_listitem1 = $empowerment_listItems["listitem1"];
+                $empowerment_listitem2 = $empowerment_listItems["listitem2"];
+                $empowerment_listitem3 = $empowerment_listItems["listitem3"];
+                $empowerment_listitem4 = $empowerment_listItems["listitem4"];
+                $empowerment_listitem5 = $empowerment_listItems["listitem5"];
+                                
+            ?>
             <div class="grid-container">
                 <h1 class="empowermentHeader">
                     <?php echo $empowerment_header; ?>
@@ -337,10 +305,7 @@ get_header();
 
 
         <section class="testimonial">
-           <?php 
-					$testimonial_header = $testimonials["header"];	?>
-
-            
+           <?php $testimonial_header = $testimonials["header"];	?>            
 			<h1 class="sectionHeader"><?php echo $testimonial_header; ?></h1>
             
             <div id="alltestimonial">
@@ -352,12 +317,11 @@ get_header();
 						$testimonial_img = $testimonial['image'];
 						$testimonial_content = $testimonial['content'];
 						$testimonial_name = $testimonial['name'];
-						// var_dump($testimonial_img);						
-
-						?>
+						// var_dump($testimonial_img);
+				?>
 						
                 <div class="testimonialGroup">
-                    <div class="testimonialImage" style="background-image:url(<?php echo $testimonial_img['url'];?>);"></div>
+                    <div class="testimonialImage" style="background-image:url(<?php echo $testimonial_img['url']; ?>);"></div>
                     <div class="testimonialContent">
                         <?php echo $testimonial_content; ?>
                     </div>
@@ -371,86 +335,46 @@ get_header();
 						$testimonialItem++;						
 
 					}
-					?>
+				?>
             </div>
 
         </section>
-
-        <!--<section class="form">-->
-        <?php
-			if(function_exists('get_field')) {
-				$form_shortcode = get_field('form_shortcode');
-				if($form_shortcode) {
-					?>
-						<section class="contact-form">
-							<div class="grid-container">
-								<div class="grid-x grid-margin-x">
-									<div class="cell small-12 medium-12 large-12">
-										<h2>Form Shortcode</h2>
-										<?php echo $form_shortcode?>
-									</div>
-								</div>
+        <?php 
+		// if(function_exists('get_field')){
+			
+			if($form_id){
+                
+				?>
+				<section class="contact-form">
+					<div class="grid-container">
+						<div class="grid-x grid-margin-x grid-margin-y">
+							<!-- <div class="cell small-12 medium-6">
+								<h2>Form ID</h2>
+								<?php //echo do_shortcode('[ws_form id="' . $form_id . '"]' ) ?>
+							</div> -->
+							<div class="cell small-12 medium-12">
+								
+                                <?php echo do_shortcode('[ws_form id="' . $form_id . '"]' ) ?>
 							</div>
-						</section>
-					<?php
-				}
-			}
-		?>
-        <!--</section>-->
-        
+						</div>
+					</div>
+				</section>
+				<?php 
 
-        <footer>
-            <div class="footerContent">
-                <?php
-					$footer_header = $footer['heading'];
-					$footer_paragraph = $footer['paragraph'];
-					$footer_link = $footer['link']["title"];
-					$footer_partner_one = $footer['partner_logo_one'];
-					$footer_partner_two = $footer['partner_logo_two'];
-					$footer_partner_three = $footer['partner_logo_three'];
-					$footer_partner_four = $footer['partner_logo_four'];
-					// var_dump($footer_header);
-                    // var_dump($footer_content);
-                    // var_dump($footer_link);
-					?>
-                <p class="footerHeader">
-                    <?php echo $footer_header; ?>
-                </p>
-                <p class="footerParagraph">
-                    <?php echo $footer_paragraph; ?>
-                </p>
-                <a class="footerLink">
-                    <?php echo $footer_link; ?> </a>
-                <div class="partnerLogos">
-                    <img src='<?php echo $footer_partner_one ?>' />
-                    <img src='<?php echo $footer_partner_two ?>' />
-                    <img src='<?php echo $footer_partner_three ?>' />
-                    <img src='<?php echo $footer_partner_four ?>' />
-                </div>
-            </div>
-        </footer>
+			}
+		// }
+		
+		?>
+     
 
         <?php
 			}
 		?>
 
-		<?php
-		// while ( have_posts() ) :
-		// 	the_post();
 
-		// 	get_template_part( 'template-parts/content', 'page' );
-
-		// 	// If comments are open or we have at least one comment, load up the comment template.
-		// 	if ( comments_open() || get_comments_number() ) :
-		// 		comments_template();
-		// 	endif;
-
-
-		// endwhile; // End of the loop.
-        ?>
     </main><!-- #main-->
 </div>
 
 <?php
 // get_sidebar();
-// get_footer();
+ get_footer();
