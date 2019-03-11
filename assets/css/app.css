@@ -255,7 +255,8 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
-    padding: 2em;
+    padding: 0 2em;
+    font-size: 1.2em;
 }
 
 #qualification-2,
@@ -268,6 +269,10 @@ h1 {
     .qualification {
         flex-direction: column;
         flex-wrap: nowrap;
+    }
+
+    .qualification-contents {
+        font-size: 1em;
     }
 
     .qualification h1 {
