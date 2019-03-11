@@ -10,11 +10,6 @@
     box-sizing: border-box;
 }
 
-/* font awesome */
-.fab {
-    font-size: 3em;
-}
-
  .header-page .header {   
     min-height: 600px;
     width: auto;
@@ -585,6 +580,18 @@ footer {
     width: 100%;
     text-align: center;
     text-decoration-line: underline;
+}
+
+/* font awesome */
+.social-media {
+    padding-top: 2em;
+    margin: 0 auto;
+    width: 8em;
+    text-align: center;
+}
+
+.fab {
+    font-size: 3em;
 }
 
 
