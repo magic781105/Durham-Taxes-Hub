@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: Abel;
     src: url(../fonts/Abel-Regular.ttf);
@@ -10,7 +9,7 @@
     box-sizing: border-box;
 }
 
- .header-page .header {   
+.header-page .header {
     min-height: 600px;
     width: auto;
     display: flex !important;
@@ -23,6 +22,7 @@
     background-repeat: no-repeat;
 
 }
+
 h1 {
     font-family: Abel;
 }
@@ -39,25 +39,28 @@ h1 {
     margin-left: 20px;
     margin-top: -10px;
 }
+
 .header_desc {
     font-family: Abel;
     color: #021d49;
     display: flex;
     justify-content: end;
-    font-size:20px;
+    font-size: 20px;
     text-align: left;
     width: 500px;
     margin-left: 900px;
 }
+
 /* ** header title ** */
 .header_title {
     font-family: Abel;
     font-size: 45px;
-    font-weight:800;
+    font-weight: 800;
     color: #021d49;
     text-align: left;
     margin-left: 690px;
 }
+
 /* ** header button - Be a Volunteer ** */
 .header_button {
     background: #021d49;
@@ -66,7 +69,7 @@ h1 {
     padding: 15px;
     border-radius: 50px;
     margin-left: 630px;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 
@@ -76,60 +79,96 @@ h1 {
     flex-flow: row;
     border: 1px solid #021d49;
     margin-left: 720px;
-    padding:0;
+    padding: 0;
 }
-.form #threshold{
+
+.form #threshold {
     display: none;
 }
+
 #userInput {
-    border:1px solid #021d49;
-    padding:10px;
+    border: 1px solid #021d49;
+    padding: 10px;
     color: rgb(50, 50, 50);
 }
+
 #inputCheck {
-    border:1px solid #021d49;
+    border: 1px solid #021d49;
     padding: 10px;
     background: #ffc436;
 }
+
 #inputCheck:hover {
     cursor: pointer;
 }
 
 
 /* ** navigation menu ** */
-.menu-bar {
+#menu-bar {
     position: fixed;
-    top:0;
-    right: -200px;
+    top: 0;
+    right: -230px;
 }
-.menu-bar nav {
+
+#menu-bar .main-navigation {
+    float: none;
+}
+
+.main-navigation li {
+    float: none;
+}
+
+#primary-menu li .sub-menu {
+    display: none;
+}
+
+.sub-menu li {
+    background-color: white;
+    margin: 2px;
+    font-size: 13px;
+}
+
+#menu-bar nav {
     display: flex;
     flex-flow: row;
 }
-.menu-bar ul {
+
+#menu-bar ul {
     background: #021d49;
-    padding: 10px;
+
     margin-left: 0;
-    margin:0;
+    margin: 0;
 }
-.menu-bar li {
+
+#menu-bar li {
     cursor: pointer;
 }
+
 #navigation {
     cursor: pointer;
-    background-image:url(../img/nav.png);
+    background-image: url(../img/nav.png);
     background-size: contain;
-    width:30px;
-    height:auto;
+    width: 30px;
+    height: auto;
     background-repeat: no-repeat;
 }
-.menu-list {
+
+#menu-list {
     color: white;
     list-style-type: none;
 }
-.menu-list img {
+
+#menu-list img {
     width: 50px;
     height: auto;
+}
+
+#primary-menu li a {
+    font-size: 18px;
+}
+
+#primary-menu li .sub-menu li a {
+    font-size: 12px;
 }
 
 
@@ -140,10 +179,12 @@ h1 {
     background-size: contain;
     height: 100vh;
 }
+
 .location h1 {
     text-align: center;
     padding-top: 1.5em;
 }
+
 .location h3 {
     font-size: 1.5em;
     margin: 0;
@@ -170,9 +211,12 @@ h1 {
     font-size: 1em;
     margin-bottom: .5em;
 }
-.location-list h3, .location-lists h2 {
+
+.location-list h3,
+.location-lists h2 {
     font-family: Abel;
 }
+
 .location-list:hover {
     cursor: pointer;
 }
@@ -405,9 +449,11 @@ main .volunteer {
     /* text-align: center; */
     text-align: left;
 }
+
 .volunteer h1 {
     text-align: center;
 }
+
 .volunteer .grid-container {
     width: 100%;
     max-width: 78rem;
@@ -529,9 +575,11 @@ main .empowerment h1 {
 .empowerment .listResult p {
     font-size: 20px;
 }
+
 .listResult h2 {
     font-family: Abel;
 }
+
 .empowerment .empowermentContainer .listContainBg {
     margin-left: 3rem;
     background-image: url('./../img/boxout.svg');
@@ -543,6 +591,7 @@ main .empowerment h1 {
 footer {
     /* height: 100vh; */
 }
+
 .footer_content {
     display: block;
     position: absolute;
@@ -569,6 +618,7 @@ footer {
     align-content: center;
     margin-top: 100px;
 }
+
 .partnerLogos img {
     height: 100px;
     /* height: auto; */
@@ -582,6 +632,42 @@ footer {
     text-decoration-line: underline;
 }
 
+/* menu Mobile styles*/
+
+@media print, screen and (max-width: 600px) {
+    .volunteerContainer .volunteerVideo {
+        margin: 20px auto;
+    }
+
+    .volunteerContainer .volunteerTextSection {
+        margin: 20px auto;
+    }
+
+    #menu-bar {
+        right: -225px;
+    }
+
+    #primary-menu li .sub-menu {
+        transition: all ease 1s;
+        position: relative;
+        top: 0px;
+        margin-left: 10px;
+    }
+
+    #primary-menu li:hover .sub-menu {
+        display: flex;
+
+    }
+
+    .main-navigation ul {
+        display: flex;
+
+        flex-direction: column;
+    }
+}
+
+
+
 /* font awesome */
 .social-media {
     padding-top: 2em;
@@ -593,5 +679,7 @@ footer {
 .fab {
     font-size: 3em;
 }
+
+
 
 
