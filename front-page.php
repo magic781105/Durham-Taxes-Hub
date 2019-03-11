@@ -233,7 +233,7 @@ get_header();
                 </h1>
                 <div class="volunteerContainer grid-x grid-margin-x">
 
-                    <div class="volunteerTextSection cell small-order-2 medium-order-2 large-4">
+                    <div class="volunteerTextSection cell small-order-2 large-order-1 medium-order-2 large-4">
                         <h1>How to become a volunteer </h1>
                         <p class="volunteerText1">
                             <?php echo $volunteer_volunteertext1; ?>
@@ -242,7 +242,7 @@ get_header();
                     </div>
 
 <!--COREY change to volunteer video small-offset -->
-                    <div class="volunteerVideo cell small-8 small-order-1 medium-order-1 small-offset-2 medium-6 large-4">
+                    <div class="volunteerVideo cell small-8 large-order-2 small-order-1 medium-order-1 medium-6 large-4">
 
                         <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
 
@@ -251,7 +251,7 @@ get_header();
                         </p>
                     </div>
 
-                    <div class="volunteerTextSection cell small-order-3 medium-order-3 large-4">
+                    <div class="volunteerTextSection cell small-order-3 large-order-3 medium-order-3 large-4">
                         <h1>How to become a volunteer </h1>
                         <p class="volunteerText1">
                             <?php echo $volunteer_volunteertext1; ?>
