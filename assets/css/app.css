@@ -107,7 +107,7 @@ h1 {
 #menu-bar {
     position: fixed;
     top: 0;
-    right: -200px;
+    right: -225px;
 }
 
 #menu-bar .main-navigation {
@@ -122,6 +122,12 @@ h1 {
     display: none;
 }
 
+.sub-menu li {
+    background-color: white;
+    margin: 2px;
+    font-size: 13px;
+}
+
 #menu-bar nav {
     display: flex;
     flex-flow: row;
@@ -129,7 +135,7 @@ h1 {
 
 #menu-bar ul {
     background: #021d49;
-    padding: 10px;
+
     margin-left: 0;
     margin: 0;
 }
@@ -155,6 +161,14 @@ h1 {
 #menu-list img {
     width: 50px;
     height: auto;
+}
+
+#primary-menu li a {
+    font-size: 18px;
+}
+
+#primary-menu li .sub-menu li a {
+    font-size: 12px;
 }
 
 
@@ -578,14 +592,27 @@ screen and (max-width: 600px) {
         margin: 20px auto;
     }
 
+
+
     #primary-menu li .sub-menu {
+        transition: all ease 1s;
+        position: relative;
+        top: 0px;
+        margin-left: 10px;
+    }
+
+    #primary-menu li:hover .sub-menu {
         display: flex;
+
     }
 
     .main-navigation ul {
         display: flex;
+
         flex-direction: column;
     }
+
+
 
 
 }
