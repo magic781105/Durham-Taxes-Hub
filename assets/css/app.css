@@ -488,9 +488,9 @@ main .empowerment h1 {
 }
 
 /* === footer section === */
-footer {
-    /* height: 100vh; */
-}
+/*footer {
+    height: 100vh;
+}*/
 .footer_content {
     display: block;
     position: absolute;
@@ -531,3 +531,39 @@ footer {
 }
 
 
+/* form style */
+.contact-form {
+    background-image: url('./../img/qualifybg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form {
+    margin: 0 auto;
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    border:none;
+}
+#contact-us {
+    font-family: Abel;
+    color: #021d49;
+    text-align: center;
+    font-size:50px;
+}
+#wsf-1-field-wrapper-7{
+    display:flex;
+    justify-content: center;
+}
+#wsf-1-field-7 {
+    width:50%;
+    background-color:#021d49;
+    font-size: 20px;
+    font-family: Abel;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.wsf-label {
+    color: #021d49;
+    font-family: Abel;
+    font-size: 20px;
+}
