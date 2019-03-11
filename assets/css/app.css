@@ -107,7 +107,7 @@ h1 {
 #menu-bar {
     position: fixed;
     top: 0;
-    right: -225px;
+    right: -230px;
 }
 
 #menu-bar .main-navigation {
@@ -592,7 +592,9 @@ screen and (max-width: 600px) {
         margin: 20px auto;
     }
 
-
+    #menu-bar {
+        right: -225px;
+    }
 
     #primary-menu li .sub-menu {
         transition: all ease 1s;

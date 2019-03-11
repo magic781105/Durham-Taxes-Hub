@@ -15,7 +15,7 @@
             } else {
                 $(this).attr("data-click-state", 0);
                 $("#menu-bar").animate({
-                    right: -200 + "px",
+                    right: -230 + "px",
                 });
             }
         });
