@@ -27,21 +27,37 @@ h1 {
     font-family: Abel;
 }
 
-.image {
-    background-image: url("../img/header-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 /* ** header description ** */
 #logo {
     background-image: url("../img/logo.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     margin-left: 20px;
     margin-top: -10px;
+}
+/*.image {
+    background-image: url("../img/homebg.svg");
+    background-repeat:no-repeat;
+    background-size: contain;
+}*/
+#image {
+    width:1280px;
+    height:auto;
+}
+#image img {
+    width: 1280px;
+    height:auto;
+}
+.height {
+    height: 100vh;
+}
+#header-info{
+    padding-top:150px;
+    padding-right:200px;
 }
 .header_desc {
     font-family: Abel;
@@ -570,4 +586,25 @@ main .empowerment h1 {
     color: #021d49;
     font-family: Abel;
     font-size: 20px;
+}
+
+
+
+/*responsive*/
+@media screen and (min-width:326px) 
+and (max-width:669px){
+    .height{
+        height:auto;
+    }
+    .header-info {
+        padding-top:20px;
+    }
+    #image {
+        width: 600px;
+        height:auto;
+    }
+    #image img {
+        width: 600px;
+        height:auto;
+    }
 }

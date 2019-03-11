@@ -68,21 +68,26 @@ get_header();
                 </section>-->
 
                 <section id="header">
-                    <div class="grid-x">
-                        <div class="cell medium-6 large-8">
-							<!--<img id="" src="<?php echo $image['url']; ?>"/>-->
+                    <div class="grid-x height">
+                        <div class="cell small-12 medium-6 large-8"> 
+                            <div id="logo"></div>
+						    <div id="image">
+                                <img src="<?php echo $image['url']; ?>"/>
+                            </div>
                         </div>
 
-                        <div class="cell medium-6 large-4">
-                            <h1 class="header_title"><?php echo $header; ?></h1>
-                        <p class="header_desc"><?php echo $content; ?></p>
-                        <div class="form">
-                            <input id="userInput" placeholder="Example: $30,000"/>
-                            <input id="threshold" value = "<?php echo $threshold; ?>" />
-                            <button id="inputCheck">Am I Eligible?</button>
-                        </div>
-                        <button class="header_button">Be a Volunteer!</button>
-                        </div>
+                        <div class="cell small-12 medium-6 large-4">
+                            <div id="header-info">
+                                <h1 class="header_title"><?php echo $header; ?></h1>
+                                <p class="header_desc"><?php echo $content; ?></p>
+                                <div class="form">
+                                    <input id="userInput" placeholder="Example: $30,000"/>
+                                    <input id="threshold" value = "<?php echo $threshold; ?>" />
+                                    <button id="inputCheck">Am I Eligible?</button>
+                                </div>
+                                <button class="header_button">Be a Volunteer!</button>
+                                </div>
+                            </div>
                     </div>
                 </section>
                 
