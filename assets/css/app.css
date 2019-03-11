@@ -513,7 +513,20 @@ main .volunteer {
 }
 
 /* COREY media query added */
+@media(max-width: 1020px) {
+  .volunteerVideo {
+    margin-left: 26% !important;
+  }
+  .volunteerTextSection {
+      margin-bottom: 2rem;
+  }
+}
+
 @media(max-width: 640px) {
+
+  .volunteerTextSection {
+      margin-bottom: 2rem;
+  }
    .volunteerTextSection h1 {
        font-size: 1.2em !important;
    }
@@ -527,6 +540,10 @@ main .volunteer {
    .volunteerTextSection a {
     margin-top: 2px !important;
 }
+    .volunteerVideo {
+      margin-left: 18vw !important;
+    }
+
 }
 /* COREY END */
 
