@@ -27,12 +27,12 @@
             if ($("#userInput").val() <= $("#threshold").val()) {
                 alert("you are eligible");
 
-           } else{
-               alert("you are not eligible");
-           }
+            } else {
+                alert("you are not eligible");
+            }
         });
-  
-  
+
+
         $(".empowerment .listItem:first-child").css("background-image", "url('/wp-content/themes/durhamtaxhub/assets/img/menuarrow.svg')");
 
 
@@ -123,7 +123,7 @@
         $('#qualificationBubble').on('click', 'li', e => {
 
             let index = $(e.target).index();
-            let id = `#qualification-${index}`; 
+            let id = `#qualification-${index}`;
             console.log("id" + id);
             $('.qualification-div').css({
                 display: 'none'
@@ -147,4 +147,3 @@
 
 
 })(jQuery);
-
