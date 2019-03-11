@@ -27,7 +27,11 @@ h1 {
     font-family: Abel;
 }
 
-
+.image {
+    background-image: url("../img/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* ** header description ** */
 #logo {
     background-image: url("../img/logo.png");
@@ -47,7 +51,7 @@ h1 {
     font-size:20px;
     text-align: left;
     width: 500px;
-    margin-left: 900px;
+    /*margin-left: 900px;*/
 }
 /* ** header title ** */
 .header_title {
@@ -56,7 +60,7 @@ h1 {
     font-weight:800;
     color: #021d49;
     text-align: left;
-    margin-left: 690px;
+    /*margin-left: 690px;*/
 }
 /* ** header button - Be a Volunteer ** */
 .header_button {
@@ -65,7 +69,7 @@ h1 {
     font-size: 30px;
     padding: 15px;
     border-radius: 50px;
-    margin-left: 630px;
+   /* margin-left: 630px;*/
     margin-top:20px;
 }
 

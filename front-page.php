@@ -53,7 +53,7 @@ get_header();
                 $threshold = $eligible_header['threshold'];
                 //var_dump($header);
                 ?>
-                <section id="header">
+                <!--<section id="header">
                     <div id="logo"></div>
                     <div class="header" style="background-image:url(<?php echo $image['url'];?>);">
                         <h1 class="header_title"><?php echo $header; ?></h1>
@@ -65,7 +65,27 @@ get_header();
                         </div>
                         <button class="header_button">Be a Volunteer!</button>
                     </div>
+                </section>-->
+
+                <section id="header">
+                    <div class="grid-x">
+                        <div class="cell medium-6 large-8">
+							<!--<img id="" src="<?php echo $image['url']; ?>"/>-->
+                        </div>
+
+                        <div class="cell medium-6 large-4">
+                            <h1 class="header_title"><?php echo $header; ?></h1>
+                        <p class="header_desc"><?php echo $content; ?></p>
+                        <div class="form">
+                            <input id="userInput" placeholder="Example: $30,000"/>
+                            <input id="threshold" value = "<?php echo $threshold; ?>" />
+                            <button id="inputCheck">Am I Eligible?</button>
+                        </div>
+                        <button class="header_button">Be a Volunteer!</button>
+                        </div>
+                    </div>
                 </section>
+                
                 <?php 
             }        
         ?>
