@@ -160,7 +160,7 @@ h1 {
 
 .location-wrapper {
     display: grid;
-    grid-template-columns: 25vw 40vw 25vw;
+    grid-template-columns: 25vw 1fr 25vw;
     grid-gap: 2em;
     padding: 2em;
 }
