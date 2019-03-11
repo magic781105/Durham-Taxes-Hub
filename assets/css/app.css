@@ -9,7 +9,12 @@
     box-sizing: border-box;
 }
 
-.header-page .header {
+/* font awesome */
+.fab {
+    font-size: 3em;
+}
+
+ .header-page .header {   
     min-height: 600px;
     width: auto;
     display: flex !important;
@@ -226,7 +231,7 @@ h1 {
     /* background-color: #d6e7ee; */
 }
 
-.location-detail > div {
+.location-detail>div {
     position: absolute;
     top: 0;
 }
@@ -246,6 +251,76 @@ h1 {
     display: none;
 }
 
+/* COREY media query added */
+@media(max-width: 1150px) {
+    .location-wrapper {
+        grid-template-columns: 85vw;
+    }
+
+    .location-lists h2 {
+        font-size: 1.3rem;
+    }
+
+    .location-list h3 {
+        font-size: 1.2rem;
+    }
+
+    .location-list p {
+        font-size: 0.8rem;
+    }
+
+    .location-list {
+        display: inline-block;
+        padding: 0.5rem;
+    }
+
+    .location-map {
+        /* border: 1px solid; */
+        margin-top: 10rem;
+        height: 20vh;
+        background-position: bottom;
+    }
+}
+
+@media(max-width: 575px) {
+    .location-wrapper {
+        grid-template-columns: 85vw;
+    }
+
+    .location-lists h2 {
+        font-size: 1.3rem;
+    }
+
+    .location-list h3 {
+        font-size: 1.2rem;
+    }
+
+    .location-list p {
+        font-size: 0.8rem;
+    }
+
+    .location-list {
+        display: inline-block;
+        padding: 0.5rem;
+    }
+
+    .location-detail h5 {
+        font-size: 1rem;
+    }
+
+    .location-detail p {
+        font-size: 0.8rem;
+    }
+
+    .location-map {
+        /* border: 1px solid; */
+        margin-top: 8rem;
+        height: 20vh;
+        background-position: bottom;
+    }
+}
+
+/* COREY END */
 
 /* === How Can I Qualify Section === */
 .qualification {
@@ -336,18 +411,18 @@ h1 {
 }
 
 @media(max-width: 638px) {
-   .qualification h1 {
-       margin-bottom: 1em;
-       font-size: 2.8em;
-   }
+    .qualification h1 {
+        margin-bottom: 1em;
+        font-size: 2.8em;
+    }
 
-   .qualification-buttons {
-       font-size: 1em;
-   }
+    .qualification-buttons {
+        font-size: 1em;
+    }
 
-   .qualification-buttons li {
-       font-size: 1.4em;
-   }
+    .qualification-buttons li {
+        font-size: 1.4em;
+    }
 }
 
 @media(max-width: 500px) {
@@ -448,6 +523,7 @@ main .volunteer {
     background-size: contain;
     /* text-align: center; */
     text-align: left;
+    height: 100vh;
 }
 
 .volunteer h1 {
@@ -502,6 +578,40 @@ main .volunteer {
     color: white;
 }
 
+/* COREY media query added */
+@media(max-width: 1020px) {
+  .volunteerVideo {
+    margin-left: 26% !important;
+  }
+  .volunteerTextSection {
+      margin-bottom: 2rem;
+  }
+}
+
+@media(max-width: 640px) {
+
+  .volunteerTextSection {
+      margin-bottom: 2rem;
+  }
+   .volunteerTextSection h1 {
+       font-size: 1.2em !important;
+   }
+
+   .volunteerTextSection p {
+       font-size: 0.9em !important;
+   }
+   .volunteerText1 {
+     margin-bottom: 2px !important;
+   }
+   .volunteerTextSection a {
+    margin-top: 2px !important;
+}
+    .volunteerVideo {
+      margin-left: 18vw !important;
+    }
+
+}
+/* COREY END */
 
 /*Empowerment page*/
 main .empowerment {
@@ -611,16 +721,18 @@ footer {
     text-align: center;
 }
 
+/*COREY changed to display grid changed spacing for logos added media query*/
 .partnerLogos {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-areas: 'img img img img';
     justify-content: center;
     align-content: center;
     margin-top: 100px;
 }
 
 .partnerLogos img {
-    height: 100px;
+    height: 80px;
+    margin: 10px;
     /* height: auto; */
 }
 
@@ -631,6 +743,26 @@ footer {
     text-align: center;
     text-decoration-line: underline;
 }
+@media(max-width: 900px) {
+   .footerHeader {
+       font-size: 2.4em !important;
+   }
+
+   .footerParagraph {
+       font-size: 1em !important;
+       padding: 0 80px;
+   }
+   .partnerLogos {
+     grid-template-areas: 'img img';
+   }
+   .partnerLogos img{
+     height: 60px;
+     margin: 20px;
+   }
+}
+/*COREY END*/
+
+
 
 /* menu Mobile styles*/
 
