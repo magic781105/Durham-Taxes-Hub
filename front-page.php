@@ -91,7 +91,7 @@ get_header();
                     </div>
 
                     <!--mobile-->
-                    <div class="grid-x">
+                    <div class="grid-x mobile-header">
                     <div class="cell show-for-small-only display-image">
                             <div id="header-info">
                                 <h1 class="header_title"><?php echo $header; ?></h1>
@@ -103,12 +103,6 @@ get_header();
                                 </div>
                                 <button class="header_button">Be a Volunteer!</button>
                                 </div>
-                        </div>
-
-                        <div class="cell show-for-small-only"> 
-						    <div id="image">
-                                
-                            </div>
                         </div>
                     </div>
                 </section>
