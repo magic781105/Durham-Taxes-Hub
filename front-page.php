@@ -31,7 +31,7 @@ get_header();
         <?php
 
 			// does get field exist
-			
+
 			if (function_exists('get_field')){
 
 			$eligible = get_field('header');
@@ -70,8 +70,8 @@ get_header();
 				*/
 				?>
         <!-- </div> -->
-        
-      
+
+
         <!-- header section -->
         <div class="header-page">
         <?php
@@ -97,8 +97,8 @@ get_header();
 					<button class="header_button">Be a Volunteer!</button>
 				</div>
 			</section>
-          <?php 
-            }        
+          <?php
+            }
         ?>
         </div>
         <!--  menu setcion  -->
@@ -122,14 +122,14 @@ get_header();
 							</li>
 						</div>
 					</div>
-					
-					<?php	
+
+					<?php
 					}
-					?>		
+					?>
 				</ul>
 			</nav>
 		</div>
-		
+
 		<!-- how to qualified -->
 		<section class="qualification">
             <h1>How to Qualify</h1>
@@ -220,12 +220,12 @@ get_header();
 
         <!--volunteers section-->
         <section class="volunteer">
-            <?php 
+            <?php
 				$volunteer_header = $volunteers["header"];
 				$volunteer_volunteertext1 = $volunteers["volunteertext1"];
-				$volunteer_volunteerVideo = $volunteers["volunteerVideo"];	
-				$volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];		
-				$volunteer_volunteertext2 = $volunteers["volunteertext2"];						
+				$volunteer_volunteerVideo = $volunteers["volunteerVideo"];
+				$volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];
+				$volunteer_volunteertext2 = $volunteers["volunteertext2"];
 			?>
             <div class="grid-container">
                 <h1 class="volunteerHeader">
@@ -240,8 +240,9 @@ get_header();
                         </p>
                         <a>Click here >></a>
                     </div>
-
-                    <div class="volunteerVideo cell small-8 medium-6 large-4">
+                    
+<!--COREY change to volunteer video small-offset -->
+                    <div class="volunteerVideo cell small-8 small-offset-2 medium-6 large-4">
 
                         <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
 
@@ -266,7 +267,7 @@ get_header();
 
         <!--section for empowerment-->
         <section class="empowerment">
-            <?php 
+            <?php
 					$empowerment_header = $empowerment["header"];
 					$empowerment_listItems = $empowerment["empowermentlist"];
 					$empowerment_text1 = $empowerment["empowermenttext1"];
@@ -276,7 +277,7 @@ get_header();
 					$empowerment_listitem3 = $empowerment_listItems["listitem3"];
 					$empowerment_listitem4 = $empowerment_listItems["listitem4"];
 					$empowerment_listitem5 = $empowerment_listItems["listitem5"];
-									
+
 				?>
             <div class="grid-container">
                 <h1 class="empowermentHeader">
@@ -332,18 +333,18 @@ get_header();
             </div>
         </section>
 
-        
+
 
 
         <section class="testimonial">
-           <?php 
+           <?php
 					$testimonial_header = $testimonials["header"];	?>
 
-            
+
 			<h1 class="sectionHeader"><?php echo $testimonial_header; ?></h1>
-            
+
             <div id="alltestimonial">
-                <?php 
+                <?php
 
 					$testimonialItem = 0;
 					foreach($testimonials as $testimonial){
@@ -351,10 +352,10 @@ get_header();
 						$testimonial_img = $testimonial['image'];
 						$testimonial_content = $testimonial['content'];
 						$testimonial_name = $testimonial['name'];
-						// var_dump($testimonial_img);						
+						// var_dump($testimonial_img);
 
 						?>
-						
+
                 <div class="testimonialGroup">
                     <div class="testimonialImage" style="background-image:url(<?php echo $testimonial_img['url'];?>);"></div>
                     <div class="testimonialContent">
@@ -365,9 +366,9 @@ get_header();
                     </div>
                 </div>
 
-                <?php	
+                <?php
 						}
-						$testimonialItem++;						
+						$testimonialItem++;
 
 					}
 					?>
