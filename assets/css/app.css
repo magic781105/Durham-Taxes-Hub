@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: Abel;
     src: url(../fonts/Abel-Regular.ttf);
@@ -10,7 +9,12 @@
     box-sizing: border-box;
 }
 
- .header-page .header {
+/* font awesome */
+.fab {
+    font-size: 3em;
+}
+
+ .header-page .header {   
     min-height: 600px;
     width: auto;
     display: flex !important;
@@ -40,25 +44,28 @@ h1 {
     margin-left: 20px;
     margin-top: -10px;
 }
+
 .header_desc {
     font-family: Abel;
     color: #021d49;
     display: flex;
     justify-content: end;
-    font-size:20px;
+    font-size: 20px;
     text-align: left;
     width: 500px;
     margin-left: 900px;
 }
+
 /* ** header title ** */
 .header_title {
     font-family: Abel;
     font-size: 45px;
-    font-weight:800;
+    font-weight: 800;
     color: #021d49;
     text-align: left;
     margin-left: 690px;
 }
+
 /* ** header button - Be a Volunteer ** */
 .header_button {
     background: #021d49;
@@ -67,7 +74,7 @@ h1 {
     padding: 15px;
     border-radius: 50px;
     margin-left: 630px;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 
@@ -77,60 +84,96 @@ h1 {
     flex-flow: row;
     border: 1px solid #021d49;
     margin-left: 720px;
-    padding:0;
+    padding: 0;
 }
-.form #threshold{
+
+.form #threshold {
     display: none;
 }
+
 #userInput {
-    border:1px solid #021d49;
-    padding:10px;
+    border: 1px solid #021d49;
+    padding: 10px;
     color: rgb(50, 50, 50);
 }
+
 #inputCheck {
-    border:1px solid #021d49;
+    border: 1px solid #021d49;
     padding: 10px;
     background: #ffc436;
 }
+
 #inputCheck:hover {
     cursor: pointer;
 }
 
 
 /* ** navigation menu ** */
-.menu-bar {
+#menu-bar {
     position: fixed;
-    top:0;
-    right: -200px;
+    top: 0;
+    right: -230px;
 }
-.menu-bar nav {
+
+#menu-bar .main-navigation {
+    float: none;
+}
+
+.main-navigation li {
+    float: none;
+}
+
+#primary-menu li .sub-menu {
+    display: none;
+}
+
+.sub-menu li {
+    background-color: white;
+    margin: 2px;
+    font-size: 13px;
+}
+
+#menu-bar nav {
     display: flex;
     flex-flow: row;
 }
-.menu-bar ul {
+
+#menu-bar ul {
     background: #021d49;
-    padding: 10px;
+
     margin-left: 0;
-    margin:0;
+    margin: 0;
 }
-.menu-bar li {
+
+#menu-bar li {
     cursor: pointer;
 }
+
 #navigation {
     cursor: pointer;
-    background-image:url(../img/nav.png);
+    background-image: url(../img/nav.png);
     background-size: contain;
-    width:30px;
-    height:auto;
+    width: 30px;
+    height: auto;
     background-repeat: no-repeat;
 }
-.menu-list {
+
+#menu-list {
     color: white;
     list-style-type: none;
 }
-.menu-list img {
+
+#menu-list img {
     width: 50px;
     height: auto;
+}
+
+#primary-menu li a {
+    font-size: 18px;
+}
+
+#primary-menu li .sub-menu li a {
+    font-size: 12px;
 }
 
 
@@ -141,9 +184,12 @@ h1 {
     background-size: contain;
     height: 100vh;
 }
+
 .location h1 {
     text-align: center;
+    padding-top: 1.5em;
 }
+
 .location h3 {
     font-size: 1.5em;
     margin: 0;
@@ -155,8 +201,8 @@ h1 {
 
 .location-wrapper {
     display: grid;
-    grid-template-columns: 15vw 45vw 25vw;
-    grid-gap: 1em;
+    grid-template-columns: 25vw 1fr 25vw;
+    grid-gap: 2em;
     padding: 2em;
 }
 
@@ -170,9 +216,12 @@ h1 {
     font-size: 1em;
     margin-bottom: .5em;
 }
-.location-list h3, .location-lists h2 {
+
+.location-list h3,
+.location-lists h2 {
     font-family: Abel;
 }
+
 .location-list:hover {
     cursor: pointer;
 }
@@ -182,7 +231,7 @@ h1 {
     /* background-color: #d6e7ee; */
 }
 
-.location-detail > div {
+.location-detail>div {
     position: absolute;
     top: 0;
 }
@@ -203,62 +252,74 @@ h1 {
 }
 
 /* COREY media query added */
-@media(max-width: 1150px){
-  .location-wrapper{
-    grid-template-columns: 85vw;
-  }
-  .location-lists h2 {
-    font-size: 1.3rem;
-  }
-  .location-list h3 {
-    font-size: 1.2rem;
-  }
-  .location-list p {
-    font-size: 0.8rem;
-  }
-  .location-list {
-    display: inline-block;
-    padding: 0.5rem;
-  }
-  .location-map {
-      /* border: 1px solid; */
-      margin-top: 10rem;
-      height: 20vh;
-      background-position: bottom;
-  }
-  }
+@media(max-width: 1150px) {
+    .location-wrapper {
+        grid-template-columns: 85vw;
+    }
 
-  @media(max-width: 575px){
-    .location-wrapper{
-      grid-template-columns: 85vw;
-    }
     .location-lists h2 {
-      font-size: 1.3rem;
+        font-size: 1.3rem;
     }
+
     .location-list h3 {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
     }
+
     .location-list p {
-      font-size: 0.8rem;
+        font-size: 0.8rem;
     }
+
     .location-list {
-      display: inline-block;
-      padding: 0.5rem;
+        display: inline-block;
+        padding: 0.5rem;
+    }
+
+    .location-map {
+        /* border: 1px solid; */
+        margin-top: 10rem;
+        height: 20vh;
+        background-position: bottom;
+    }
+}
+
+@media(max-width: 575px) {
+    .location-wrapper {
+        grid-template-columns: 85vw;
+    }
+
+    .location-lists h2 {
+        font-size: 1.3rem;
+    }
+
+    .location-list h3 {
+        font-size: 1.2rem;
+    }
+
+    .location-list p {
+        font-size: 0.8rem;
+    }
+
+    .location-list {
+        display: inline-block;
+        padding: 0.5rem;
     }
 
     .location-detail h5 {
-      font-size: 1rem;
+        font-size: 1rem;
     }
+
     .location-detail p {
-      font-size: 0.8rem;
+        font-size: 0.8rem;
     }
+
     .location-map {
         /* border: 1px solid; */
         margin-top: 8rem;
         height: 20vh;
         background-position: bottom;
     }
-    }
+}
+
 /* COREY END */
 
 /* === How Can I Qualify Section === */
@@ -274,7 +335,7 @@ h1 {
 }
 
 .qualification h1 {
-    flex: 1 100vw;
+    flex: 0 100vw;
     text-align: center;
 }
 
@@ -287,7 +348,6 @@ h1 {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    flex-wrap: warp;
 }
 
 .qualification-buttons li {
@@ -297,7 +357,6 @@ h1 {
     font-weight: bold;
     font-size: 1.8em;
     margin-bottom: 1em;
-    display: inline-block;
     align-self: flex-start;
     padding: .3em;
     border-radius: 20px;
@@ -306,11 +365,12 @@ h1 {
 .qualification-contents {
     flex: 0 646px;
     background: #fff;
-    background-image: url('./../img/border.svg');
+    /* background-image: url('./../img/border.svg'); */
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
-    padding: 2em;
+    padding: 0 2em;
+    font-size: 1.2em;
 }
 
 #qualification-2,
@@ -323,6 +383,10 @@ h1 {
     .qualification {
         flex-direction: column;
         flex-wrap: nowrap;
+    }
+
+    .qualification-contents {
+        font-size: 1em;
     }
 
     .qualification h1 {
@@ -347,18 +411,18 @@ h1 {
 }
 
 @media(max-width: 638px) {
-   .qualification h1 {
-       margin-bottom: 1em;
-       font-size: 2.8em;
-   }
+    .qualification h1 {
+        margin-bottom: 1em;
+        font-size: 2.8em;
+    }
 
-   .qualification-buttons {
-       font-size: 1em;
-   }
+    .qualification-buttons {
+        font-size: 1em;
+    }
 
-   .qualification-buttons li {
-       font-size: 1.4em;
-   }
+    .qualification-buttons li {
+        font-size: 1.4em;
+    }
 }
 
 @media(max-width: 500px) {
@@ -461,9 +525,11 @@ main .volunteer {
     text-align: left;
     height: 100vh;
 }
+
 .volunteer h1 {
     text-align: center;
 }
+
 .volunteer .grid-container {
     width: 100%;
     max-width: 78rem;
@@ -619,9 +685,11 @@ main .empowerment h1 {
 .empowerment .listResult p {
     font-size: 20px;
 }
+
 .listResult h2 {
     font-family: Abel;
 }
+
 .empowerment .empowermentContainer .listContainBg {
     margin-left: 3rem;
     background-image: url('./../img/boxout.svg');
@@ -633,6 +701,7 @@ main .empowerment h1 {
 footer {
     /* height: 100vh; */
 }
+
 .footer_content {
     display: block;
     position: absolute;
@@ -660,6 +729,7 @@ footer {
     align-content: center;
     margin-top: 100px;
 }
+
 .partnerLogos img {
     height: 80px;
     margin: 10px;
@@ -691,3 +761,57 @@ footer {
    }
 }
 /*COREY END*/
+
+
+
+/* menu Mobile styles*/
+
+@media print, screen and (max-width: 600px) {
+    .volunteerContainer .volunteerVideo {
+        margin: 20px auto;
+    }
+
+    .volunteerContainer .volunteerTextSection {
+        margin: 20px auto;
+    }
+
+    #menu-bar {
+        right: -225px;
+    }
+
+    #primary-menu li .sub-menu {
+        transition: all ease 1s;
+        position: relative;
+        top: 0px;
+        margin-left: 10px;
+    }
+
+    #primary-menu li:hover .sub-menu {
+        display: flex;
+
+    }
+
+    .main-navigation ul {
+        display: flex;
+
+        flex-direction: column;
+    }
+}
+
+
+
+/* font awesome */
+.social-media {
+    padding-top: 2em;
+    margin: 0 auto;
+    width: 8em;
+    text-align: center;
+}
+
+.fab {
+    font-size: 3em;
+}
+
+
+
+
