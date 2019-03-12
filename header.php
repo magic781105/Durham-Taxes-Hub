@@ -42,20 +42,25 @@
 			$durhamtaxhub_description = get_bloginfo( 'description', 'display' );
 			if ( $durhamtaxhub_description || is_customize_preview() ) :
 				?>
-				<!-- <p class="site-description"><?php //echo $durhamtaxhub_description; /* WPCS: xss ok. */ ?></p> -->
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+                <!-- <p class="site-description"><?php //echo $durhamtaxhub_description; /* WPCS: xss ok. */ ?></p> -->
+                <?php endif; ?>
+            </div><!-- .site-branding -->
+            <div id="menu-bar">
+                <nav id="site-navigation" class="main-navigation">
+                    <div id="navigation" data-click-state="0"></div>
 
-            <nav id="site-navigation" class="main-navigation">
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                    <?php esc_html_e( 'Primary Menu', 'durhamtaxhub' ); ?></button>
-                <?php
+                    <div class="nav-menu">
+                        <div class="nav-border">
+                            <?php
             wp_nav_menu( array(
 			'theme_location' => 'primary-menu',
  	          'menu_id'        => 'primary-menu',
 			 ) );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+                        </div>
+                    </div>
+                </nav>
+            </div><!-- #site-navigation -->
+        </header><!-- #masthead -->
 
 	<div id="content" class="site-content">

@@ -82,34 +82,7 @@ get_header();
             }        
         ?>
         </div>
-        <!--  menu setcion  -->
-        <div id="menu-bar">
-			<nav>
-				<div id="navigation" data-click-state = "0"></div>
-				<ul>
-					<?php
-                        // var_dump($nav_menu);
-                        foreach($navigation_menu as $nav_menu) {
-                            $icon = $nav_menu['nav_div1'];
-                            $text = $nav_menu['nav_div2'];
-                            $idName = $nav_menu['id_name'];
-                            // var_dump($idName);
-					?>
-					<div class="nav-menu">
-						<div class="nav-border">
-							<li class="menu-list" id="<?php echo $idName; ?>">
-								<img src="<?php echo $icon['url']; ?>"/>
-								<p><?php echo $text; ?></p>
-							</li>
-						</div>
-					</div>
-					
-					<?php	
-					}
-					?>		
-				</ul>
-			</nav>
-		</div>
+       
 		
 		<!-- how to qualified -->
 		<section class="qualification">
