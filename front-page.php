@@ -343,7 +343,7 @@ get_header();
 								<?php //echo do_shortcode('[ws_form id="' . $form_id . '"]' ) ?>
 							</div> -->
 							<div class="cell small-12 medium-12">
-								
+                                <p id="contact-us">Contact Us</p>
                                 <?php echo do_shortcode('[ws_form id="' . $form_id . '"]' ) ?>
 							</div>
 						</div>
