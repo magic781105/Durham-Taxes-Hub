@@ -9,7 +9,12 @@
     box-sizing: border-box;
 }
 
-.header-page .header {
+/* font awesome */
+.fab {
+    font-size: 3em;
+}
+
+ .header-page .header {   
     min-height: 600px;
     width: auto;
     display: flex !important;
@@ -33,11 +38,27 @@ h1 {
     background-image: url("../img/logo.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     margin-left: 20px;
-    margin-top: -10px;
+    margin-top: 10px;
+}
+
+#image {
+    width:1280px;
+    height:auto;
+}
+#image img {
+    width: 1280px;
+    height:auto;
+}
+.height {
+    height: 100vh;
+}
+#header-info{
+    padding-top:150px;
+    padding-right:200px;
 }
 
 .header_desc {
@@ -48,7 +69,7 @@ h1 {
     font-size: 20px;
     text-align: left;
     width: 500px;
-    margin-left: 900px;
+    /* margin-left: 900px; */
 }
 
 /* ** header title ** */
@@ -58,7 +79,7 @@ h1 {
     font-weight: 800;
     color: #021d49;
     text-align: left;
-    margin-left: 690px;
+    /* margin-left: 690px; */
 }
 
 /* ** header button - Be a Volunteer ** */
@@ -68,7 +89,7 @@ h1 {
     font-size: 30px;
     padding: 15px;
     border-radius: 50px;
-    margin-left: 630px;
+    /* margin-left: 630px; */
     margin-top: 20px;
 }
 
@@ -77,8 +98,8 @@ h1 {
 .form {
     display: flex;
     flex-flow: row;
-    border: 1px solid #021d49;
-    margin-left: 720px;
+    /* border: 1px solid #021d49;
+    margin-left: 720px; */
     padding: 0;
 }
 
@@ -171,6 +192,84 @@ h1 {
     font-size: 12px;
 }
 
+/* navigation icon */
+#menu-bar {
+    z-index: 100;
+}
+.menu > li > a {
+    font-family: Abel;
+    position: relative;
+    margin-left: 50px;
+}
+ul.sub-menu {
+    width: 235px;
+}
+ul.sub-menu li {
+    text-align: center;
+}
+ul.sub-menu a {
+    margin: 0 auto;
+}
+
+#qualification:before {    
+    content: "";
+    background-image: url(../img/qualification.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 31px;
+    height: 30px;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+}
+
+#location:before {    
+    content: "";
+    background-image: url(../img/location.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 31px;
+    height: 30px;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+}
+
+#volunteer:before {
+    content: "";
+    background-image: url(../img/volunteer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 31px;
+    height: 30px;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+}
+#empowerment:before{
+    content: "";
+    background-image: url(../img/empowerment.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 31px;
+    height: 30px;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+}
+#testimonial:before{
+    content: "";
+    background-image: url(../img/testimonial.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 31px;
+    height: 30px;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+}
+
+
 
 /*icons for menu*/
 
@@ -231,7 +330,7 @@ h1 {
     /* background-color: #d6e7ee; */
 }
 
-.location-detail > div {
+.location-detail>div {
     position: absolute;
     top: 0;
 }
@@ -251,6 +350,76 @@ h1 {
     display: none;
 }
 
+/* COREY media query added */
+@media(max-width: 1150px) {
+    .location-wrapper {
+        grid-template-columns: 85vw;
+    }
+
+    .location-lists h2 {
+        font-size: 1.3rem;
+    }
+
+    .location-list h3 {
+        font-size: 1.2rem;
+    }
+
+    .location-list p {
+        font-size: 0.8rem;
+    }
+
+    .location-list {
+        display: inline-block;
+        padding: 0.5rem;
+    }
+
+    .location-map {
+        /* border: 1px solid; */
+        margin-top: 10rem;
+        height: 20vh;
+        background-position: bottom;
+    }
+}
+
+@media(max-width: 575px) {
+    .location-wrapper {
+        grid-template-columns: 85vw;
+    }
+
+    .location-lists h2 {
+        font-size: 1.3rem;
+    }
+
+    .location-list h3 {
+        font-size: 1.2rem;
+    }
+
+    .location-list p {
+        font-size: 0.8rem;
+    }
+
+    .location-list {
+        display: inline-block;
+        padding: 0.5rem;
+    }
+
+    .location-detail h5 {
+        font-size: 1rem;
+    }
+
+    .location-detail p {
+        font-size: 0.8rem;
+    }
+
+    .location-map {
+        /* border: 1px solid; */
+        margin-top: 8rem;
+        height: 20vh;
+        background-position: bottom;
+    }
+}
+
+/* COREY END */
 
 /* === How Can I Qualify Section === */
 .qualification {
@@ -453,6 +622,7 @@ main .volunteer {
     background-size: contain;
     /* text-align: center; */
     text-align: left;
+    height: 100vh;
 }
 
 .volunteer h1 {
@@ -507,6 +677,40 @@ main .volunteer {
     color: white;
 }
 
+/* COREY media query added */
+@media(max-width: 1020px) {
+  .volunteerVideo {
+    margin-left: 26% !important;
+  }
+  .volunteerTextSection {
+      margin-bottom: 2rem;
+  }
+}
+
+@media(max-width: 640px) {
+
+  .volunteerTextSection {
+      margin-bottom: 2rem;
+  }
+   .volunteerTextSection h1 {
+       font-size: 1.2em !important;
+   }
+
+   .volunteerTextSection p {
+       font-size: 0.9em !important;
+   }
+   .volunteerText1 {
+     margin-bottom: 2px !important;
+   }
+   .volunteerTextSection a {
+    margin-top: 2px !important;
+}
+    .volunteerVideo {
+      margin-left: 18vw !important;
+    }
+
+}
+/* COREY END */
 
 /*Empowerment page*/
 main .empowerment {
@@ -622,16 +826,18 @@ footer {
     text-align: center;
 }
 
+/*COREY changed to display grid changed spacing for logos added media query*/
 .partnerLogos {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-areas: 'img img img img';
     justify-content: center;
     align-content: center;
     margin-top: 100px;
 }
 
 .partnerLogos img {
-    height: 100px;
+    height: 80px;
+    margin: 10px;
     /* height: auto; */
 }
 
@@ -642,6 +848,26 @@ footer {
     text-align: center;
     text-decoration-line: underline;
 }
+@media(max-width: 900px) {
+   .footerHeader {
+       font-size: 2.4em !important;
+   }
+
+   .footerParagraph {
+       font-size: 1em !important;
+       padding: 0 80px;
+   }
+   .partnerLogos {
+     grid-template-areas: 'img img';
+   }
+   .partnerLogos img{
+     height: 60px;
+     margin: 20px;
+   }
+}
+/*COREY END*/
+
+
 
 /* menu Mobile styles*/
 
@@ -691,7 +917,114 @@ screen and (max-width: 600px) {
 
 }
 
+/* form style */
+.contact-form {
+    background-image: url('./../img/qualifybg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact {
+    margin: 0 auto;
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    border:none;
+}
+#contact-us {
+    font-family: Abel;
+    color: #021d49;
+    text-align: center;
+    font-size:50px;
+}
+.contact-form #wsf-1-field-wrapper-7{
+    display:flex;
+    justify-content: center;
+}
+.contact-form #wsf-1-field-7 {
+    width:50%;
+    background-color:#021d49;
+    font-size: 20px;
+    font-family: Abel;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.contact-form .wsf-label {
+    color: #021d49;
+    font-family: Abel;
+    font-size: 20px;
+}
 
+
+
+/*responsive*/
+@media screen and (min-width:326px) 
+and (max-width:600px){
+    .height{
+        height:auto;
+    }
+    .header-info {
+        padding-top:0px;
+        padding-right:0px;
+    }
+    /*#image {
+        background-image: url(../img/mobile-header-bg.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+        width:auto;
+        height:625px;
+    
+    }*/
+    .display-image {
+        background-image: url(../img/mobile-header-bg.png);
+        background-repeat:no-repeat;
+        background-size: contain;
+        height:120vh;
+
+    }
+    .mobile-header {
+        display:flex;
+        justify-content: center;
+    }
+    #header-info{
+        padding-top:150px;
+        padding-right:200px;
+    }
+    .header_desc {
+        font-family: Abel;
+        color: #021d49;
+        display: flex;
+        justify-content: end;
+        font-size:20px;
+        text-align: center;
+        width: 500px;
+        /*margin-left: 900px;*/
+    }
+    /* ** header title ** */
+    .header_title {
+        font-family: Abel;
+        font-size: 35px;
+        font-weight:800;
+        color: #021d49;
+        margin-left:150px;
+        width:500px;
+    }
+    /* ** header button - Be a Volunteer ** */
+    .header_button {
+        background: #021d49;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 50px;
+       /* margin-left: 630px;*/
+        margin-top:20px;
+        margin-left: 150px;
+        width:200px;
+    }
+    .form {
+        margin-left:100px;
+        border:none;
+    }
+} 
 
 /* font awesome */
 .social-media {
@@ -703,4 +1036,5 @@ screen and (max-width: 600px) {
 
 .fab {
     font-size: 3em;
+    color: #99cadc;
 }
