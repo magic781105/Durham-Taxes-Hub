@@ -336,18 +336,18 @@ h1 {
 }
 
 @media(max-width: 638px) {
-   .qualification h1 {
-       margin-bottom: 1em;
-       font-size: 2.8em;
-   }
+    .qualification h1 {
+        margin-bottom: 1em;
+        font-size: 2.8em;
+    }
 
-   .qualification-buttons {
-       font-size: 1em;
-   }
+    .qualification-buttons {
+        font-size: 1em;
+    }
 
-   .qualification-buttons li {
-       font-size: 1.4em;
-   }
+    .qualification-buttons li {
+        font-size: 1.4em;
+    }
 }
 
 @media(max-width: 500px) {
@@ -634,7 +634,8 @@ footer {
 
 /* menu Mobile styles*/
 
-@media print, screen and (max-width: 600px) {
+@media print,
+screen and (max-width: 600px) {
     .volunteerContainer .volunteerVideo {
         margin: 20px auto;
     }
@@ -679,7 +680,3 @@ footer {
 .fab {
     font-size: 3em;
 }
-
-
-
-
