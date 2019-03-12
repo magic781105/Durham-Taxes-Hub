@@ -94,7 +94,7 @@
 
         }
 
-        $("#menu-bar li a").attr('href', '#');
+        $("#menu-bar li a").removeAttr('href');
 
         $("#menu-bar li a").each(function (index, item) {
 
