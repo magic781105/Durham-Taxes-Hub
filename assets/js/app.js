@@ -15,7 +15,7 @@
             } else {
                 $(this).attr("data-click-state", 0);
                 $("#menu-bar").animate({
-                    right: -230 + "px",
+                    right: -250 + "px",
                 });
             }
         });
@@ -98,7 +98,8 @@
 
         $("#menu-bar li a").each(function (index, item) {
 
-            let arrayOfId = ['qualification', '', '', '', 'location', 'volunteer', 'empowerment', '', '', '', '', '', 'testimonial'];
+            // let arrayOfId = ['qualification', '', '', '', 'location', 'volunteer', 'empowerment', '', '', '', '', '', 'testimonial'];
+            let arrayOfId = ['qualification', 'eligible', 'receipts', 'information', 'location', 'volunteer', 'empowerment', 'financialIteracy', 'taxBenefits', 'financialProducts', 'assetBuilding', 'ConsumerProtection', 'testimonial'];
 
             let selectedId = arrayOfId[index];
 
@@ -108,8 +109,42 @@
 
         });
 
+         //animated scrolling for sub menu
+         $("#menu-item-249 .sub-menu li").on('click', function (e) {
+
+            let selection = $(e.target).index();
+
+            let id = `#qualification-${selection}`;
+
+            $('.qualification-div').css({
+                display: 'none'
+            });
+            $(id).fadeIn('slow');
 
 
+            let section = this.parentElement.parentElement.firstChild.id;
+
+
+            //let selection = this.children;
+
+            animate(section);
+
+        });
+
+
+        $('#menu-item-254 .sub-menu li').click(function (e) {
+
+            let selection = $(e.target).text();
+
+            $('#listHeader').text(selection);
+
+
+            let section = this.parentElement.parentElement.firstChild.id;
+            animate(section);
+        });
+
+
+        // destop version
         $("#menu-bar li a").click(function () {
 
             let clickedSection = $(this).attr("id");

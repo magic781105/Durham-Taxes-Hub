@@ -174,49 +174,47 @@ get_header();
 
         <!--volunteers section-->
         <section class="volunteer">
-            <?php 
-				$volunteer_header = $volunteers["header"];
-				$volunteer_volunteertext1 = $volunteers["volunteertext1"];
-				$volunteer_volunteerVideo = $volunteers["volunteerVideo"];	
-				$volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];		
-				$volunteer_volunteertext2 = $volunteers["volunteertext2"];						
-			?>
+           <?php
+                $volunteer_header = $volunteers["header"];
+                $volunteer_volunteertext1 = $volunteers["volunteertext1"];
+                $volunteer_volunteerVideo = $volunteers["volunteerVideo"];    
+                $volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];        
+                $volunteer_volunteertext2 = $volunteers["volunteertext2"];                        
+            ?>
+           <div class="grid-container">
+               <h1 class="volunteerHeader">
+                   <?php echo $volunteer_header; ?>
+               </h1>
+               <div class="volunteerContainer grid-x grid-margin-x">
 
-            <div class="grid-container">
-                <h1 class="volunteerHeader">
-                    <?php echo $volunteer_header; ?>
-                </h1>
-                <div class="volunteerContainer grid-x grid-margin-x">
+                   <div class="volunteerTextSection cell small-10 small-order-2   large-4 large-order-1">
+                       <h1>How to become a volunteer </h1>
+                       <p class="volunteerText1">
+                           <?php echo $volunteer_volunteertext1; ?>
+                       </p>
+                       <a>Click here >></a>
+                   </div>
 
-                    <div class="volunteerTextSection cell small-order-2 medium-order-1 large-4">
-                        <h1>How to become a volunteer </h1>
-                        <p class="volunteerText1">
-                            <?php echo $volunteer_volunteertext1; ?>
-                        </p>
-                        <a>Click here >></a>
-                    </div>
+                   <div class="volunteerVideo cell small-10 small-order-1  large-4 large-order-2">
 
-                    <!--COREY change to volunteer video small-offset -->
-                    <div class="volunteerVideo cell small-8 small-order-1 medium-order-2 medium-6 large-4">
+                       <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
 
-                        <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo; ?>" alt="video"></div>
+                       <p class="volunteerVideoDesc">
+                           <?php echo $volunteer_volunteerVideoDesc;?>
+                       </p>
+                   </div>
 
-                        <p class="volunteerVideoDesc">
-                            <?php echo $volunteer_volunteerVideoDesc; ?>
-                        </p>
-                    </div>
+                   <div class="volunteerTextSection cell small-10 small-order-3 large-4 large-order-3">
+                       <h1>How to become a volunteer </h1>
+                       <p class="volunteerText1">
+                           <?php echo $volunteer_volunteertext1; ?>
+                       </p>
+                       <a>Click here >></a>
+                   </div>
+               </div>
 
-                    <div class="volunteerTextSection cell small-order-3 medium-order-3 large-4">
-                        <h1>How to become a volunteer </h1>
-                        <p class="volunteerText1">
-                            <?php echo $volunteer_volunteertext1; ?>
-                        </p>
-                        <a>Click here >></a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+           </div>
+       </section>
 
 
 
@@ -240,7 +238,7 @@ get_header();
                 </h1>
                 <div class="empowermentContainer grid-x grid-margin-x">
 
-                    <div class="listContain cell small-12 medium-8 large-3">
+                    <div class="listContain cell small-4 medium-3 large-3">
                         <div class="orderedList">
                             <div class="listItem">
                                 <p>
@@ -273,7 +271,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="listContainBg cell small-12 medium-8 large-8">
+                        <div class="listContainBg cell small-12 medium-8 large-8">
                         <div class="listResult ">
                             <h2>Overview</h2>
                             <p>

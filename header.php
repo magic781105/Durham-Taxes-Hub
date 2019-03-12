@@ -52,11 +52,11 @@
                     <div class="nav-menu">
                         <div class="nav-border">
                             <?php
-            wp_nav_menu( array(
-			'theme_location' => 'primary-menu',
- 	          'menu_id'        => 'primary-menu',
-			 ) );
-			?>
+								wp_nav_menu( array(
+								'theme_location' => 'primary-menu',
+								'menu_id'        => 'primary-menu',
+								) );
+							?>
                         </div>
                     </div>
                 </nav>
