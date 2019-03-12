@@ -49,7 +49,7 @@
             <div id="menu-bar">
 
                 <nav id="site-navigation" class="main-navigation">
-                    <div id="navigation"></div>
+                    <div id="navigation" data-click-state="0"></div>
 
                     <?php
             wp_nav_menu( array(

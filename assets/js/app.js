@@ -85,6 +85,7 @@
 
         // Animated scrolling
 
+        //scrolling
         function animate(sectionClass) {
 
             $("html, body").animate({
@@ -94,11 +95,13 @@
 
         }
 
+        //removing href
         $("#menu-bar li a").removeAttr('href');
 
+        //id for each menu item
         $("#menu-bar li a").each(function (index, item) {
 
-            let arrayOfId = ['qualification', '', '', '', 'location', 'volunteer', 'empowerment', '', '', '', '', '', 'testimonial'];
+            let arrayOfId = ['qualification', 'eligible', 'receipts', 'information', 'location', 'volunteer', 'empowerment', 'financialIteracy', 'taxBenefits', 'financialProducts', 'assetBuilding', 'ConsumerProtection', 'testimonial'];
 
             let selectedId = arrayOfId[index];
 
@@ -108,9 +111,50 @@
 
         });
 
+        //animated scrolling for sub menu
+        $("#menu-item-249 .sub-menu li").on('click', function (e) {
+
+            let selection = $(e.target).index();
+
+            let id = `#qualification-${selection}`;
+
+            $('.qualification-div').css({
+                display: 'none'
+            });
+            $(id).fadeIn('slow');
 
 
-        $("#menu-bar li a").click(function () {
+            let section = this.parentElement.parentElement.firstChild.id;
+
+
+            //let selection = this.children;
+
+            animate(section);
+
+        });
+
+
+        $('#menu-item-254 .sub-menu li').click(function (e) {
+
+            let selection = $(e.target).text();
+
+            $('#listHeader').text(selection);
+
+
+            let section = this.parentElement.parentElement.firstChild.id;
+
+
+
+
+            animate(section);
+
+
+
+        });
+
+
+        // animated scrolling for menu bar
+        $(".menu > li > a").click(function () {
 
             let clickedSection = $(this).attr("id");
 
@@ -123,7 +167,9 @@
         $('#qualificationBubble').on('click', 'li', e => {
 
             let index = $(e.target).index();
+
             let id = `#qualification-${index}`;
+
             console.log("id" + id);
             $('.qualification-div').css({
                 display: 'none'

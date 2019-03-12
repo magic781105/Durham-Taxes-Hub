@@ -16,7 +16,7 @@ get_header();
 ?>
 
 <div id="primary" class="content-area">
-
+    <main>
         <!--        temporary nav-->
         <!-- <nav>
             <ul class="nav-bar"> -->
@@ -106,7 +106,7 @@ get_header();
         </div>
         <!--  menu setcion  -->
 
-<!--
+        <!--
 <div class="menu-bar">
     <nav>
         <div id="navigation" data-click-state="0"></div>
@@ -307,7 +307,7 @@ get_header();
                 </h1>
                 <div class="empowermentContainer grid-x grid-margin-x">
 
-                    <div class="listContain cell small-12 medium-8 large-3">
+                    <div class="listContain cell small-4 medium-8 large-3">
                         <div class="orderedList">
                             <div class="listItem">
                                 <p>
@@ -340,7 +340,11 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="listContainBg cell small-12 medium-8 large-8">
+
+                    <h2 id="listHeader">Financial Literacy and Coaching</h2>
+
+                    <div class="listContainBg cell small-8 medium-8 large-8">
+
                         <div class="listResult ">
                             <h2>Overview</h2>
                             <p>
@@ -401,7 +405,7 @@ get_header();
         </section>
 
         <footer>
-        
+
             <div class="footerContent">
                 <?php
 					$footer_header = $footer['heading'];
@@ -423,20 +427,20 @@ get_header();
                 </p>
                 <a class="footerLink">
                     <?php echo $footer_link; ?> </a>
-                    <div class="social-media">
-                        <?php
+                <div class="social-media">
+                    <?php
                         if(get_theme_mod('durhamtaxhub_facebook_url')) {?>
-                            <a href="<?php echo get_theme_mod('durhamtaxhub_facebook_url')?>" class="icon facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                        <?php
+                    <a href="<?php echo get_theme_mod('durhamtaxhub_facebook_url')?>" class="icon facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <?php
                         }
                         if(get_theme_mod('durhamtaxhub_twitter_url')) {?>
-                            <a href="<?php echo get_theme_mod('durhamtaxhub_twitter_url')?>" class="icon twitter" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                        <?php
+                    <a href="<?php echo get_theme_mod('durhamtaxhub_twitter_url')?>" class="icon twitter" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <?php
                         }
                         ?>
-                    </div>
+                </div>
                 <div class="partnerLogos">
-                
+
                     <img src='<?php echo $footer_partner_one ?>' />
                     <img src='<?php echo $footer_partner_two ?>' />
                     <img src='<?php echo $footer_partner_three ?>' />

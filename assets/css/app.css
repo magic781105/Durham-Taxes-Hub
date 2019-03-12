@@ -172,6 +172,11 @@ h1 {
 }
 
 
+/*icons for menu*/
+
+
+
+
 /*  locations */
 .location {
     background-image: url("../img/locationsbg.svg");
@@ -522,6 +527,7 @@ main .empowerment {
 
 main .empowerment h1 {
     margin: 30px 10px;
+    font-size: 27px;
 }
 
 .empowermentContainer {
@@ -573,7 +579,12 @@ main .empowerment h1 {
 }
 
 .empowerment .listResult p {
-    font-size: 20px;
+    font-size: 18px;
+
+}
+
+.empowerment h2 {
+    margin: 10px auto;
 }
 
 .listResult h2 {
@@ -660,11 +671,24 @@ screen and (max-width: 600px) {
 
     }
 
+    .empowermentContainer .listContain {
+
+        display: none;
+    }
+
+    .empowerment .empowermentContainer .listContainBg {
+        margin: 0 auto;
+        background-image: none;
+    }
+
+
     .main-navigation ul {
         display: flex;
 
         flex-direction: column;
     }
+
+
 }
 
 
