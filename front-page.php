@@ -95,8 +95,6 @@ get_header();
             ?>
                 <!--header-->
                 <section id="header">
-                    <!--logo-->
-                    <div id="logo"></div>
                     <!--header background-image-->
                     <div class="header" style="background-image:url(<?php echo $image['url'];?>);">
                         <!--display header's header-->
