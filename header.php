@@ -28,8 +28,22 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
+
 			<?php
-			the_custom_logo();
+			// add custom logo
+			//if custom logo is show or else display no logo
+			if(has_custom_logo() ) {
+				the_custom_logo();
+			}
+			/* $custom_logo = get_custom_logo();
+			if( custom_logo() ) {
+				echo custom_logo;
+			}*/
+			else {
+				echo 'No Logo';
+			}
+
+
 			if ( is_front_page() && is_home() ) :
 				?>
 				<!-- <h1 class="site-title"><a href="<?php //echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php //bloginfo( 'name' ); ?></a></h1> -->

@@ -3,6 +3,13 @@
     src: url(../fonts/Abel-Regular.ttf);
 }
 
+/* ** logo ** */
+.custom-logo-link {
+    width:100px;
+    height:100px;
+    padding:20px;
+}
+
 /* ** header page ** */
 
 * {
@@ -814,9 +821,9 @@ main .empowerment h1 {
 
 
 /* === footer section === */
-footer {
+/* footer { */
     /* height: 100vh; */
-}
+/* } */
 
 .footer_content {
     display: block;
