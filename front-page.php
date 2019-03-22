@@ -362,32 +362,33 @@ get_header();
 
 
 
-        <?php 
-		// if(function_exists('get_field')){
-			
-			if($form_id){
-                
-				?>
-				<section class="contact-form">
-					<div class="grid-container">
-						<div class="grid-x grid-margin-x grid-margin-y">
-							<!-- <div class="cell small-12 medium-6">
-								<h2>Form ID</h2>
-								<?php //echo do_shortcode('[ws_form id="' . $form_id . '"]' ) ?>
-							</div> -->
-							<div class="cell small-12 medium-12">
-                                <p id="contact-us">Contact Us</p>
-                                <?php echo do_shortcode('[ws_form id="' . $form_id . '"]' ) ?>
-							</div>
-						</div>
-					</div>
-				</section>
-				<?php 
 
-			}
-		// }
-		
-		?>
+         <!--contact us form-->
+        <?php 
+		// if(function_exists('get_field'))
+            // add conditional tag
+            if (! empty ($form_id)){
+            //if($form_id){        
+        ?> 
+
+            <!--display contact form-->
+            <section class="contact-form">
+                <!--using foundation making it responsive-->
+                <div class="grid-container">
+                    <div class="grid-x grid-margin-x grid-margin-y">
+                        <div class="cell small-12 medium-12">
+                            <!-- contact header-->
+                            <p id="contact-us">Contact Us</p>
+                            <!--contact form using echo-->
+                            <?php echo do_shortcode('[ws_form id="' . $form_id . '"]' ) ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <?php 
+            }
+        ?>
 
         <footer>
             <div class="footerContent">
