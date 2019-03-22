@@ -86,7 +86,7 @@
         // Animated scrolling
 
         function animate(sectionClass) {
-
+            
             $("html, body").animate({
                 scrollTop: $('.' + sectionClass).offset().top
 
@@ -105,7 +105,7 @@
 
 
             $(item).attr('id', `${selectedId}`);
-
+            
 
         });
 
@@ -121,12 +121,12 @@
             });
             $(id).fadeIn('slow');
 
-
+            
             let section = this.parentElement.parentElement.firstChild.id;
-
+            
 
             //let selection = this.children;
-
+            
             animate(section);
 
         });
