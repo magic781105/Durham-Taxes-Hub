@@ -81,28 +81,35 @@ get_header();
 
 
       
-        <!--header section test comment-->
+        <!--header section-->
         <div class="header-page">
         <?php
-            // var_dump($header);
+            // for each for header section 
+            // display heading/content/image/button/threshold
             foreach($eligible as $eligible_header) {
                 $header = $eligible_header['heading'];
                 $content = $eligible_header['content'];
                 $image = $eligible_header['image'];
                 $button = $eligible_header['button'];
                 $threshold = $eligible_header['threshold'];
-                //var_dump($header);
-                ?>
+            ?>
+                <!--header-->
                 <section id="header">
+                    <!--logo-->
                     <div id="logo"></div>
+                    <!--header background-image-->
                     <div class="header" style="background-image:url(<?php echo $image['url'];?>);">
+                        <!--display header's header-->
                         <h1 class="header_title"><?php echo $header; ?></h1>
+                        <!--display header desc-->
                         <p class="header_desc"><?php echo $content; ?></p>
+                        <!--header form-->
                         <div class="form">
                             <input id="userInput" placeholder="Example: $30,000"/>
                             <input id="threshold" value = "<?php echo $threshold; ?>" />
                             <button id="inputCheck">Am I Eligible?</button>
                         </div>
+                        <!--header button for be a volunteer link-->
                         <button class="header_button">Be a Volunteer!</button>
                     </div>
                 </section>
