@@ -48,7 +48,35 @@ get_header();
 
 
                 $form_id 		= get_field('form_id');
-                // $form_shortcode = get_field('form_shortcode');
+                $form_shortcode = get_field('form_shortcode');
+
+
+                
+                $args = array(
+                    'post_type' => 'location',
+                );
+                $locations = new WP_Query( $args );
+                if( $locations->have_posts() ){
+                    while ($locations->have_posts() ) {
+                        $locations->the_post();
+                        the_title();
+                        the_content();
+                        the_post_thumbnail();
+
+                        $locationsCustomizeds = get_field('locations');
+                        foreach($locationsCustomizeds as $locationsCustomized) {
+                            $locationName = $locationsCustomized['name'];
+                            $locationAddress = $locationsCustomized['address'];
+                            $locationMap = $locationsCustomized['map'];
+                            $locationContent = $locationsCustomized['content'];
+                            echo $locationName;
+                            echo $locationAddress;
+                            echo $locationContent;
+                        }
+                        
+                    }
+                    wp_reset_postdata();
+                }
 		?>
 
 
@@ -398,6 +426,7 @@ get_header();
         </footer>
 
         <?php
+
 			}
 		?>
         
