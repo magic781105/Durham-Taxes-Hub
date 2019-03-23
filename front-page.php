@@ -128,10 +128,10 @@ get_header();
         </section>
         
 		<section  class="location">
-			<h1><?php echo $location['header']; ?></h1>
+			<h1><?php if(!empty($location['header'])){echo $location['header'];} ?></h1>
 			<div class="location-wrapper">
 				<div class="location-lists">
-					<h2><?php echo $location['header']; ?></h2>
+					<h2><?php if(!empty($location['header'])){echo $location['header'];} ?></h2>
                     <?php  
                         $args = array(
                             'post_type' => 'location',
@@ -143,23 +143,26 @@ get_header();
                                 $locations->the_post();
                             
                                 $locationsCustomizeds = get_field('locations');
-                                foreach($locationsCustomizeds as $locationsCustomized) {
-                                    $locationName = $locationsCustomized['name'];
-                                    $locationAddress = $locationsCustomized['address'];
-                                    $locationMap = $locationsCustomized['map'];
-                                    $locationContent = $locationsCustomized['content'];
-                                 
-                                    $id = "location-" . $locationCount;
-                                    ?>
-                                    
-                                    <div class="location-list">
-                                        <h3 data-id="<?php echo $id; ?>"><?php echo $locationName; ?></h3>
-                                        <p><?php echo $locationAddress; ?><p>
-                                    </div>
-                                    <?php 
-                                }
+                                if(!empty($locationsCustomizeds)) {
 
-                                $locationCount++;
+                                    foreach($locationsCustomizeds as $locationsCustomized) {
+                                        $locationName = $locationsCustomized['name'];
+                                        $locationAddress = $locationsCustomized['address'];
+                                        $locationMap = $locationsCustomized['map'];
+                                        $locationContent = $locationsCustomized['content'];
+                                     
+                                        $id = "location-" . $locationCount;
+                                        ?>
+                                        
+                                        <div class="location-list">
+                                            <h3 data-id="<?php echo $id; ?>"><?php echo $locationName; ?></h3>
+                                            <p><?php echo $locationAddress; ?><p>
+                                        </div>
+                                        <?php 
+                                    }
+    
+                                    $locationCount++;
+                                }
                             }
                             wp_reset_postdata();
                         }
@@ -176,26 +179,27 @@ get_header();
                             the_content();
                             
                             $locationsCustomizeds = get_field('locations');
-                            foreach($locationsCustomizeds as $locationsCustomized) {
-                                $locationName = $locationsCustomized['name'];
-                                $locationAddress = $locationsCustomized['address'];
-                                $locationMap = $locationsCustomized['map'];
-                                $locationContent = $locationsCustomized['content'];
-                      
-                                $id = "location-" . $locationCount;
-                                // echo $id;
-                                ?>
-                                <div id="<?php echo $id; ?>" class="tim">
-                                    <h5><?php echo $locationName; ?></h5>
-                                    <p><?php echo $locationAddress; ?></p>
-                                    <p><?php echo $locationContent; ?></p>
-                                </div>
-                                <?php 
-                                
-                            }
-                            
-                            $locationCount++;  
+                            if(!empty($locationsCustomizeds)) {
+                                foreach($locationsCustomizeds as $locationsCustomized) {
+                                    $locationName = $locationsCustomized['name'];
+                                    $locationAddress = $locationsCustomized['address'];
+                                    $locationMap = $locationsCustomized['map'];
+                                    $locationContent = $locationsCustomized['content'];
                           
+                                    $id = "location-" . $locationCount;
+                                    // echo $id;
+                                    ?>
+                                    <div id="<?php echo $id; ?>" class="tim">
+                                        <h5><?php echo $locationName; ?></h5>
+                                        <p><?php echo $locationAddress; ?></p>
+                                        <p><?php echo $locationContent; ?></p>
+                                    </div>
+                                    <?php 
+                                    
+                                }
+                                
+                                $locationCount++;  
+                            }
                         }
                     }
                     ?>
