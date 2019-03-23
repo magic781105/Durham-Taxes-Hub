@@ -52,31 +52,7 @@ get_header();
 
 
                 
-                $args = array(
-                    'post_type' => 'location',
-                );
-                $locations = new WP_Query( $args );
-                if( $locations->have_posts() ){
-                    while ($locations->have_posts() ) {
-                        $locations->the_post();
-                        the_title();
-                        the_content();
-                        the_post_thumbnail();
-
-                        $locationsCustomizeds = get_field('locations');
-                        foreach($locationsCustomizeds as $locationsCustomized) {
-                            $locationName = $locationsCustomized['name'];
-                            $locationAddress = $locationsCustomized['address'];
-                            $locationMap = $locationsCustomized['map'];
-                            $locationContent = $locationsCustomized['content'];
-                            echo $locationName;
-                            echo $locationAddress;
-                            echo $locationContent;
-                        }
-                        
-                    }
-                    wp_reset_postdata();
-                }
+               
 		?>
 
 
@@ -150,51 +126,91 @@ get_header();
 				?>
             </div>
         </section>
-
+        
 		<section  class="location">
-			<h1><?php echo $location['header']; ?></h1>
+			<!-- <h1><?php //echo $location['header']; ?></h1> -->
+            <h1>Location</h1>
 			<div class="location-wrapper">
 				<div class="location-lists">
-					<h2><?php echo $location['header']; ?></h2>
-					<?php
-                        // var_dump($location);
-                        $locationCount = 0;
-                        foreach($location as $section) {
-                            if($locationCount > 0){
-                            $name = $section['name'];
-                            $address = $section['address'];
-                            $id = "location-" . $locationCount;
-                        ?>
-                        <div class="location-list">
-                            <h3 data-id="<?php echo $id; ?>"><?php echo $name; ?></h3>
-                            <p><?php echo $address; ?><p>
-                        </div>
-                        <?php
+					<!-- <h2><?php //echo $location['header']; ?></h2> -->
+                    <h1>Location</h1>
+                    <?php  
+                        $args = array(
+                            'post_type' => 'location',
+                        );
+                        $locations = new WP_Query( $args );
+                        if( $locations->have_posts() ){
+                            while ($locations->have_posts() ) {
+                                $locations->the_post();
+                                // the_title();
+                                // the_content();
+                                // the_post_thumbnail();
+                                $locationCount = 0;
+                                $locationsCustomizeds = get_field('locations');
+                                foreach($locationsCustomizeds as $locationsCustomized) {
+                                    $locationName = $locationsCustomized['name'];
+                                    $locationAddress = $locationsCustomized['address'];
+                                    $locationMap = $locationsCustomized['map'];
+                                    $locationContent = $locationsCustomized['content'];
+                                    // echo $locationName;
+                                    // echo $locationAddress;
+                                    // echo $locationContent;
+                                    $id = "location-" . $locationCount;
+                                    ?>
+                                    <div class="location-list">
+                                        <h3 data-id="<?php echo $id; ?>"><?php echo $locationName; ?></h3>
+                                        <p><?php echo $locationAddress; ?><p>
+                                    </div>
+                                    <?php 
+                                    $locationCount++;
+                                }
+                                
+                            }
+                            wp_reset_postdata();
                         }
-                        $locationCount++;
-					}
-					?>
+                        // var_dump($location);
+                        // $locationCount = 0;
+                        // foreach($location as $section) {
+                        //     if($locationCount > 0){
+                        //     $name = $section['name'];
+                        //     $address = $section['address'];
+                        //     $id = "location-" . $locationCount;
+                        ?>
+                        
+				
 				</div>
 				<div class="location-detail">
 					<?php
-                        $locationCount = 0;
-                        foreach($location as $section) {
-                            if($locationCount > 0){
-                            $locationDetail = $section['content'];
-                            $name = $section['name'];
-                            $address = $section['address'];
-                            $id = "location-" . $locationCount;
-                            ?>
+
+                    if( $locations->have_posts() ){
+                        while ($locations->have_posts() ) {
+                            $locations->the_post();
+                            // the_title();
+                            the_content();
+                            // the_post_thumbnail();
+                            $locationCount = 0;
+                            $locationsCustomizeds = get_field('locations');
+                            foreach($locationsCustomizeds as $locationsCustomized) {
+                                $locationName = $locationsCustomized['name'];
+                                $locationAddress = $locationsCustomized['address'];
+                                $locationMap = $locationsCustomized['map'];
+                                $locationContent = $locationsCustomized['content'];
+                                // echo $locationName;
+                                // echo $locationAddress;
+                                // echo $locationContent;
+                                $id = "location-" . $locationCount;
+                                ?>
                                 <div id="<?php echo $id; ?>" class="tim">
-                                    <h5><?php echo $name; ?></h5>
-                                    <p><?php echo $address; ?></p>
-                                    <p><?php echo $locationDetail; ?></p>
+                                    <h5><?php echo $locationName; ?></h5>
+                                    <p><?php echo $locationAddress; ?></p>
+                                    <p><?php echo $locationContent; ?></p>
                                 </div>
-                            <?php
+                                <?php 
+                                }
+                                $locationCount++;
                             }
-                            $locationCount++;
                         }
-					?>
+                        ?>
 				</div>
 				<div class="location-map"></div>
 			</div>
