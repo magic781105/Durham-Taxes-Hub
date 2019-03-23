@@ -128,33 +128,40 @@ get_header();
         </section>
         
 		<section  class="location">
+            <!-- Adds location header -->
 			<h1><?php if(!empty($location['header'])){echo $location['header'];} ?></h1>
 			<div class="location-wrapper">
 				<div class="location-lists">
-					<h2><?php if(!empty($location['header'])){echo $location['header'];} ?></h2>
+                    <h2><?php if(!empty($location['header'])){echo $location['header'];} ?></h2>
+                    <!-- declare variables that stores location info, and use custom post type-->
                     <?php  
                         $args = array(
                             'post_type' => 'location',
                         );
                         $locations = new WP_Query( $args );
                         if( $locations->have_posts() ){
+                            // variable that is used to create unique data-id 
                             $locationCount = 0;
+                            // check if locations have posts
                             while ($locations->have_posts() ) {
+                                // query customized location posts
                                 $locations->the_post();
-                            
+                                
                                 $locationsCustomizeds = get_field('locations');
+                                // check $locationsCustomizeds is not empty
                                 if(!empty($locationsCustomizeds)) {
-
+                                    // create variables that hold data and display the data
                                     foreach($locationsCustomizeds as $locationsCustomized) {
                                         $locationName = $locationsCustomized['name'];
                                         $locationAddress = $locationsCustomized['address'];
                                         $locationMap = $locationsCustomized['map'];
                                         $locationContent = $locationsCustomized['content'];
-                                     
+                                        // this is used for data-id to display contents respectively
                                         $id = "location-" . $locationCount;
                                         ?>
                                         
                                         <div class="location-list">
+                                            <!-- display location name and address -->
                                             <h3 data-id="<?php echo $id; ?>"><?php echo $locationName; ?></h3>
                                             <p><?php echo $locationAddress; ?><p>
                                         </div>
@@ -170,25 +177,27 @@ get_header();
 				</div>
 				<div class="location-detail">
 					<?php
-
+                    // check locations have posts
                     if( $locations->have_posts() ){
+                        // to make unique ids to animate
                         $locationCount = 0;
                         while ($locations->have_posts() ) {
+                            // query customized location posts
                             $locations->the_post();
-                          
-                            the_content();
                             
+                            // store data
                             $locationsCustomizeds = get_field('locations');
+                            // if there is data create contents
                             if(!empty($locationsCustomizeds)) {
                                 foreach($locationsCustomizeds as $locationsCustomized) {
                                     $locationName = $locationsCustomized['name'];
                                     $locationAddress = $locationsCustomized['address'];
                                     $locationMap = $locationsCustomized['map'];
                                     $locationContent = $locationsCustomized['content'];
-                          
+                                    // id to animate
                                     $id = "location-" . $locationCount;
-                                    // echo $id;
                                     ?>
+                                    <!-- create html that display data -->
                                     <div id="<?php echo $id; ?>" class="tim">
                                         <h5><?php echo $locationName; ?></h5>
                                         <p><?php echo $locationAddress; ?></p>
