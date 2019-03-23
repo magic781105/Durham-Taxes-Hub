@@ -318,36 +318,59 @@ get_header();
 
 
         <section class="testimonial">
-           <?php $testimonial_header = $testimonials["header"];	?>            
-			<h1 class="sectionHeader"><?php echo $testimonial_header; ?></h1>
+           <?php 
+            // check if $testimonials is not empty
+            if(!empty($testimonials)){
+               $testimonial_header = $testimonials["header"];
+            }?>            
+			<h1 class="sectionHeader">
+                <?php 
+                    // check if $testimonial_header is not empty
+                    if(!empty($testimonial_header)){
+                        echo $testimonial_header; 
+                    }
+                ?>
+            </h1>
             
             <div id="alltestimonial">
                 <?php 
-
-					$testimonialItem = 0;
-					foreach($testimonials as $testimonial){
-						if($testimonialItem > 0){
-						$testimonial_img = $testimonial['image'];
-						$testimonial_content = $testimonial['content'];
-						$testimonial_name = $testimonial['name'];
-						// var_dump($testimonial_img);
-				?>
-						
-                <div class="testimonialGroup">
-                    <div class="testimonialImage" style="background-image:url(<?php echo $testimonial_img['url']; ?>);"></div>
-                    <div class="testimonialContent">
-                        <?php echo $testimonial_content; ?>
+                    // check if get_field('testimonials') has content
+                    if(!empty($testimonials)){
+                        $testimonialItem = 0;
+                        // using foreach to get each element in "testimonial" customized field group
+                        foreach($testimonials as $testimonial){
+                            // since we need to skip $testimonials["header"] and get the rest testimonials group in customized field
+                            // using index($testimonialItem) to skip the first one in testimonial customized field.
+                            if($testimonialItem > 0){
+                            $testimonial_img = $testimonial['image'];
+                            $testimonial_content = $testimonial['content'];
+                            $testimonial_name = $testimonial['name'];
+                            // var_dump($testimonial_img);
+                        ?>
+                            
+                    <div class="testimonialGroup">
+                        <div class="testimonialImage" style="background-image:url(<?php 
+                            // check if $testimonial_img['url'] is not empty
+                            if(!empty($testimonial_img['url'])){echo $testimonial_img['url'];} ?>);">
+                        </div>
+                        <div class="testimonialContent">
+                            <?php 
+                                // check if $testimonial_content is not empty
+                                if(!empty($testimonial_content)){echo $testimonial_content; }?>
+                        </div>
+                        <div class="testimonialName">
+                            <?php 
+                                // check if $testimonial_name is not empty
+                                if(!empty($testimonial_name)){echo $testimonial_name;} ?>
+                        </div>
                     </div>
-                    <div class="testimonialName">
-                        <?php echo $testimonial_name; ?>
-                    </div>
-                </div>
 
-                <?php	
-						}
-						$testimonialItem++;						
+                    <?php	
+                            }
+                            $testimonialItem++;						
 
-					}
+                        }
+                    }
 				?>
             </div>
 
