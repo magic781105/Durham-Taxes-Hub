@@ -48,39 +48,9 @@ get_header();
 
 
                 $form_id 		= get_field('form_id');
-                $form_shortcode = get_field('form_shortcode');
-
-
-                
-                $args = array(
-                    'post_type' => 'location',
-                );
-                $locations = new WP_Query( $args );
-                if( $locations->have_posts() ){
-                    while ($locations->have_posts() ) {
-                        $locations->the_post();
-                        the_title();
-                        the_content();
-                        the_post_thumbnail();
-
-                        $locationsCustomizeds = get_field('locations');
-                        foreach($locationsCustomizeds as $locationsCustomized) {
-                            $locationName = $locationsCustomized['name'];
-                            $locationAddress = $locationsCustomized['address'];
-                            $locationMap = $locationsCustomized['map'];
-                            $locationContent = $locationsCustomized['content'];
-                            echo $locationName;
-                            echo $locationAddress;
-                            echo $locationContent;
-                        }
-                        
-                    }
-                    wp_reset_postdata();
-                }
-		?>
-
-
-      
+                $form_shortcode = get_field('form_shortcode');  
+        ?>
+        
         <!-- header section -->
         <div class="header-page">
         <?php
@@ -114,87 +84,157 @@ get_header();
 		
 		<!-- how to qualified -->
 		<section class="qualification">
-            <h1>How to Qualify</h1>
+            <!-- display header dynamically -->
+            <?php
+            // check if header has content
+            if(!empty($how_to_qualify['header'])) {
+            ?>
+                <h1><?php echo $how_to_qualify['header']; ?></h1>
+            <?php
+            }
+            ?>
             <div class="qualification-buttons">
+                <!-- check if $how_to_qualify has data -->
+                <?php
+                if(!empty($how_to_qualify)) {
+                ?>
                 <ul id="qualificationBubble">
                     <?php
-					// var_dump($featured_slider);
+                    // used to not include header
+                    $qualificationCount = 0;
+                        // create buttons using data from the custom field
                         foreach($how_to_qualify as $section) {
-                            $button = $section['button'];
+                            if($qualificationCount > 0 && !empty($section['button'])) {
+                                $button = $section['button'];
+                            
                     ?>
-
+                    <!-- generate li tags respectively -->
                     <li class="qualification-btn">
                         <?php echo $button; ?>
                     </li>
 
                     <?php
+                        }
+                        // to skip first content in $qualificationCount
+                        $qualificationCount++;
 					}
 					?>
                 </ul>
+                <?php
+                }
+                ?>
             </div>
             <div class="qualification-contents">
                 <?php
-					$idCounter = 0;
+                    $idCounter = 0;
+                    $qualificationCount = 0;
+                    //skip first content in $how_to_qualify and make sure it has data
 					foreach($how_to_qualify as $content) {
+                        if ($qualificationCount > 0 && !empty($content['content'])) {
 						$content = $content['content'];
 						$id = "qualification-" . $idCounter;
 				?>
+                        <!-- generate contents accordingly -->
+                        <div id="<?php echo $id; ?>" class="qualification-div">
+                            <?php echo $content; ?>
+                        </div>
 
-                <div id="<?php echo $id; ?>" class="qualification-div">
-                    <?php echo $content; ?>
-                </div>
-
-                <?php
-						$idCounter++;
+                        <?php  
+                        // used to generate ids 
+                        $idCounter++;
+                        }
+                        // to skip first data in $how_to_qualify
+                        $qualificationCount++;
 					}
 				?>
             </div>
         </section>
-
+        
 		<section  class="location">
-			<h1><?php echo $location['header']; ?></h1>
+            <!-- Adds location header -->
+			<h1><?php if(!empty($location['header'])){echo $location['header'];} ?></h1>
 			<div class="location-wrapper">
 				<div class="location-lists">
-					<h2><?php echo $location['header']; ?></h2>
-					<?php
-                        // var_dump($location);
-                        $locationCount = 0;
-                        foreach($location as $section) {
-                            if($locationCount > 0){
-                            $name = $section['name'];
-                            $address = $section['address'];
-                            $id = "location-" . $locationCount;
-                        ?>
-                        <div class="location-list">
-                            <h3 data-id="<?php echo $id; ?>"><?php echo $name; ?></h3>
-                            <p><?php echo $address; ?><p>
-                        </div>
-                        <?php
+                    <h2><?php if(!empty($location['header'])){echo $location['header'];} ?></h2>
+                    <!-- declare variables that stores location info, and use custom post type-->
+                    <?php  
+                        $args = array(
+                            'post_type' => 'location',
+                        );
+                        $locations = new WP_Query( $args );
+                        if( $locations->have_posts() ){
+                            // variable that is used to create unique data-id 
+                            $locationCount = 0;
+                            // check if locations have posts
+                            while ($locations->have_posts() ) {
+                                // query customized location posts
+                                $locations->the_post();
+                                
+                                $locationsCustomizeds = get_field('locations');
+                                // check $locationsCustomizeds is not empty
+                                if(!empty($locationsCustomizeds)) {
+                                    // create variables that hold data and display the data
+                                    foreach($locationsCustomizeds as $locationsCustomized) {
+                                        $locationName = $locationsCustomized['name'];
+                                        $locationAddress = $locationsCustomized['address'];
+                                        $locationMap = $locationsCustomized['map'];
+                                        $locationContent = $locationsCustomized['content'];
+                                        // this is used for data-id to display contents respectively
+                                        $id = "location-" . $locationCount;
+                                        ?>
+                                        
+                                        <div class="location-list">
+                                            <!-- display location name and address -->
+                                            <h3 data-id="<?php echo $id; ?>"><?php echo $locationName; ?></h3>
+                                            <p><?php echo $locationAddress; ?><p>
+                                        </div>
+                                        <?php 
+                                    }
+    
+                                    $locationCount++;
+                                }
+                            }
+                            wp_reset_postdata();
                         }
-                        $locationCount++;
-					}
-					?>
+                        ?>
 				</div>
 				<div class="location-detail">
 					<?php
+                    // check locations have posts
+                    if( $locations->have_posts() ){
+                        // to make unique ids to animate
                         $locationCount = 0;
-                        foreach($location as $section) {
-                            if($locationCount > 0){
-                            $locationDetail = $section['content'];
-                            $name = $section['name'];
-                            $address = $section['address'];
-                            $id = "location-" . $locationCount;
-                            ?>
-                                <div id="<?php echo $id; ?>" class="tim">
-                                    <h5><?php echo $name; ?></h5>
-                                    <p><?php echo $address; ?></p>
-                                    <p><?php echo $locationDetail; ?></p>
-                                </div>
-                            <?php
+                        while ($locations->have_posts() ) {
+                            // query customized location posts
+                            $locations->the_post();
+                            
+                            // store data
+                            $locationsCustomizeds = get_field('locations');
+                            // if there is data create contents
+                            if(!empty($locationsCustomizeds)) {
+                                foreach($locationsCustomizeds as $locationsCustomized) {
+                                    $locationName = $locationsCustomized['name'];
+                                    $locationAddress = $locationsCustomized['address'];
+                                    $locationMap = $locationsCustomized['map'];
+                                    $locationContent = $locationsCustomized['content'];
+                                    // id to animate
+                                    $id = "location-" . $locationCount;
+                                    ?>
+                                    <!-- create html that display data -->
+                                    <div id="<?php echo $id; ?>" class="tim">
+                                        <h5><?php echo $locationName; ?></h5>
+                                        <p><?php echo $locationAddress; ?></p>
+                                        <p><?php echo $locationContent; ?></p>
+                                    </div>
+                                    <?php 
+                                    
+                                }
+                                
+                                $locationCount++;  
                             }
-                            $locationCount++;
                         }
-					?>
+                    }
+                    ?>
 				</div>
 				<div class="location-map"></div>
 			</div>
@@ -429,10 +469,12 @@ get_header();
                     <?php echo $footer_link; ?> </a>
                     <div class="social-media">
                         <?php
+                        // If the modification name exists, use it for facebook icon and url
                         if(get_theme_mod('durhamtaxhub_facebook_url')) {?>
                             <a href="<?php echo get_theme_mod('durhamtaxhub_facebook_url')?>" class="icon facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
                         <?php
                         }
+                        // If the modification name exists, use it for twitter icon and url
                         if(get_theme_mod('durhamtaxhub_twitter_url')) {?>
                             <a href="<?php echo get_theme_mod('durhamtaxhub_twitter_url')?>" class="icon twitter" target="_blank"><i class="fab fa-twitter-square"></i></a>
                         <?php
