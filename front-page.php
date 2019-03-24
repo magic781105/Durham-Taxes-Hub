@@ -18,17 +18,17 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-    
+
 
         <!--        temporary nav-->
         <!-- <nav>
             <ul class="nav-bar"> -->
-                <!-- <li id="testimonial">Testimonials</li>
+        <!-- <li id="testimonial">Testimonials</li>
                 <li id="volunteer">volunteers</li>
                 <li id="empowerment">empowerment</li>
                 <li id="qualification">qualification</li> -->
 
-            <!-- </ul>
+        <!-- </ul>
         </nav> -->
         <?php
 
@@ -80,10 +80,10 @@ get_header();
 		?>
 
 
-      
+
         <!-- header section -->
         <div class="header-page">
-        <?php
+            <?php
             // var_dump($header);
             foreach($eligible as $eligible_header) {
                 $header = $eligible_header['heading'];
@@ -93,27 +93,31 @@ get_header();
                 $threshold = $eligible_header['threshold'];
                 //var_dump($header);
                 ?>
-                <section id="header">
-                    <div id="logo"></div>
-                    <div class="header" style="background-image:url(<?php echo $image['url'];?>);">
-                        <h1 class="header_title"><?php echo $header; ?></h1>
-                        <p class="header_desc"><?php echo $content; ?></p>
-                        <div class="form">
-                            <input id="userInput" placeholder="Example: $30,000"/>
-                            <input id="threshold" value = "<?php echo $threshold; ?>" />
-                            <button id="inputCheck">Am I Eligible?</button>
-                        </div>
-                        <button class="header_button">Be a Volunteer!</button>
+            <section id="header">
+                <div id="logo"></div>
+                <div class="header" style="background-image:url(<?php echo $image['url'];?>);">
+                    <h1 class="header_title">
+                        <?php echo $header; ?>
+                    </h1>
+                    <p class="header_desc">
+                        <?php echo $content; ?>
+                    </p>
+                    <div class="form">
+                        <input id="userInput" placeholder="Example: $30,000" />
+                        <input id="threshold" value="<?php echo $threshold; ?>" />
+                        <button id="inputCheck">Am I Eligible?</button>
                     </div>
-                </section>
-                <?php 
+                    <button class="header_button">Be a Volunteer!</button>
+                </div>
+            </section>
+            <?php 
             }        
         ?>
         </div>
-       
-		
-		<!-- how to qualified -->
-		<section class="qualification">
+
+
+        <!-- how to qualified -->
+        <section class="qualification">
             <h1>How to Qualify</h1>
             <div class="qualification-buttons">
                 <ul id="qualificationBubble">
@@ -151,12 +155,16 @@ get_header();
             </div>
         </section>
 
-		<section  class="location">
-			<h1><?php echo $location['header']; ?></h1>
-			<div class="location-wrapper">
-				<div class="location-lists">
-					<h2><?php echo $location['header']; ?></h2>
-					<?php
+        <section class="location">
+            <h1>
+                <?php echo $location['header']; ?>
+            </h1>
+            <div class="location-wrapper">
+                <div class="location-lists">
+                    <h2>
+                        <?php echo $location['header']; ?>
+                    </h2>
+                    <?php
                         // var_dump($location);
                         $locationCount = 0;
                         foreach($location as $section) {
@@ -165,18 +173,22 @@ get_header();
                             $address = $section['address'];
                             $id = "location-" . $locationCount;
                         ?>
-                        <div class="location-list">
-                            <h3 data-id="<?php echo $id; ?>"><?php echo $name; ?></h3>
-                            <p><?php echo $address; ?><p>
-                        </div>
-                        <?php
+                    <div class="location-list">
+                        <h3 data-id="<?php echo $id; ?>">
+                            <?php echo $name; ?>
+                        </h3>
+                        <p>
+                            <?php echo $address; ?>
+                            <p>
+                    </div>
+                    <?php
                         }
                         $locationCount++;
 					}
 					?>
-				</div>
-				<div class="location-detail">
-					<?php
+                </div>
+                <div class="location-detail">
+                    <?php
                         $locationCount = 0;
                         foreach($location as $section) {
                             if($locationCount > 0){
@@ -185,66 +197,86 @@ get_header();
                             $address = $section['address'];
                             $id = "location-" . $locationCount;
                             ?>
-                                <div id="<?php echo $id; ?>" class="tim">
-                                    <h5><?php echo $name; ?></h5>
-                                    <p><?php echo $address; ?></p>
-                                    <p><?php echo $locationDetail; ?></p>
-                                </div>
-                            <?php
+                    <div id="<?php echo $id; ?>" class="tim">
+                        <h5>
+                            <?php echo $name; ?>
+                        </h5>
+                        <p>
+                            <?php echo $address; ?>
+                        </p>
+                        <p>
+                            <?php echo $locationDetail; ?>
+                        </p>
+                    </div>
+                    <?php
                             }
                             $locationCount++;
                         }
 					?>
-				</div>
-				<div class="location-map"></div>
-			</div>
-		</section>
+                </div>
+                <div class="location-map"></div>
+            </div>
+        </section>
 
         <!--volunteers section-->
+        <?php
+        if(!is_null($volunteers)){
+            ?>
+
         <section class="volunteer">
-           <?php
+            <?php
                 $volunteer_header = $volunteers["header"];
                 $volunteer_volunteertext1 = $volunteers["volunteertext1"];
                 $volunteer_volunteerVideo = $volunteers["volunteerVideo"];    
                 $volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];        
                 $volunteer_volunteertext2 = $volunteers["volunteertext2"];                        
             ?>
-           <div class="grid-container">
-               <h1 class="volunteerHeader">
-                   <?php echo $volunteer_header; ?>
-               </h1>
-               <div class="volunteerContainer grid-x grid-margin-x">
 
-                   <div class="volunteerTextSection cell small-10 small-order-2   large-4 large-order-1">
-                       <h1>How to become a volunteer </h1>
-                       <p class="volunteerText1">
-                           <?php echo $volunteer_volunteertext1; ?>
-                       </p>
-                       <a>Click here >></a>
-                   </div>
-
-                   <div class="volunteerVideo cell small-10 small-order-1  large-4 large-order-2">
-
-                       <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
-
-                       <p class="volunteerVideoDesc">
-                           <?php echo $volunteer_volunteerVideoDesc;?>
-                       </p>
-                   </div>
-
-                   <div class="volunteerTextSection cell small-10 small-order-3 large-4 large-order-3">
-                       <h1>How to become a volunteer </h1>
-                       <p class="volunteerText1">
-                           <?php echo $volunteer_volunteertext1; ?>
-                       </p>
-                       <a>Click here >></a>
-                   </div>
-               </div>
-
-           </div>
-       </section>
+            <!--            grid container volunteer section-->
+            <div class="grid-container">
+                <h1 class="volunteerHeader">
+                    <?php echo $volunteer_header; ?>
+                </h1>
+                <div class="volunteerContainer grid-x grid-margin-x">
 
 
+                    <!--                   text container -->
+                    <div class="volunteerTextSection cell small-10 small-order-2   large-4 large-order-1">
+                        <h1>How to become a volunteer </h1>
+                        <p class="volunteerText1">
+                            <?php echo $volunteer_volunteertext1; ?>
+                        </p>
+                        <a>Click here >></a>
+                    </div>
+
+
+                    <!--                   video container-->
+                    <div class="volunteerVideo cell small-10 small-order-1  large-4 large-order-2">
+
+                        <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
+
+                        <p class="volunteerVideoDesc">
+                            <?php echo $volunteer_volunteerVideoDesc;?>
+                        </p>
+                    </div>
+
+
+                    <!--                   text container-->
+                    <div class="volunteerTextSection cell small-10 small-order-3 large-4 large-order-3">
+                        <h1>How to become a volunteer </h1>
+                        <p class="volunteerText1">
+                            <?php echo $volunteer_volunteertext1; ?>
+                        </p>
+                        <a>Click here >></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <?php
+        }
+                ?>
 
         <!--section for empowerment-->
         <section class="empowerment">
@@ -299,7 +331,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                        <div class="listContainBg cell small-12 medium-8 large-8">
+                    <div class="listContainBg cell small-12 medium-8 large-8">
                         <div class="listResult ">
                             <h2>Overview</h2>
                             <p>
@@ -314,13 +346,15 @@ get_header();
             </div>
         </section>
 
-        
+
 
 
         <section class="testimonial">
-           <?php $testimonial_header = $testimonials["header"];	?>            
-			<h1 class="sectionHeader"><?php echo $testimonial_header; ?></h1>
-            
+            <?php $testimonial_header = $testimonials["header"];	?>
+            <h1 class="sectionHeader">
+                <?php echo $testimonial_header; ?>
+            </h1>
+
             <div id="alltestimonial">
                 <?php 
 
@@ -332,7 +366,7 @@ get_header();
 						$testimonial_name = $testimonial['name'];
 						// var_dump($testimonial_img);
 				?>
-						
+
                 <div class="testimonialGroup">
                     <div class="testimonialImage" style="background-image:url(<?php echo $testimonial_img['url']; ?>);"></div>
                     <div class="testimonialContent">
@@ -361,21 +395,21 @@ get_header();
 			if($form_id){
                 
 				?>
-				<section class="contact-form">
-					<div class="grid-container">
-						<div class="grid-x grid-margin-x grid-margin-y">
-							<!-- <div class="cell small-12 medium-6">
+        <section class="contact-form">
+            <div class="grid-container">
+                <div class="grid-x grid-margin-x grid-margin-y">
+                    <!-- <div class="cell small-12 medium-6">
 								<h2>Form ID</h2>
 								<?php //echo do_shortcode('[ws_form id="' . $form_id . '"]' ) ?>
 							</div> -->
-							<div class="cell small-12 medium-12">
-                                <p id="contact-us">Contact Us</p>
-                                <?php echo do_shortcode('[ws_form id="' . $form_id . '"]' ) ?>
-							</div>
-						</div>
-					</div>
-				</section>
-				<?php 
+                    <div class="cell small-12 medium-12">
+                        <p id="contact-us">Contact Us</p>
+                        <?php echo do_shortcode('[ws_form id="' . $form_id . '"]' ) ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php 
 
 			}
 		// }
@@ -404,18 +438,18 @@ get_header();
                 </p>
                 <a class="footerLink">
                     <?php echo $footer_link; ?> </a>
-                    <div class="social-media">
-                        <?php
+                <div class="social-media">
+                    <?php
                         if(get_theme_mod('durhamtaxhub_facebook_url')) {?>
-                            <a href="<?php echo get_theme_mod('durhamtaxhub_facebook_url')?>" class="icon facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                        <?php
+                    <a href="<?php echo get_theme_mod('durhamtaxhub_facebook_url')?>" class="icon facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <?php
                         }
                         if(get_theme_mod('durhamtaxhub_twitter_url')) {?>
-                            <a href="<?php echo get_theme_mod('durhamtaxhub_twitter_url')?>" class="icon twitter" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                        <?php
+                    <a href="<?php echo get_theme_mod('durhamtaxhub_twitter_url')?>" class="icon twitter" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <?php
                         }
                         ?>
-                    </div>
+                </div>
                 <div class="partnerLogos">
                     <img src='<?php echo $footer_partner_one ?>' />
                     <img src='<?php echo $footer_partner_two ?>' />
@@ -429,7 +463,7 @@ get_header();
 
 			}
 		?>
-        
+
 
     </main><!-- #main-->
 </div>
