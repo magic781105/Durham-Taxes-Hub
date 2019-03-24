@@ -48,15 +48,9 @@ get_header();
 
 
                 $form_id 		= get_field('form_id');
-                $form_shortcode = get_field('form_shortcode');
-
-
-                
-               
-		?>
-
-
-      
+                $form_shortcode = get_field('form_shortcode');  
+        ?>
+        
         <!-- header section -->
         <div class="header-page">
         <?php
@@ -90,38 +84,67 @@ get_header();
 		
 		<!-- how to qualified -->
 		<section class="qualification">
-            <h1>How to Qualify</h1>
+            <!-- display header dynamically -->
+            <?php
+            // check if header has content
+            if(!empty($how_to_qualify['header'])) {
+            ?>
+                <h1><?php echo $how_to_qualify['header']; ?></h1>
+            <?php
+            }
+            ?>
             <div class="qualification-buttons">
+                <!-- check if $how_to_qualify has data -->
+                <?php
+                if(!empty($how_to_qualify)) {
+                ?>
                 <ul id="qualificationBubble">
                     <?php
-					// var_dump($featured_slider);
+                    // used to not include header
+                    $qualificationCount = 0;
+                        // create buttons using data from the custom field
                         foreach($how_to_qualify as $section) {
-                            $button = $section['button'];
+                            if($qualificationCount > 0 && !empty($section['button'])) {
+                                $button = $section['button'];
+                            
                     ?>
-
+                    <!-- generate li tags respectively -->
                     <li class="qualification-btn">
                         <?php echo $button; ?>
                     </li>
 
                     <?php
+                        }
+                        // to skip first content in $qualificationCount
+                        $qualificationCount++;
 					}
 					?>
                 </ul>
+                <?php
+                }
+                ?>
             </div>
             <div class="qualification-contents">
                 <?php
-					$idCounter = 0;
+                    $idCounter = 0;
+                    $qualificationCount = 0;
+                    //skip first content in $how_to_qualify and make sure it has data
 					foreach($how_to_qualify as $content) {
+                        if ($qualificationCount > 0 && !empty($content['content'])) {
 						$content = $content['content'];
 						$id = "qualification-" . $idCounter;
 				?>
+                        <!-- generate contents accordingly -->
+                        <div id="<?php echo $id; ?>" class="qualification-div">
+                            <?php echo $content; ?>
+                        </div>
 
-                <div id="<?php echo $id; ?>" class="qualification-div">
-                    <?php echo $content; ?>
-                </div>
-
-                <?php
-						$idCounter++;
+                        <?php  
+                        // used to generate ids 
+                        $idCounter++;
+                        }
+                        // to skip first data in $how_to_qualify
+                        $qualificationCount++;
 					}
 				?>
             </div>
