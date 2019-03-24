@@ -446,10 +446,12 @@ get_header();
                     <?php echo $footer_link; ?> </a>
                     <div class="social-media">
                         <?php
+                        // If the modification name exists, use it for facebook icon and url
                         if(get_theme_mod('durhamtaxhub_facebook_url')) {?>
                             <a href="<?php echo get_theme_mod('durhamtaxhub_facebook_url')?>" class="icon facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
                         <?php
                         }
+                        // If the modification name exists, use it for twitter icon and url
                         if(get_theme_mod('durhamtaxhub_twitter_url')) {?>
                             <a href="<?php echo get_theme_mod('durhamtaxhub_twitter_url')?>" class="icon twitter" target="_blank"><i class="fab fa-twitter-square"></i></a>
                         <?php
