@@ -218,10 +218,12 @@ get_header();
             </div>
         </section>
 
+        <?php
+        if(!is_null($volunteers)){
+            
+            ?>
         <!--volunteers section-->
         <section class="volunteer">
-
-            <!--            acf for volunteers-->
             <?php
                 $volunteer_header = $volunteers["header"];
                 $volunteer_volunteertext1 = $volunteers["volunteertext1"];
@@ -229,19 +231,12 @@ get_header();
                 $volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];        
                 $volunteer_volunteertext2 = $volunteers["volunteertext2"];                        
             ?>
-
-            <!--            grid container for voluteer section-->
             <div class="grid-container">
-
-                <!--                header for volunteer-->
                 <h1 class="volunteerHeader">
                     <?php echo $volunteer_header; ?>
                 </h1>
-
-                <!--                x axis grid for volunteers-->
                 <div class="volunteerContainer grid-x grid-margin-x">
 
-                    <!--                    volunteers text container-->
                     <div class="volunteerTextSection cell small-10 small-order-2   large-4 large-order-1">
                         <h1>How to become a volunteer </h1>
                         <p class="volunteerText1">
@@ -250,7 +245,6 @@ get_header();
                         <a>Click here >></a>
                     </div>
 
-                    <!--                    volunteers video-->
                     <div class="volunteerVideo cell small-10 small-order-1  large-4 large-order-2">
 
                         <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
@@ -260,8 +254,6 @@ get_header();
                         </p>
                     </div>
 
-
-                    <!--colunteers text container-->
                     <div class="volunteerTextSection cell small-10 small-order-3 large-4 large-order-3">
                         <h1>How to become a volunteer </h1>
                         <p class="volunteerText1">
@@ -274,12 +266,13 @@ get_header();
             </div>
         </section>
 
-
+        <?php
+            }
+        ?>
 
         <!--section for empowerment-->
-        <section class="empowerment">
 
-            <!--            acf for empowerment-->
+        <section class="empowerment">
             <?php 
                 $empowerment_header = $empowerment["header"];
                 $empowerment_listItems = $empowerment["empowermentlist"];
@@ -292,19 +285,12 @@ get_header();
                 $empowerment_listitem5 = $empowerment_listItems["listitem5"];
                                 
             ?>
-
-            <!--            grid container for the section-->
             <div class="grid-container">
-
-                <!--                header title -->
                 <h1 class="empowermentHeader">
                     <?php echo $empowerment_header; ?>
                 </h1>
-
-                <!--                x axis grid-->
                 <div class="empowermentContainer grid-x grid-margin-x">
 
-                    <!--                    empowerment list container-->
                     <div class="listContain cell small-4 medium-3 large-3">
                         <div class="orderedList">
                             <div class="listItem">
@@ -338,8 +324,6 @@ get_header();
                             </div>
                         </div>
                     </div>
-
-                    <!--                    list result container-->
                     <div class="listContainBg cell small-12 medium-8 large-8">
                         <div class="listResult ">
                             <h2>Overview</h2>
