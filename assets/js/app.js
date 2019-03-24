@@ -143,42 +143,6 @@
         });
 
 
-        // $("#menu-item-262 .sub-menu li").on('click', function (e) {
-
-        //     let selection = $(e.target).index();
-
-        //     let id = `#qualification-${selection}`;
-
-        //     $('.qualification-div').css({
-        //         display: 'none'
-        //     });
-        //     $(id).fadeIn('slow');
-
-
-        //     let section = this.parentElement.parentElement.firstChild.id;
-
-
-        //     //let selection = this.children;
-
-        //     animate(section);
-
-        // });
-
-
-        // $('#menu-item-265 .sub-menu li').click(function (e) {
-
-        //     let selection = $(e.target).text();
-
-        //     $('#listHeader').text(selection);
-
-
-        //     let section = this.parentElement.parentElement.firstChild.id;
-
-
-        //     animate(section);
-        // });
-
-
         // destop version
         $("#menu-bar li a").click(function () {
 
