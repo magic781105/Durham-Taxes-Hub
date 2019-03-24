@@ -96,6 +96,8 @@ get_header();
 
                 <!--header-->
                 <section id="header">
+                    <!--if header is not empty display the following-->
+                    <?php if(! empty ($header)) { ?>
                     <!--header background-image-->
                     <div class="header" style="background-image:url(<?php echo $image['url'];?>);">
                         <!--display header's header-->
@@ -111,6 +113,10 @@ get_header();
                         <!--header button for be a volunteer link-->
                         <button class="header_button">Be a Volunteer!</button>
                     </div>
+                    <!--else no eligible header-->
+                    <?php } else {
+                        echo 'no ELIGIBLE Header added';
+                    } ?>
                 </section>
                 <?php 
             }        
