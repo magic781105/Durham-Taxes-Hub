@@ -93,6 +93,7 @@ get_header();
                 $button = $eligible_header['button'];
                 $threshold = $eligible_header['threshold'];
             ?>
+
                 <!--header-->
                 <section id="header">
                     <!--header background-image-->
@@ -383,10 +384,13 @@ get_header();
                     </div>
                 </div>
             </section>
-
+        <!--adding conditional else-->
         <?php 
-            }
-        ?>
+            } else {
+				echo 'No Form Added';
+			}
+        ?> 
+            
 
         <footer>
             <div class="footerContent">
