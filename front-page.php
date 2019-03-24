@@ -33,7 +33,7 @@ get_header();
         <?php
 
 			// does get field exist
-			
+
             if (function_exists('get_field')){
 
                 $eligible = get_field('header');
@@ -79,12 +79,12 @@ get_header();
                         <button class="header_button">Be a Volunteer!</button>
                     </div>
                 </section>
-                <?php 
-            }        
+                <?php
+            }
         ?>
         </div>
-       
-		
+
+
 		<!-- how to qualified -->
 		<section class="qualification">
             <!-- display header dynamically -->
@@ -109,7 +109,7 @@ get_header();
                         foreach($how_to_qualify as $section) {
                             if($qualificationCount > 0 && !empty($section['button'])) {
                                 $button = $section['button'];
-                            
+
                     ?>
                     <!-- generate li tags respectively -->
                     <li class="qualification-btn">
@@ -142,8 +142,8 @@ get_header();
                             <?php echo $content; ?>
                         </div>
 
-                        <?php  
-                        // used to generate ids 
+                        <?php
+                        // used to generate ids
                         $idCounter++;
                         }
                         // to skip first data in $how_to_qualify
@@ -152,7 +152,7 @@ get_header();
 				?>
             </div>
         </section>
-        
+
 		<section  class="location">
             <!-- Adds location header -->
 			<h1><?php if(!empty($location['header'])){echo $location['header'];} ?></h1>
@@ -160,19 +160,19 @@ get_header();
 				<div class="location-lists">
                     <h2><?php if(!empty($location['header'])){echo $location['header'];} ?></h2>
                     <!-- declare variables that stores location info, and use custom post type-->
-                    <?php  
+                    <?php
                         $args = array(
                             'post_type' => 'location',
                         );
                         $locations = new WP_Query( $args );
                         if( $locations->have_posts() ){
-                            // variable that is used to create unique data-id 
+                            // variable that is used to create unique data-id
                             $locationCount = 0;
                             // check if locations have posts
                             while ($locations->have_posts() ) {
                                 // query customized location posts
                                 $locations->the_post();
-                                
+
                                 $locationsCustomizeds = get_field('locations');
                                 // check $locationsCustomizeds is not empty
                                 if(!empty($locationsCustomizeds)) {
@@ -185,15 +185,15 @@ get_header();
                                         // this is used for data-id to display contents respectively
                                         $id = "location-" . $locationCount;
                                         ?>
-                                        
+
                                         <div class="location-list">
                                             <!-- display location name and address -->
                                             <h3 data-id="<?php echo $id; ?>"><?php echo $locationName; ?></h3>
                                             <p><?php echo $locationAddress; ?><p>
                                         </div>
-                                        <?php 
+                                        <?php
                                     }
-    
+
                                     $locationCount++;
                                 }
                             }
@@ -210,7 +210,7 @@ get_header();
                         while ($locations->have_posts() ) {
                             // query customized location posts
                             $locations->the_post();
-                            
+
                             // store data
                             $locationsCustomizeds = get_field('locations');
                             // if there is data create contents
@@ -229,11 +229,11 @@ get_header();
                                         <p><?php echo $locationAddress; ?></p>
                                         <p><?php echo $locationContent; ?></p>
                                     </div>
-                                    <?php 
-                                    
+                                    <?php
+
                                 }
-                                
-                                $locationCount++;  
+
+                                $locationCount++;
                             }
                         }
                     }
@@ -252,9 +252,9 @@ get_header();
             <?php
                 $volunteer_header = $volunteers["header"];
                 $volunteer_volunteertext1 = $volunteers["volunteertext1"];
-                $volunteer_volunteerVideo = $volunteers["volunteerVideo"];    
-                $volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];        
-                $volunteer_volunteertext2 = $volunteers["volunteertext2"];                        
+                $volunteer_volunteerVideo = $volunteers["volunteerVideo"];
+                $volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];
+                $volunteer_volunteertext2 = $volunteers["volunteertext2"];
             ?>
 
             <!--            grid container volunteer section-->
@@ -306,10 +306,10 @@ get_header();
         <!--section for empowerment-->
         <?php
         if(!is_null($empowerment)){
-            
+
             ?>
         <section class="empowerment">
-            <?php 
+            <?php
                 $empowerment_header = $empowerment["header"];
                 $empowerment_listItems = $empowerment["empowermentlist"];
                 $empowerment_text1 = $empowerment["empowermenttext1"];
@@ -319,7 +319,7 @@ get_header();
                 $empowerment_listitem3 = $empowerment_listItems["listitem3"];
                 $empowerment_listitem4 = $empowerment_listItems["listitem4"];
                 $empowerment_listitem5 = $empowerment_listItems["listitem5"];
-                                
+
             ?>
             <div class="grid-container">
                 <h1 class="empowermentHeader">
@@ -375,28 +375,28 @@ get_header();
             </div>
         </section>
 
-        <?php 
+        <?php
         }
         ?>
 
 
         <section class="testimonial">
-           <?php 
+           <?php
             // check if $testimonials is not empty
             if(!empty($testimonials)){
                $testimonial_header = $testimonials["header"];
-            }?>            
+            }?>
 			<h1 class="sectionHeader">
-                <?php 
+                <?php
                     // check if $testimonial_header is not empty
                     if(!empty($testimonial_header)){
-                        echo $testimonial_header; 
+                        echo $testimonial_header;
                     }
                 ?>
             </h1>
-            
+
             <div id="alltestimonial">
-                <?php 
+                <?php
                     // check if get_field('testimonials') has content
                     if(!empty($testimonials)){
                         $testimonialItem = 0;
@@ -410,27 +410,27 @@ get_header();
                             $testimonial_name = $testimonial['name'];
                             // var_dump($testimonial_img);
                         ?>
-                            
+
                     <div class="testimonialGroup">
-                        <div class="testimonialImage" style="background-image:url(<?php 
+                        <div class="testimonialImage" style="background-image:url(<?php
                             // check if $testimonial_img['url'] is not empty
                             if(!empty($testimonial_img['url'])){echo $testimonial_img['url'];} ?>);">
                         </div>
                         <div class="testimonialContent">
-                            <?php 
+                            <?php
                                 // check if $testimonial_content is not empty
                                 if(!empty($testimonial_content)){echo $testimonial_content; }?>
                         </div>
                         <div class="testimonialName">
-                            <?php 
+                            <?php
                                 // check if $testimonial_name is not empty
                                 if(!empty($testimonial_name)){echo $testimonial_name;} ?>
                         </div>
                     </div>
 
-                    <?php	
+                    <?php
                             }
-                            $testimonialItem++;						
+                            $testimonialItem++;
 
                         }
                     }
@@ -441,11 +441,11 @@ get_header();
 
 
 
-        <?php 
+        <?php
 		// if(function_exists('get_field')){
-			
+
 			if($form_id){
-                
+
 				?>
 				<section class="contact-form">
 					<div class="grid-container">
@@ -461,13 +461,18 @@ get_header();
 						</div>
 					</div>
 				</section>
-				<?php 
+				<?php
 
 			}
-		// }
-		
+
+
 		?>
 
+<!-- conditional to check footer content -->
+    <?php
+    if(!is_null($footer)){
+
+        ?>
         <footer>
             <div class="footerContent">
                 <?php
@@ -518,7 +523,12 @@ get_header();
 			}
 		?>
 
+    <?php
 
+    }
+
+
+    ?>
     </main><!-- #main-->
 </div>
 
