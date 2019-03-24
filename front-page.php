@@ -218,6 +218,10 @@ get_header();
             </div>
         </section>
 
+        <?php
+        if(!is_null($volunteers)){
+            
+            ?>
         <!--volunteers section-->
         <section class="volunteer">
             <?php
@@ -262,12 +266,16 @@ get_header();
             </div>
         </section>
 
-
+        <?php
+            }
+        ?>
 
         <!--section for empowerment-->
+        <?php
+        if(!is_null($empowerment)){
+            
+            ?>
         <section class="empowerment">
-
-            <!--            acf for empowerment-->
             <?php 
                 $empowerment_header = $empowerment["header"];
                 $empowerment_listItems = $empowerment["empowermentlist"];
@@ -280,19 +288,12 @@ get_header();
                 $empowerment_listitem5 = $empowerment_listItems["listitem5"];
                                 
             ?>
-
-            <!--            grid container for the section-->
             <div class="grid-container">
-
-                <!--                header title -->
                 <h1 class="empowermentHeader">
                     <?php echo $empowerment_header; ?>
                 </h1>
-
-                <!--                x axis grid-->
                 <div class="empowermentContainer grid-x grid-margin-x">
 
-                    <!--                    empowerment list container-->
                     <div class="listContain cell small-4 medium-3 large-3">
                         <div class="orderedList">
                             <div class="listItem">
@@ -326,8 +327,6 @@ get_header();
                             </div>
                         </div>
                     </div>
-
-                    <!--                    list result container-->
                     <div class="listContainBg cell small-12 medium-8 large-8">
                         <div class="listResult ">
                             <h2>Overview</h2>
@@ -342,7 +341,9 @@ get_header();
                 </div>
             </div>
         </section>
-
+        <?php
+        }
+        ?>
 
 
 
