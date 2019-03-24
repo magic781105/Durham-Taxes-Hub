@@ -86,7 +86,7 @@
         // Animated scrolling
 
         function animate(sectionClass) {
-            
+
             $("html, body").animate({
                 scrollTop: $('.' + sectionClass).offset().top
 
@@ -94,7 +94,9 @@
 
         }
 
-        $("#menu-bar li a").attr('href', '#');
+
+
+        $("#menu-bar li a").removeAttr("href");
 
         $("#menu-bar li a").each(function (index, item) {
 
@@ -105,12 +107,12 @@
 
 
             $(item).attr('id', `${selectedId}`);
-            
+
 
         });
 
-         //animated scrolling for sub menu
-         $("#menu-item-249 .sub-menu li").on('click', function (e) {
+        //animated scrolling for sub menu
+        $("#menu-item-249 .sub-menu li").on('click', function (e) {
 
             let selection = $(e.target).index();
 
@@ -121,12 +123,12 @@
             });
             $(id).fadeIn('slow');
 
-            
+
             let section = this.parentElement.parentElement.firstChild.id;
-            
+
 
             //let selection = this.children;
-            
+
             animate(section);
 
         });
