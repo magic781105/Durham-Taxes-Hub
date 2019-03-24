@@ -240,6 +240,11 @@ get_header();
 			</div>
 		</section>
 
+
+        <?php
+        if(!is_null($volunteers)){
+            
+            ?>
         <!--volunteers section-->
         <section class="volunteer">
            <?php
@@ -284,9 +289,15 @@ get_header();
            </div>
        </section>
 
-
+        <?php
+            }
+        ?>
 
         <!--section for empowerment-->
+        <?php
+        if(!is_null($empowerment)){
+            
+            ?>
         <section class="empowerment">
             <?php 
                 $empowerment_header = $empowerment["header"];
@@ -354,7 +365,9 @@ get_header();
             </div>
         </section>
 
-        
+        <?php 
+        }
+        ?>
 
 
         <section class="testimonial">
