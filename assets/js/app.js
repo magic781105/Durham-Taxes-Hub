@@ -115,16 +115,25 @@
         });
 
         //animated scrolling for sub menu
-        $("#menu-item-249 .sub-menu li").on('click', function (e) {
+        $("#primary-menu > li > .sub-menu li").on('click', function (e) {
             debugger;
-            let selection = $(e.target).index();
+            let selection = $(e.target);
+            let selectionIndex = $(e.target).index();
 
-            let id = `#qualification-${selection}`;
+            if (selection.parent().parent().parent().children()[0].id === "qualification") {
+                debugger;
+                let id = `#qualification-${selection}`;
 
-            $('.qualification-div').css({
-                display: 'none'
-            });
-            $(id).fadeIn('slow');
+                $('.qualification-div').css({
+                    display: 'none'
+                });
+                $(id).fadeIn('slow');
+
+            } else if (selection.parent().parent().parent().children()[0].id === "empowerment") {
+
+                $('#listHeader').text(selection);
+
+            }
 
 
             let section = this.parentElement.parentElement.firstChild.id;
@@ -136,17 +145,6 @@
 
         });
 
-        // scrolling for submenu
-        $('#menu-item-254 .sub-menu li').click(function (e) {
-
-            let selection = $(e.target).text();
-
-            $('#listHeader').text(selection);
-
-            debugger;
-            let section = this.parentElement.parentElement.firstChild.id;
-            animate(section);
-        });
 
 
         // destop version
