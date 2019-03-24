@@ -18,17 +18,17 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-    
+
 
         <!--        temporary nav-->
         <!-- <nav>
             <ul class="nav-bar"> -->
-                <!-- <li id="testimonial">Testimonials</li>
+        <!-- <li id="testimonial">Testimonials</li>
                 <li id="volunteer">volunteers</li>
                 <li id="empowerment">empowerment</li>
                 <li id="qualification">qualification</li> -->
 
-            <!-- </ul>
+        <!-- </ul>
         </nav> -->
         <?php
 
@@ -48,12 +48,15 @@ get_header();
 
 
                 $form_id 		= get_field('form_id');
-                $form_shortcode = get_field('form_shortcode');  
-        ?>
-        
+                $form_shortcode = get_field('form_shortcode');
+
+		?>
+
+
+
         <!-- header section -->
         <div class="header-page">
-        <?php
+            <?php
             // var_dump($header);
             foreach($eligible as $eligible_header) {
                 $header = $eligible_header['heading'];
@@ -240,51 +243,58 @@ get_header();
 			</div>
 		</section>
 
-
+        <!--volunteers section-->
         <?php
         if(!is_null($volunteers)){
-            
             ?>
-        <!--volunteers section-->
+
         <section class="volunteer">
-           <?php
+            <?php
                 $volunteer_header = $volunteers["header"];
                 $volunteer_volunteertext1 = $volunteers["volunteertext1"];
                 $volunteer_volunteerVideo = $volunteers["volunteerVideo"];    
                 $volunteer_volunteerVideoDesc = $volunteers["volunteervideodesc"];        
                 $volunteer_volunteertext2 = $volunteers["volunteertext2"];                        
             ?>
-           <div class="grid-container">
-               <h1 class="volunteerHeader">
-                   <?php echo $volunteer_header; ?>
-               </h1>
-               <div class="volunteerContainer grid-x grid-margin-x">
 
-                   <div class="volunteerTextSection cell small-10 small-order-2   large-4 large-order-1">
-                       <h1>How to become a volunteer </h1>
-                       <p class="volunteerText1">
-                           <?php echo $volunteer_volunteertext1; ?>
-                       </p>
-                       <a>Click here >></a>
-                   </div>
+            <!--            grid container volunteer section-->
+            <div class="grid-container">
+                <h1 class="volunteerHeader">
+                    <?php echo $volunteer_header; ?>
+                </h1>
+                <div class="volunteerContainer grid-x grid-margin-x">
 
-                   <div class="volunteerVideo cell small-10 small-order-1  large-4 large-order-2">
 
-                       <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
+                    <!--                   text container -->
+                    <div class="volunteerTextSection cell small-10 small-order-2   large-4 large-order-1">
+                        <h1>How to become a volunteer </h1>
+                        <p class="volunteerText1">
+                            <?php echo $volunteer_volunteertext1; ?>
+                        </p>
+                        <a>Click here >></a>
+                    </div>
 
-                       <p class="volunteerVideoDesc">
-                           <?php echo $volunteer_volunteerVideoDesc;?>
-                       </p>
-                   </div>
 
-                   <div class="volunteerTextSection cell small-10 small-order-3 large-4 large-order-3">
-                       <h1>How to become a volunteer </h1>
-                       <p class="volunteerText1">
-                           <?php echo $volunteer_volunteertext1; ?>
-                       </p>
-                       <a>Click here >></a>
-                   </div>
-               </div>
+                    <!--                   video container-->
+                    <div class="volunteerVideo cell small-10 small-order-1  large-4 large-order-2">
+
+                        <div class="volunteerVideo1"><img src="<?php echo $volunteer_volunteerVideo;?>" alt="video"></div>
+
+                        <p class="volunteerVideoDesc">
+                            <?php echo $volunteer_volunteerVideoDesc;?>
+                        </p>
+                    </div>
+
+
+                    <!--                   text container-->
+                    <div class="volunteerTextSection cell small-10 small-order-3 large-4 large-order-3">
+                        <h1>How to become a volunteer </h1>
+                        <p class="volunteerText1">
+                            <?php echo $volunteer_volunteertext1; ?>
+                        </p>
+                        <a>Click here >></a>
+                    </div>
+                </div>
 
            </div>
        </section>
@@ -507,7 +517,7 @@ get_header();
 
 			}
 		?>
-        
+
 
     </main><!-- #main-->
 </div>
