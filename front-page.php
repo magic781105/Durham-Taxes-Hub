@@ -475,6 +475,8 @@ get_header();
         ?>
         <footer>
             <div class="footerContent">
+
+              <!-- pulling information from custom fields -->
                 <?php
 					$footer_header = $footer['heading'];
 					$footer_paragraph = $footer['paragraph'];
@@ -487,6 +489,7 @@ get_header();
                     // var_dump($footer_content);
                     // var_dump($footer_link);
 					?>
+          <!-- return custom field content to page -->
                 <p class="footerHeader">
                     <?php echo $footer_header; ?>
                 </p>
