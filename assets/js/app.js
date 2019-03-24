@@ -86,18 +86,21 @@
         // Animated scrolling
 
         function animate(sectionClass) {
-
+            debugger;
             $("html, body").animate({
+
                 scrollTop: $('.' + sectionClass).offset().top
 
             }, 1000);
 
         }
 
-
+        // remove href attr for the nav
 
         $("#menu-bar li a").removeAttr("href");
 
+
+        // lopp for assigning id to the nav   
         $("#menu-bar li a").each(function (index, item) {
 
             // let arrayOfId = ['qualification', '', '', '', 'location', 'volunteer', 'empowerment', '', '', '', '', '', 'testimonial'];
@@ -113,13 +116,15 @@
 
         //animated scrolling for sub menu
         $("#primary-menu > li > .sub-menu li").on('click', function (e) {
-            // debugger;
+
             let selection = $(e.target);
             let selectionIndex = $(e.target).index();
 
             if (selection.parent().parent().parent().children()[0].id === "qualification") {
+
                 
                 let id = `#qualification-${selectionIndex}`;
+
 
                 $('.qualification-div').css({
                     display: 'none'
@@ -144,8 +149,8 @@
 
 
         // destop version
-        $("#menu-bar li a").click(function () {
-
+        $("#primary-menu > li > a").click(function () {
+            debugger
             let clickedSection = $(this).attr("id");
 
             animate(clickedSection);
