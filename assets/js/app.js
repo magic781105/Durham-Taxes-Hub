@@ -86,16 +86,21 @@
         // Animated scrolling
 
         function animate(sectionClass) {
-            
+            debugger;
             $("html, body").animate({
+
                 scrollTop: $('.' + sectionClass).offset().top
 
             }, 1000);
 
         }
 
-        $("#menu-bar li a").attr('href', '#');
+        // remove href attr for the nav
 
+        $("#menu-bar li a").removeAttr("href");
+
+
+        // lopp for assigning id to the nav   
         $("#menu-bar li a").each(function (index, item) {
 
             // let arrayOfId = ['qualification', '', '', '', 'location', 'volunteer', 'empowerment', '', '', '', '', '', 'testimonial'];
@@ -105,48 +110,47 @@
 
 
             $(item).attr('id', `${selectedId}`);
-            
+
 
         });
 
-         //animated scrolling for sub menu
-         $("#menu-item-249 .sub-menu li").on('click', function (e) {
+        //animated scrolling for sub menu
+        $("#primary-menu > li > .sub-menu li").on('click', function (e) {
 
-            let selection = $(e.target).index();
+            let selection = $(e.target);
+            let selectionIndex = $(e.target).index();
 
-            let id = `#qualification-${selection}`;
+            if (selection.parent().parent().parent().children()[0].id === "qualification") {
 
-            $('.qualification-div').css({
-                display: 'none'
-            });
-            $(id).fadeIn('slow');
+                
+                let id = `#qualification-${selectionIndex}`;
 
-            
+
+                $('.qualification-div').css({
+                    display: 'none'
+                });
+                $(id).fadeIn('slow');
+
+            } else if (selection.parent().parent().parent().children()[0].id === "empowerment") {
+
+                $('#listHeader').text(selection);
+
+            }
+
+
             let section = this.parentElement.parentElement.firstChild.id;
-            
+
 
             //let selection = this.children;
-            
+
             animate(section);
 
-        });
-
-
-        $('#menu-item-254 .sub-menu li').click(function (e) {
-
-            let selection = $(e.target).text();
-
-            $('#listHeader').text(selection);
-
-
-            let section = this.parentElement.parentElement.firstChild.id;
-            animate(section);
         });
 
 
         // destop version
-        $("#menu-bar li a").click(function () {
-
+        $("#primary-menu > li > a").click(function () {
+            debugger
             let clickedSection = $(this).attr("id");
 
             animate(clickedSection);

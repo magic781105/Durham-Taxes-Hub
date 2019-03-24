@@ -315,6 +315,10 @@ ul.sub-menu a {
     border-radius: 10px;
 }
 
+.tim:not(:first-child) {
+    display: none;
+}
+
 .location-list {
     font-size: 1em;
     margin-bottom: .5em;
@@ -475,7 +479,7 @@ ul.sub-menu a {
     padding: 0 2em;
     font-size: 1.2em;
 }
-
+#qualification-1,
 #qualification-2,
 #qualification-3 {
     display: none;
