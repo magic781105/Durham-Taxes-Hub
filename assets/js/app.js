@@ -112,16 +112,25 @@
         });
 
         //animated scrolling for sub menu
-        $("#menu-item-249 .sub-menu li").on('click', function (e) {
+        $("#primary-menu > li > .sub-menu li").on('click', function (e) {
+            // debugger;
+            let selection = $(e.target);
+            let selectionIndex = $(e.target).index();
 
-            let selection = $(e.target).index();
+            if (selection.parent().parent().parent().children()[0].id === "qualification") {
+                
+                let id = `#qualification-${selectionIndex}`;
 
-            let id = `#qualification-${selection}`;
+                $('.qualification-div').css({
+                    display: 'none'
+                });
+                $(id).fadeIn('slow');
 
-            $('.qualification-div').css({
-                display: 'none'
-            });
-            $(id).fadeIn('slow');
+            } else if (selection.parent().parent().parent().children()[0].id === "empowerment") {
+
+                $('#listHeader').text(selection);
+
+            }
 
 
             let section = this.parentElement.parentElement.firstChild.id;
@@ -134,16 +143,40 @@
         });
 
 
-        $('#menu-item-254 .sub-menu li').click(function (e) {
+        // $("#menu-item-262 .sub-menu li").on('click', function (e) {
 
-            let selection = $(e.target).text();
+        //     let selection = $(e.target).index();
 
-            $('#listHeader').text(selection);
+        //     let id = `#qualification-${selection}`;
+
+        //     $('.qualification-div').css({
+        //         display: 'none'
+        //     });
+        //     $(id).fadeIn('slow');
 
 
-            let section = this.parentElement.parentElement.firstChild.id;
-            animate(section);
-        });
+        //     let section = this.parentElement.parentElement.firstChild.id;
+
+
+        //     //let selection = this.children;
+
+        //     animate(section);
+
+        // });
+
+
+        // $('#menu-item-265 .sub-menu li').click(function (e) {
+
+        //     let selection = $(e.target).text();
+
+        //     $('#listHeader').text(selection);
+
+
+        //     let section = this.parentElement.parentElement.firstChild.id;
+
+
+        //     animate(section);
+        // });
 
 
         // destop version
