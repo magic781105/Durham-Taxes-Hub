@@ -116,13 +116,15 @@
 
         //animated scrolling for sub menu
         $("#primary-menu > li > .sub-menu li").on('click', function (e) {
-            debugger;
+
             let selection = $(e.target);
             let selectionIndex = $(e.target).index();
 
             if (selection.parent().parent().parent().children()[0].id === "qualification") {
-                debugger;
-                let id = `#qualification-${selection}`;
+
+                
+                let id = `#qualification-${selectionIndex}`;
+
 
                 $('.qualification-div').css({
                     display: 'none'
@@ -144,7 +146,6 @@
             animate(section);
 
         });
-
 
 
         // destop version
