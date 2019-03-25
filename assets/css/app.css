@@ -3,6 +3,14 @@
     src: url(../fonts/Abel-Regular.ttf);
 }
 
+/* ** logo ** */
+.custom-logo-link {
+    position: absolute;
+    width:120px;
+    height:120px;
+    padding:10px 20px;
+}
+
 /* ** header page ** */
 
 * {
@@ -16,6 +24,7 @@
 
 .header-page .header {
     min-height: 600px;
+    height:100vh;
     width: auto;
     display: flex !important;
     flex-direction: column;
@@ -25,7 +34,6 @@
     background-position: center;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 h1 {
@@ -818,9 +826,9 @@ main .empowerment h1 {
 
 
 /* === footer section === */
-footer {
+/* footer { */
     /* height: 100vh; */
-}
+/* } */
 
 .footer_content {
     display: block;
