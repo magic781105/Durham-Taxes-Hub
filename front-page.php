@@ -477,9 +477,10 @@ get_header();
 					</div>
 				</section>
 				<?php
-
-         <!--contact us form-->
-        <?php 
+            }
+            
+         //contact us form
+        // <?php 
 		// if(function_exists('get_field'))
             // add conditional tag
             if (! empty ($form_id)){
