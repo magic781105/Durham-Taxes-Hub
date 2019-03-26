@@ -69,29 +69,73 @@ get_header();
                 $threshold = $eligible_header['threshold'];
             ?>
 
-                <!--header-->
-                <section id="header">
-                    <!--if header is not empty display the following-->
-                    <?php if(! empty ($header)) { ?>
-                    <!--header background-image-->
-                    <div class="header" style="background-image:url(<?php echo $image['url'];?>);">
-                        <!--display header's header-->
-                        <h1 class="header_title"><?php echo $header; ?></h1>
-                        <!--display header desc-->
-                        <p class="header_desc"><?php echo $content; ?></p>
-                        <!--header form-->
-                        <div class="form">
-                            <input id="userInput" placeholder="Example: $30,000"/>
-                            <input id="threshold" value = "<?php echo $threshold; ?>" />
-                            <button id="inputCheck">Am I Eligible?</button>
+<!--header section-->
+<section id="header">
+                    <!--desktop-->
+                    <div class="grid-x height">
+                        <!--desktop header background image-->
+                        <div class="cell hide-for-small-only small-12 medium-6 large-8">
+                            <!--if header image is not empty display-->
+                            <?php if (! empty ($image)) { ?> 
+                                <!--displaying image-->
+                                <div id="image">
+                                    <img src="<?php echo $image['url']; ?>"/>
+                                </div>
+                            <!-- else no header image added-->
+                            <?php } else {
+                                echo 'No Header Image Added';
+                            }
+                            ?>
                         </div>
-                        <!--header button for be a volunteer link-->
-                        <button class="header_button">Be a Volunteer!</button>
+                        
+                        <!--desktop header and content-->
+                        <div class="cell hide-for-small-only medium-6 large-4 display-image">
+                            <!--if header is not empty display the following-->
+                            <?php if(! empty ($header && $content)) { ?>
+                                <div id="header-info">
+                                    <!-- header title -->
+                                    <h1 class="header_title"><?php echo $header; ?></h1>
+                                    <!-- header content -->
+                                    <p class="header_desc"><?php echo $content; ?></p>
+                                    <!-- header form -->
+                                    <div class="form">
+                                        <input id="userInput" placeholder="Example: $30,000"/>
+                                        <input id="threshold" value = "<?php echo $threshold; ?>" />
+                                        <button id="inputCheck">Am I Eligible?</button>
+                                    </div>
+                                    <!-- header button for volunteer link -->
+                                    <button class="header_button">Be a Volunteer!</button>
+                                    </div>
+                                </div>
+                            <?php } else {
+                                echo 'no header or content added';
+                            } ?>
                     </div>
-                    <!--else no eligible header-->
-                    <?php } else {
-                        echo 'no ELIGIBLE Header added';
-                    } ?>
+
+                    <!--mobile-->
+                    <div class="grid-x mobile-header">
+                    <div class="cell show-for-small-only display-image">
+                        <!--If header is not empty display the following-->
+                        <?php if(! empty ($header && $content)) { ?>
+                            <div id="header-info">
+                                <!--header-->
+                                <h1 class="header_title"><?php echo $header; ?></h1>
+                                <!--content-->
+                                <p class="header_desc"><?php echo $content; ?></p>
+                                <!--header form-->
+                                <div class="form">
+                                    <input id="userInput" placeholder="Example: $30,000"/>
+                                    <input id="threshold" value = "<?php echo $threshold; ?>" />
+                                    <button id="inputCheck">Am I Eligible?</button>
+                                </div>
+                                <!-- header button for a volunteer link -->
+                                <button class="header_button">Be a Volunteer!</button>
+                            </div>
+                        <?php } else {
+                            echo 'no header or content added';
+                        } ?>
+                    </div>
+                    </div>
                 </section>
                 <?php
             }
